@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:styles mc:Ignorable="w14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml">
+ <w:docDefaults>
+  <w:rPrDefault>
+   <w:rPr>
+    <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman"/>
+    <w:b w:val="0"/>
+    <w:bCs w:val="0"/>
+    <w:i w:val="0"/>
+    <w:iCs w:val="0"/>
+    <w:caps w:val="0"/>
+    <w:smallCaps w:val="0"/>
+    <w:strike w:val="0"/>
+    <w:dstrike w:val="0"/>
+    <w:outline w:val="0"/>
+    <w:emboss w:val="0"/>
+    <w:imprint w:val="0"/>
+    <w:vanish w:val="0"/>
+    <w:color w:val="auto"/>
+    <w:spacing w:val="0"/>
+    <w:w w:val="100"/>
+    <w:kern w:val="0"/>
+    <w:position w:val="0"/>
+    <w:sz w:val="20"/>
+    <w:szCs w:val="20"/>
+    <w:u w:color="auto" w:val="none"/>
+    <w:bdr w:val="nil"/>
+    <w:vertAlign w:val="baseline"/>
+    <w:lang/>
+   </w:rPr>
+  </w:rPrDefault>
+  <w:pPrDefault>
+   <w:pPr>
+    <w:keepNext w:val="0"/>
+    <w:keepLines w:val="0"/>
+    <w:pageBreakBefore w:val="0"/>
+    <w:framePr w:anchorLock="0" w:h="0" w:hRule="exact" w:hSpace="0" w:vAnchor="margin" w:vSpace="0" w:w="0" w:xAlign="left" w:y="0"/>
+    <w:widowControl w:val="1"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="0"/>
+    </w:numPr>
+    <w:suppressLineNumbers w:val="0"/>
+    <w:pBdr>
+     <w:top w:val="nil"/>
+     <w:left w:val="nil"/>
+     <w:bottom w:val="nil"/>
+     <w:right w:val="nil"/>
+     <w:between w:val="nil"/>
+     <w:bar w:val="nil"/>
+    </w:pBdr>
+    <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+    <w:suppressAutoHyphens w:val="0"/>
+    <w:spacing w:after="0" w:afterAutospacing="0" w:before="0" w:beforeAutospacing="0" w:line="240" w:lineRule="auto"/>
+    <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+    <w:jc w:val="left"/>
+    <w:outlineLvl w:val="9"/>
+   </w:pPr>
+  </w:pPrDefault>
+ </w:docDefaults>
+ <w:style w:default="1" w:styleId="Normal" w:type="paragraph">
+  <w:name w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr/>
+  <w:rPr>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:lang w:bidi="ar-SA" w:eastAsia="en-US" w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:default="1" w:styleId="Default Paragraph Font" w:type="character">
+  <w:name w:val="Default Paragraph Font"/>
+  <w:next w:val="Default Paragraph Font"/>
+ </w:style>
+ <w:style w:styleId="Hyperlink" w:type="character">
+  <w:name w:val="Hyperlink"/>
+  <w:rPr>
+   <w:u w:val="single"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:default="1" w:styleId="Table Normal" w:type="table">
+  <w:name w:val="Table Normal"/>
+  <w:next w:val="Table Normal"/>
+  <w:pPr/>
+  <w:tblPr>
+   <w:tblInd w:type="dxa" w:w="0"/>
+  </w:tblPr>
+  <w:trPr/>
+  <w:tcPr/>
+  <w:tblStylePr w:type="firstRow"/>
+  <w:tblStylePr w:type="lastRow"/>
+  <w:tblStylePr w:type="firstCol"/>
+  <w:tblStylePr w:type="lastCol"/>
+  <w:tblStylePr w:type="band1Vert"/>
+  <w:tblStylePr w:type="band2Vert"/>
+  <w:tblStylePr w:type="band1Horz"/>
+  <w:tblStylePr w:type="band2Horz"/>
+  <w:tblStylePr w:type="neCell"/>
+  <w:tblStylePr w:type="nwCell"/>
+  <w:tblStylePr w:type="seCell"/>
+  <w:tblStylePr w:type="swCell"/>
+ </w:style>
+ <w:style w:default="1" w:styleId="No List" w:type="numbering">
+  <w:name w:val="No List"/>
+  <w:next w:val="No List"/>
+  <w:pPr/>
+ </w:style>
+ <w:style w:styleId="Верхний колонтитул" w:type="paragraph">
+  <w:name w:val="Верхний колонтитул"/>
+  <w:next w:val="Верхний колонтитул"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="4677" w:val="center"/>
+    <w:tab w:pos="9355" w:val="right"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Calibri" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Calibri"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="22"/>
+   <w:szCs w:val="22"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Header &amp; Footer" w:type="paragraph">
+  <w:name w:val="Header &amp; Footer"/>
+  <w:next w:val="Header &amp; Footer"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="9020" w:val="right"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textOutline>
+    <w14:noFill/>
+   </w14:textOutline>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Body" w:type="paragraph">
+  <w:name w:val="Body"/>
+  <w:next w:val="Body"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="22"/>
+   <w:szCs w:val="22"/>
+   <w:u w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textOutline>
+    <w14:noFill/>
+   </w14:textOutline>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Обычный" w:type="paragraph">
+  <w:name w:val="Обычный"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="0" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Calibri" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Calibri"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="22"/>
+   <w:szCs w:val="22"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Основной текст" w:type="paragraph">
+  <w:name w:val="Основной текст"/>
+  <w:next w:val="Основной текст"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="0" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Calibri" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Calibri" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="22"/>
+   <w:szCs w:val="22"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Табличный" w:type="paragraph">
+  <w:name w:val="Табличный"/>
+  <w:next w:val="Табличный"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="None" w:type="character">
+  <w:name w:val="None"/>
+ </w:style>
+ <w:style w:styleId="Hyperlink.0" w:type="character">
+  <w:name w:val="Hyperlink.0"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.0"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.1" w:type="character">
+  <w:name w:val="Hyperlink.1"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.1"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:u w:val="single"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 1,Заголовок 1 Знак Знак Знак Знак Знак Знак Знак Знак Знак Знак Знак Знак Знак,ЧТЗ,Глава,заголовок1_pg" w:type="paragraph">
+  <w:name w:val="Заголовок 1"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="480" w:line="276" w:lineRule="auto"/>
+   <w:ind w:hanging="291" w:left="291" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="0"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="1"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Imported Style 1" w:type="numbering">
+  <w:name w:val="Imported Style 1"/>
+  <w:pPr>
+   <w:numPr>
+    <w:numId w:val="1"/>
+   </w:numPr>
+  </w:pPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 2" w:type="paragraph">
+  <w:name w:val="Заголовок 2"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="360" w:line="276" w:lineRule="auto"/>
+   <w:ind w:hanging="435" w:left="435" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="1"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="apple-converted-space" w:type="character">
+  <w:name w:val="apple-converted-space"/>
+ </w:style>
+ <w:style w:styleId="Перечень" w:type="paragraph">
+  <w:name w:val="Перечень"/>
+  <w:next w:val="Перечень"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="120" w:line="276" w:lineRule="auto"/>
+   <w:ind w:hanging="22" w:left="22" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Основной" w:type="paragraph">
+  <w:name w:val="Основной"/>
+  <w:next w:val="Основной"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="120" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="709" w:left="0" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 3,h3,Head 3,l3+toc 3,CT,Sub-section Title,l3,3,H3,(пункт),SBS BP Heading 3,Заголовок 3 Знак Знак,H3 Знак,H3 Знак Знак,Заголовок 31,H31,Заголовок 3 Знак1,H3 Знак Знак Знак,Заголовок 32,H32,Заголовок 3 Знак2,H311,заголовок3_pg" w:type="paragraph">
+  <w:name w:val="Заголовок 3"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="709" w:val="left"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="240" w:line="240" w:lineRule="auto"/>
+   <w:ind w:hanging="11" w:left="11" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="2"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.2" w:type="character">
+  <w:name w:val="Hyperlink.2"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.2"/>
+  <w:rPr>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="ph_normal" w:type="paragraph">
+  <w:name w:val="ph_normal"/>
+  <w:next w:val="ph_normal"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="120" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="720" w:left="0" w:right="170"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 4,Заголовок 4 (Приложение),Параграф,Sub-Minor,????????? 4 (??????????)" w:type="paragraph">
+  <w:name w:val="Заголовок 4"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="993" w:val="left"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="120" w:line="360" w:lineRule="auto"/>
+   <w:ind w:hanging="295" w:left="295" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="2"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.3" w:type="character">
+  <w:name w:val="Hyperlink.3"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.3"/>
+  <w:rPr>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Знак сноски" w:type="character">
+  <w:name w:val="Знак сноски"/>
+  <w:rPr>
+   <w:vertAlign w:val="superscript"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Текст сноски" w:type="paragraph">
+  <w:name w:val="Текст сноски"/>
+  <w:next w:val="Текст сноски"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="0" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Calibri" w:cs="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="20"/>
+   <w:szCs w:val="20"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.4" w:type="character">
+  <w:name w:val="Hyperlink.4"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.4"/>
+  <w:rPr>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:lang w:val="en-US"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Абзац списка,Подпись рисунка,Маркированный список_уровень1,Colorful List Accent 1,List Paragraph,Colorful List - Accent 11,Цветной список - Акцент 11" w:type="paragraph">
+  <w:name w:val="Абзац списка"/>
+  <w:next w:val="Абзац списка,Подпись рисунка,Маркированный список_уровень1,Colorful List Accent 1,List Paragraph,Colorful List - Accent 11,Цветной список - Акцент 11"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="0" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="720" w:right="0"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Calibri" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Calibri" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="22"/>
+   <w:szCs w:val="22"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 5" w:type="paragraph">
+  <w:name w:val="Заголовок 5"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="567" w:val="left"/>
+    <w:tab w:pos="1134" w:val="left"/>
+    <w:tab w:pos="1276" w:val="left"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="240" w:before="240" w:line="240" w:lineRule="auto"/>
+   <w:ind w:hanging="441" w:left="441" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="2"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.5" w:type="character">
+  <w:name w:val="Hyperlink.5"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.5"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.6" w:type="character">
+  <w:name w:val="Hyperlink.6"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.6"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.7" w:type="character">
+  <w:name w:val="Hyperlink.7"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.7"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:shd w:color="auto" w:fill="ffffff" w:val="clear"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Абзац основной" w:type="paragraph">
+  <w:name w:val="Абзац основной"/>
+  <w:next w:val="Абзац основной"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="0"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="360" w:lineRule="auto"/>
+   <w:ind w:firstLine="709" w:left="0" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.8" w:type="character">
+  <w:name w:val="Hyperlink.8"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.8"/>
+  <w:rPr>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.9" w:type="character">
+  <w:name w:val="Hyperlink.9"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.9"/>
+  <w:rPr>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Normal Body" w:type="paragraph">
+  <w:name w:val="Normal Body"/>
+  <w:next w:val="Normal Body"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="120" w:before="0" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="357" w:left="0" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.10" w:type="character">
+  <w:name w:val="Hyperlink.10"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.10"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:lang w:val="en-US"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.11" w:type="character">
+  <w:name w:val="Hyperlink.11"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.11"/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:lang w:val="ru-RU"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 6" w:type="paragraph">
+  <w:name w:val="Заголовок 6"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="200" w:line="276" w:lineRule="auto"/>
+   <w:ind w:hanging="443" w:left="443" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="2"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Заголовок 7" w:type="paragraph">
+  <w:name w:val="Заголовок 7"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="1"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="200" w:line="276" w:lineRule="auto"/>
+   <w:ind w:hanging="587" w:left="587" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="2"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="1"/>
+   <w:bCs w:val="1"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Imported Style 3" w:type="numbering">
+  <w:name w:val="Imported Style 3"/>
+  <w:pPr>
+   <w:numPr>
+    <w:numId w:val="4"/>
+   </w:numPr>
+  </w:pPr>
+ </w:style>
+ <w:style w:styleId="Imported Style 4" w:type="numbering">
+  <w:name w:val="Imported Style 4"/>
+  <w:pPr>
+   <w:numPr>
+    <w:numId w:val="6"/>
+   </w:numPr>
+  </w:pPr>
+ </w:style>
+ <w:style w:styleId="ph_list_itemized_1" w:type="paragraph">
+  <w:name w:val="ph_list_itemized_1"/>
+  <w:next w:val="ph_list_itemized_1"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="1634" w:val="left"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="120" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="170"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.12" w:type="character">
+  <w:name w:val="Hyperlink.12"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.12"/>
+  <w:rPr>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:u w:color="000000" w:val="single"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Imported Style 6" w:type="numbering">
+  <w:name w:val="Imported Style 6"/>
+  <w:pPr>
+   <w:numPr>
+    <w:numId w:val="9"/>
+   </w:numPr>
+  </w:pPr>
+ </w:style>
+ <w:style w:styleId="6546546546546546" w:type="paragraph">
+  <w:name w:val="6546546546546546"/>
+  <w:next w:val="6546546546546546"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="1"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="288" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.13" w:type="character">
+  <w:name w:val="Hyperlink.13"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.13"/>
+  <w:rPr>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Hyperlink.14" w:type="character">
+  <w:name w:val="Hyperlink.14"/>
+  <w:basedOn w:val="None"/>
+  <w:next w:val="Hyperlink.14"/>
+  <w:rPr>
+   <w:sz w:val="28"/>
+   <w:szCs w:val="28"/>
+   <w:lang w:val="ru-RU"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Список-" w:type="paragraph">
+  <w:name w:val="Список-"/>
+  <w:next w:val="Список-"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="1"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="0" w:line="276" w:lineRule="auto"/>
+   <w:ind w:firstLine="672" w:left="37" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="2"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Текст пункта" w:type="paragraph">
+  <w:name w:val="Текст пункта"/>
+  <w:next w:val="Текст пункта"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:tabs>
+    <w:tab w:pos="1134" w:val="left"/>
+   </w:tabs>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="120" w:line="288" w:lineRule="auto"/>
+   <w:ind w:firstLine="624" w:left="0" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="2"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Название объекта" w:type="paragraph">
+  <w:name w:val="Название объекта"/>
+  <w:next w:val="Обычный"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="1"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="200" w:before="0" w:line="240" w:lineRule="auto"/>
+   <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+   <w:jc w:val="center"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style2" w:type="paragraph">
+  <w:name w:val="Style2"/>
+  <w:next w:val="Style2"/>
+  <w:pPr>
+   <w:keepNext w:val="0"/>
+   <w:keepLines w:val="0"/>
+   <w:pageBreakBefore w:val="0"/>
+   <w:widowControl w:val="0"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+   <w:suppressAutoHyphens w:val="0"/>
+   <w:bidi w:val="0"/>
+   <w:spacing w:after="0" w:before="0" w:line="325" w:lineRule="exact"/>
+   <w:ind w:firstLine="816" w:left="0" w:right="0"/>
+   <w:jc w:val="both"/>
+   <w:outlineLvl w:val="9"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Times New Roman" w:hint="default"/>
+   <w:b w:val="0"/>
+   <w:bCs w:val="0"/>
+   <w:i w:val="0"/>
+   <w:iCs w:val="0"/>
+   <w:caps w:val="0"/>
+   <w:smallCaps w:val="0"/>
+   <w:strike w:val="0"/>
+   <w:dstrike w:val="0"/>
+   <w:outline w:val="0"/>
+   <w:color w:val="000000"/>
+   <w:spacing w:val="0"/>
+   <w:kern w:val="0"/>
+   <w:position w:val="0"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:u w:color="000000" w:val="none"/>
+   <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+   <w:vertAlign w:val="baseline"/>
+   <w:lang w:val="ru-RU"/>
+   <w14:textFill>
+    <w14:solidFill>
+     <w14:srgbClr w14:val="000000"/>
+    </w14:solidFill>
+   </w14:textFill>
+  </w:rPr>
+ </w:style>
+</w:styles>
