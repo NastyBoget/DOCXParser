@@ -7,7 +7,7 @@ class StylesExtractor:
     def __init__(self, xml):
         # xml - BeautifulSoup tree with styles
         if xml:
-            self.styles = xml.find('w:styles')
+            self.styles = xml.styles
             if not self.styles:
                 raise Exception("there are no styles")
         else:
@@ -45,7 +45,7 @@ class StylesExtractor:
         # TODO information in numPr for indent
 
         if not style_id:
-            style = self.styles.find('w:docDefaults')
+            style = self.styles.docDefaults
             p_info = {'size': 0, 'indent': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'}
         else:
             style = self.find_style(style_id)
@@ -54,7 +54,7 @@ class StylesExtractor:
             return p_info
 
         # size
-        size = style.find('sz')
+        size = style.sz
         if size:
             try:
                 p_info['size'] = int(size['w:val'])
@@ -62,7 +62,7 @@ class StylesExtractor:
                 pass
         # indent
         # TODO different attributes for indent
-        indent = style.find('ind')
+        indent = style.ind
         if indent:
             try:
                 p_info['indent'] = int(indent['w:firstLine'])
@@ -73,15 +73,15 @@ class StylesExtractor:
                     pass
         # bold
         # TODO find out the behaviour if there isn't value attribute
-        bold = style.find('b')
+        bold = style.b
         if bold:
             try:
                 p_info['bold'] = bold['w:val']
             except KeyError:
-                pass
+                p_info['bold'] = '1'  # TODO check behaviour
 
         # italic
-        italic = style.find('i')
+        italic = style.i
         if italic:
             try:
                 p_info['italic'] = italic['w:val']
@@ -89,7 +89,7 @@ class StylesExtractor:
                 pass
 
         # underlined
-        underlined = style.find('u')
+        underlined = style.u
         if underlined:
             try:
                 p_info['underlined'] = underlined['w:val']

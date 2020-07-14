@@ -1,0 +1,3704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:document xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing">
+ <w:body>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitlePage"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Документ предоставлен
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId4" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      КонсультантПлюс
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:br/>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+  </w:p>
+  <w:tbl>
+   <w:tblPr>
+    <w:tblW w:type="auto" w:w="0"/>
+    <w:tblBorders>
+     <w:top w:color="auto" w:space="0" w:sz="8" w:val="single"/>
+     <w:left w:color="auto" w:space="0" w:sz="8" w:val="single"/>
+     <w:bottom w:color="auto" w:space="0" w:sz="8" w:val="single"/>
+     <w:right w:color="auto" w:space="0" w:sz="8" w:val="single"/>
+     <w:insideH w:color="auto" w:space="0" w:sz="8" w:val="single"/>
+     <w:insideV w:color="auto" w:space="0" w:sz="8" w:val="single"/>
+    </w:tblBorders>
+    <w:tblLayout w:type="fixed"/>
+    <w:tblCellMar>
+     <w:left w:type="dxa" w:w="0"/>
+     <w:right w:type="dxa" w:w="0"/>
+    </w:tblCellMar>
+    <w:tblLook w:val="0000"/>
+   </w:tblPr>
+   <w:tblGrid>
+    <w:gridCol w:w="4677"/>
+    <w:gridCol w:w="4677"/>
+   </w:tblGrid>
+   <w:tr w:rsidR="006A51EF">
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="4677"/>
+      <w:tcBorders>
+       <w:top w:val="nil"/>
+       <w:left w:val="nil"/>
+       <w:bottom w:val="nil"/>
+       <w:right w:val="nil"/>
+      </w:tcBorders>
+     </w:tcPr>
+     <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+      <w:pPr>
+       <w:pStyle w:val="ConsPlusNormal"/>
+      </w:pPr>
+      <w:r>
+       <w:t>
+        3 августа 2018 года
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="4677"/>
+      <w:tcBorders>
+       <w:top w:val="nil"/>
+       <w:left w:val="nil"/>
+       <w:bottom w:val="nil"/>
+       <w:right w:val="nil"/>
+      </w:tcBorders>
+     </w:tcPr>
+     <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+      <w:pPr>
+       <w:pStyle w:val="ConsPlusNormal"/>
+       <w:jc w:val="right"/>
+      </w:pPr>
+      <w:r>
+       <w:t>
+        N 307-ФЗ
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+   </w:tr>
+  </w:tbl>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:pBdr>
+     <w:top w:color="auto" w:space="0" w:sz="6" w:val="single"/>
+    </w:pBdr>
+    <w:spacing w:after="100" w:before="100"/>
+    <w:jc w:val="both"/>
+    <w:rPr>
+     <w:sz w:val="2"/>
+     <w:szCs w:val="2"/>
+    </w:rPr>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     РОССИЙСКАЯ ФЕДЕРАЦИЯ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     ФЕДЕРАЛЬНЫЙ ЗАКОН
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     О ВНЕСЕНИИ ИЗМЕНЕНИЙ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     В ОТДЕЛЬНЫЕ ЗАКОНОДАТЕЛЬНЫЕ АКТЫ РОССИЙСКОЙ ФЕДЕРАЦИИ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     В ЦЕЛЯХ СОВЕРШЕНСТВОВАНИЯ КОНТРОЛЯ ЗА СОБЛЮДЕНИЕМ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     ЗАКОНОДАТЕЛЬСТВА РОССИЙСКОЙ ФЕДЕРАЦИИ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     О ПРОТИВОДЕЙСТВИИ КОРРУПЦИИ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Принят
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Государственной Думой
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     24 июля 2018 года
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Одобрен
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Советом Федерации
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     28 июля 2018 года
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 1
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId5" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 26
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона "О банках и банковской деятельности" (в редакции Федерального закона от 3 февраля 1996 года N 17-ФЗ) (Ведомости Съезда народных депутатов РСФСР и Верховного Совета РСФСР, 1990, N 27, ст. 357; Собрание законодательства Российской Федерации, 1996, N 6, ст. 492; 2001, N 33, ст. 3424; 2003, N 27, ст. 2700; N 52, ст. 5033; 2004, N 27, ст. 2711; 2005, N 1, ст. 45; 2007, N 31, ст. 4011; N 41, ст. 4845; 2009, N 23, ст. 2776; N 30, ст. 3739; 2010, N 31, ст. 4193; N 47, ст. 6028; 2011, N 7, ст. 905; N 27, ст. 3873; N 48, ст. 6730; N 50, ст. 7351; 2012, N 27, ст. 3588; N 50, ст. 6954; N 53, ст. 7605; 2013, N 11, ст. 1076; N 19, ст. 2329; N 26, ст. 3207; N 27, ст. 3438; N 30, ст. 4084; N 51, ст. 6699; 2014, N 26, ст. 3395; N 52, ст. 7543; 2015, N 27, ст. 3950; N 29, ст. 4357; 2017, N 18, ст. 2661; 2018, N 24, ст. 3400; N 27, ст. 3950) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId6" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      абзац первый части шестой
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     "Справки по операциям, счетам и вкладам физических и юридических лиц выдаются кредитной организацией руководителям (должностным лицам) федеральных государственных органов, перечень которых определяется Президентом Российской Федерации, Председателю Центрального банка Российской Федерации, высшим должностным лицам субъектов Российской Федерации (руководителям высших исполнительных органов государственной власти субъектов Российской Федерации), руководителям Пенсионного фонда Российской Федерации, Фонда социального страхования Российской Федерации, Федерального фонда обязательного медицинского страхования, справки по операциям, счетам и вкладам физических лиц - также руководителям государственных корпораций, публично-правовых компаний при наличии запроса, направленного в порядке, определяемом Президентом Российской Федерации, в случае проведения в соответствии с законодательством Российской Федерации о противодействии коррупции проверки достоверности и полноты сведений о доходах, расходах, об имуществе и обязательствах имущественного характера, соблюдения запретов, ограничений, исполнения обязанностей, установленных Федеральным
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId7" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      законом
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     от 25 декабря 2008 года N 273-ФЗ "О противодействии коррупции" и другими федеральными законами, в отношении:";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId8" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть четырнадцатую
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     "За разглашение банковской тайны Банк России, руководители (должностные лица) федеральных государственных органов, перечень которых определяется Президентом Российской Федерации, высшие должностные лица субъектов Российской Федерации (руководители высших исполнительных органов государственной власти субъектов Российской Федерации), руководители государственных корпораций, публично-правовых компаний, руководители Пенсионного фонда Российской Федерации, Фонда социального страхования Российской Федерации, Федерального фонда обязательного медицинского страхования, организация, осуществляющая функции по обязательному страхованию вкладов, кредитные, аудиторские и иные организации, уполномоченный орган, осуществляющий функции по противодействию легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма, орган валютного контроля, уполномоченный Правительством Российской Федерации, и агенты валютного контроля, а также должностные лица и работники указанных органов и организаций несут ответственность, включая возмещение нанесенного ущерба, в порядке, установленном федеральным законом.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId9" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть семнадцатую
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     "Руководители (должностные лица) федеральных государственных органов, перечень которых определяется Президентом Российской Федерации, высшие должностные лица субъектов Российской Федерации (руководители высших исполнительных органов государственной власти субъектов Российской Федерации), руководители государственных корпораций, публично-правовых компаний, руководители Пенсионного фонда Российской Федерации, Фонда социального страхования Российской Федерации, Федерального фонда обязательного медицинского страхования не вправе раскрывать третьим лицам информацию об операциях, о счетах и вкладах физических и юридических лиц, полученную в соответствии с нормативными правовыми актами Российской Федерации о противодействии коррупции и настоящим Федеральным законом в Банке России, кредитных организациях, а также в представительствах иностранных банков. Информация об операциях, о счетах и вкладах физических и юридических лиц, полученная в соответствии с частью шестой настоящей статьи при проведении проверки достоверности и полноты сведений о доходах, расходах, об имуществе и обязательствах имущественного характера, соблюдения запретов, ограничений, исполнения обязанностей, установленных Федеральным
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId10" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      законом
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     от 25 декабря 2008 года N 273-ФЗ "О противодействии коррупции" и другими федеральными законами, может быть использована только в соответствии с законодательством Российской Федерации о противодействии коррупции.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 2
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId11" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 41.10
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона "О прокуратуре Российской Федерации" (в редакции Федерального закона от 17 ноября 1995 года N 168-ФЗ) (Ведомости Съезда народных депутатов Российской Федерации и Верховного Совета Российской Федерации, 1992, N 8, ст. 366; Собрание законодательства Российской Федерации, 1995, N 47, ст. 4472; 2011, N 48, ст. 6730; 2015, N 48, ст. 6720) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId12" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "С согласия работника и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть применено на основании доклада подразделения кадровой службы соответствующего органа прокуратуры по профилактике коррупционных и иных правонарушений о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения такого работника.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId13" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункте 3.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     интересов (аттестационной комиссии)" исключить;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId14" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "4. Взыскания, предусмотренные статьями 41.8 и 41.9 настоящего Федерального закона, применяются не позднее шести месяцев со дня поступления информации о совершении работником коррупционного правонарушения и не позднее трех лет со дня его совершения.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 3
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId15" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 29.3
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 21 июля 1997 года N 114-ФЗ "О службе в таможенных органах Российской Федерации" (Собрание законодательства Российской Федерации, 1997, N 30, ст. 3586; 2011, N 48, ст. 6730; 2014, N 52, ст. 7542) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId16" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "С согласия сотрудника таможенного органа и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть применено на основании доклада подразделения кадровой службы соответствующего таможенного органа по профилактике коррупционных и иных правонарушений о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения такого сотрудника.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId17" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункте 3.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов (аттестационной комиссии)" исключить;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId18" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "4. Взыскания, предусмотренные статьями 29.1 и 29.2 настоящего Федерального закона, применяются не позднее шести месяцев со дня поступления информации о совершении сотрудником таможенного органа коррупционного правонарушения и не позднее трех лет со дня его совершения.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 4
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId19" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 51.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 28 марта 1998 года N 53-ФЗ "О воинской обязанности и военной службе" (Собрание законодательства Российской Федерации, 1998, N 13, ст. 1475; 2011, N 48, ст. 6730; 2014, N 52, ст. 7542) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId20" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "С согласия военнослужащего и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть применено на основании доклада подразделения кадровой службы по профилактике коррупционных и иных правонарушений о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения такого военнослужащего.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId21" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункте 3.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов (аттестационной комиссии)" исключить;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId22" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     "4. Взыскания, предусмотренные подпунктами "д.1" и "д.2" пункта 1 и подпунктом "е.1" пункта 2 статьи 51 настоящего Федерального закона и другими нормативными правовыми актами Российской Федерации о прохождении военной службы, применяются не позднее шести месяцев
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     со дня поступления информации о совершении военнослужащим коррупционного правонарушения и не позднее трех лет со дня его совершения.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 5
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:hyperlink r:id="rId23" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      Пункт 8 статьи 28.2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 27 мая 1998 года N 76-ФЗ "О статусе военнослужащих" (Собрание законодательства Российской Федерации, 1998, N 22, ст. 2331; 2006, N 50, ст. 5281) изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "8. Военнослужащий или гражданин, призванный на военные сборы, не может быть привлечен к дисциплинарной ответственности, в том числе в случае отказа в возбуждении в отношении военнослужащего или гражданина, призванного на военные сборы, уголовного дела или прекращения в отношении его уголовного дела, но при наличии в его действиях (бездействии) признаков дисциплинарного проступка, по истечении одного года со дня совершения дисциплинарного проступка, за исключением случаев, когда федеральными законами установлены иные сроки давности привлечения военнослужащих к дисциплинарной ответственности.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 6
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     В
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId24" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункте 2 части 7 статьи 40
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 6 октября 2003 года N 131-ФЗ "Об общих принципах организации местного самоуправления в Российской Федерации" (Собрание законодательства Российской Федерации, 2003, N 40, ст. 3822; 2004, N 25, ст. 2484; 2005, N 30, ст. 3104; 2006, N 1, ст. 10; N 8, ст. 852; N 31, ст. 3427; 2007, N 10, ст. 1151; N 43, ст. 5084; N 45, ст. 5430; 2008, N 52, ст. 6229; 2009, N 52, ст. 6441; 2011, N 31, ст. 4703; N 48, ст. 6730; N 49, ст. 7039; 2014, N 22, ст. 2770; N 26, ст. 3371; N 52, ст. 7542; 2015, N 10, ст. 1393; N 27, ст. 3978; N 45, ст. 6204; 2016, N 1, ст. 66; 2017, N 15, ст. 2139; N 24, ст. 3476; N 31, ст. 4766; 2018, N 17, ст. 2432) слова "случаев, предусмотренных федеральными законами, и случаев, если участие в управлении организацией осуществляется в соответствии с законодательством Российской Федерации от имени органа местного самоуправления" заменить словами "участия на безвозмездной основе в деятельности коллегиального органа организации на основании акта Президента Российской Федерации или Правительства Российской Федерации; представления на безвозмездной основе интересов муниципального образования в органах управления и ревизионной комиссии организации, учредителем (акционером, участником) которой является муниципальное образование, в соответствии с муниципальными правовыми актами, определяющими порядок осуществления от имени муниципального образования полномочий учредителя организации или управления находящимися в муниципальной собственности акциями (долями участия в уставном капитале); иных случаев, предусмотренных федеральными законами".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 7
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в Федеральный
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId25" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      закон
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     от 27 июля 2004 года N 79-ФЗ "О государственной гражданской службе Российской Федерации" (Собрание законодательства Российской Федерации, 2004, N 31, ст. 3215; 2007, N 10, ст. 1151; 2008, N 13, ст. 1186; N 52, ст. 6235; 2010, N 5, ст. 459; 2011, N 48, ст. 6730; 2013, N 19, ст. 2329; 2014, N 52, ст. 7542; 2015, N 41, ст. 5639; 2017, N 1, ст. 46; N 15, ст. 2139; N 31, ст. 4766) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId26" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункте 3 части 1 статьи 17
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "с разрешения представителя нанимателя" дополнить словами ", которое получено", слова "случаев, предусмотренных федеральными законами, и случаев, если участие в управлении организацией осуществляется в соответствии с законодательством Российской Федерации от имени государственного органа" заменить словами "участия на безвозмездной основе в деятельности коллегиального органа организации на основании акта Президента Российской Федерации или Правительства Российской Федерации; представления на безвозмездной основе интересов Российской Федерации или субъекта
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     Российской Федерации в органах управления и ревизионной комиссии организации, учредителем (акционером, участником) которой является Российская Федерация или субъект Российской Федерации, в соответствии с нормативными правовыми актами Правительства Российской Федерации или нормативными правовыми актами субъекта Российской Федерации, определяющими порядок осуществления от имени Российской Федерации или субъекта Российской Федерации полномочий учредителя организации либо управления находящимися в федеральной собственности или собственности субъекта Российской Федерации акциями (долями участия в уставном капитале); иных случаев, предусмотренных федеральными законами";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId27" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статье 59.3
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId28" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "С согласия гражданского служащего и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть применено на основании доклада подразделения кадровой службы соответствующего государственного органа по профилактике коррупционных и иных правонарушений о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения такого гражданского служащего.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId29" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 3
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "3. Взыскания, предусмотренные статьями 59.1 и 59.2 настоящего Федерального закона, применяются не позднее шести месяцев со дня поступления информации о совершении гражданским служащим коррупционного правонарушения и не позднее трех лет со дня его совершения.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     в) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId30" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 3.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по урегулированию конфликтов интересов" исключить.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 8
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId31" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 5
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 5 декабря 2005 года N 154-ФЗ "О государственной службе российского казачества" (Собрание законодательства Российской Федерации, 2005, N 50, ст. 5245; 2008, N 49, ст. 5743; 2011, N 23, ст. 3241; 2015, N 29, ст. 4388; 2016, N 27, ст. 4160; 2017, N 18, ст. 2659) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId32" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 16
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "16. Атаман войскового казачьего общества обязан представлять сведения о своих доходах, об имуществе и обязательствах имущественного характера, а также о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId33" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     частью 16.1 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "16.1. Порядок представления атаманом войскового казачьего общества сведений о своих доходах, об имуществе и обязательствах имущественного характера, а также о доходах, об имуществе и обязательствах имущественного характера своих супруги (супруга) и несовершеннолетних детей, порядок проверки этих сведений устанавливаются Президентом Российской Федерации.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 9
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в Федеральный
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId34" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      закон
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     от 2 марта 2007 года N 25-ФЗ "О муниципальной службе в Российской Федерации" (Собрание законодательства Российской Федерации, 2007, N 10, ст. 1152; 2008, N 52, ст. 6235; 2011, N 19, ст. 2709; N 48, ст. 6730; 2014, N 52, ст. 7542; 2016, N 7, ст. 909; 2017,
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     N 15, ст. 2139; N 27, ст. 3929; N 31, ст. 4766) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId35" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункте 3 части 1 статьи 14
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "с разрешения представителя нанимателя (работодателя)" дополнить словами ", которое получено", слова "случаев, предусмотренных федеральными законами, и случаев, если участие в управлении организацией осуществляется в соответствии с законодательством Российской Федерации от имени органа местного самоуправления" заменить словами "представления на безвозмездной основе интересов муниципального образования в органах управления и ревизионной комиссии организации, учредителем (акционером, участником) которой является муниципальное образование, в соответствии с муниципальными правовыми актами, определяющими порядок осуществления от имени муниципального образования полномочий учредителя организации или управления находящимися в муниципальной собственности акциями (долями участия в уставном капитале); иных случаев, предусмотренных федеральными законами";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId36" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 3 статьи 27.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить пунктом 2.1 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "2.1) доклада подразделения кадровой службы соответствующего муниципального органа по профилактике коррупционных и иных правонарушений о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения муниципального служащего только с его согласия и при условии признания им факта совершения коррупционного правонарушения (за исключением применения взыскания в виде увольнения в связи с утратой доверия);".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 10
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:hyperlink r:id="rId37" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      Часть 1 статьи 12
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 2 октября 2007 года N 229-ФЗ "Об исполнительном производстве" (Собрание законодательства Российской Федерации, 2007, N 41, ст. 4849; 2009, N 1, ст. 14; 2013, N 51, ст. 6678; N 52, ст. 7006; 2014, N 19, ст. 2331; 2015, N 10, ст. 1411; 2016, N 1, ст. 11; 2017, N 1, ст. 33; 2018, N 24, ст. 3400) дополнить пунктом 12 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     "12) определение судьи о наложении ареста на имущество в целях обеспечения исполнения постановления о назначении административного наказания за совершение административного правонарушения, предусмотренного
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId38" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статьей 19.28
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Кодекса Российской Федерации об административных правонарушениях.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 11
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в Федеральный
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId39" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      закон
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     от 25 декабря 2008 года N 273-ФЗ "О противодействии коррупции" (Собрание законодательства Российской Федерации, 2008, N 52, ст. 6228; 2011, N 48, ст. 6730; 2013, N 40, ст. 5031; 2014, N 52, ст. 7542; 2015, N 41, ст. 5639; N 45, ст. 6204; N 48, ст. 6720; 2017, N 15, ст. 2139) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId40" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 1.1 статьи 12
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "1.1. Комиссия в порядке, установленном нормативными правовыми актами Российской Федерации, обязана рассмотреть письменное обращение гражданина о даче согласия на замещение на условиях трудового договора должности в организации и (или) на выполнение в данной организации работ (оказание данной организации услуг) на условиях гражданско-правового договора, если отдельные функции государственного, муниципального (административного) управления данной организацией входили в его должностные (служебные) обязанности, а также проинформировать гражданина о принятом решении.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId41" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 3 статьи 12.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId42" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     "2) участвовать в управлении коммерческой организацией или некоммерческой организацией, за исключением следующих случаев:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     а) участие в управлении совета муниципальных образований субъекта Российской Федерации, иных объединений муниципальных образований, политической партией, участие в съезде (конференции) или общем собрании иной общественной организации, жилищного, жилищно-строительного, гаражного кооперативов, садоводческого, огороднического, дачного потребительских кооперативов, товарищества собственников недвижимости;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     б) участие на безвозмездной основе в деятельности коллегиального органа организации на основании акта Президента Российской Федерации или Правительства Российской Федерации;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     в) представление на безвозмездной основе интересов Российской Федерации или субъекта Российской Федерации в органах управления и ревизионной комиссии организации, учредителем (акционером, участником) которой является Российская Федерация или субъект Российской Федерации, в соответствии с нормативными правовыми актами Правительства Российской Федерации или нормативными правовыми актами субъекта Российской Федерации, определяющими порядок осуществления от имени Российской Федерации или субъекта Российской Федерации полномочий учредителя организации либо управления находящимися в федеральной собственности или собственности субъекта Российской Федерации акциями (долями участия в уставном капитале);
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     г) представление на безвозмездной основе интересов муниципального образования в органах управления и ревизионной комиссии организации, учредителем (акционером, участником) которой является муниципальное образование, в соответствии с муниципальными правовыми актами, определяющими порядок осуществления от имени муниципального образования полномочий учредителя организации или управления находящимися в муниципальной собственности акциями (долями участия в уставном капитале);
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     д) иных случаев, предусмотренных федеральными законами;";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId43" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     пунктом 2.1 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "2.1) заниматься предпринимательской деятельностью лично или через доверенных лиц;".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 12
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId44" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 30.3
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 28 декабря 2010 года N 403-ФЗ "О Следственном комитете Российской Федерации" (Собрание законодательства Российской Федерации, 2011, N 1, ст. 15; N 48, ст. 6730; 2014, N 52, ст. 7542) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId45" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     "2. Взыскания, предусмотренные статьями 30.1 и 30.2 настоящего Федерального закона, применяются на основании доклада о результатах проверки, проведенной подразделением кадровой службы следственного органа или учреждения Следственного комитета по профилактике коррупционных и иных правонарушений, а в случае, если доклад о результатах проверки направлялся в комиссию по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов (аттестационную комиссию), - и на основании рекомендации указанной комиссии. С согласия сотрудника Следственного комитета и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть применено на основании доклада подразделения кадровой службы следственного органа или учреждения Следственного комитета по профилактике коррупционных и иных правонарушений о совершении коррупционного правонарушения, в котором излагаются
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     фактические обстоятельства его совершения, и письменного объяснения такого сотрудника.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId46" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 3.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов (аттестационной комиссии)" исключить;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId47" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "4. Взыскания, предусмотренные статьями 30.1 и 30.2 настоящего Федерального закона, применяются не позднее шести месяцев со дня поступления информации о совершении сотрудником Следственного комитета коррупционного правонарушения и не позднее трех лет со дня его совершения.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 13
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId48" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 51.1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 30 ноября 2011 года N 342-ФЗ "О службе в органах внутренних дел Российской Федерации и внесении изменений в отдельные законодательные акты Российской Федерации" (Собрание законодательства Российской Федерации, 2011, N 49, ст. 7020; 2014, N 52, ст. 7542) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId49" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "С согласия сотрудника органов внутренних дел и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть применено на основании доклада подразделения по профилактике коррупционных и иных правонарушений кадрового подразделения федерального органа исполнительной власти в сфере внутренних дел, его территориального органа, подразделения о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения такого сотрудника.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId50" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов (аттестационной комиссии)" исключить;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId51" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 5
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "5. Взыскания, предусмотренные статьями 50.1 и 82.1 настоящего Федерального закона, налагаются не позднее шести месяцев со дня поступления информации о совершении сотрудником органов внутренних дел коррупционного правонарушения и не позднее трех лет со дня его совершения.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 14
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в Федеральный
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId52" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      закон
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     от 3 декабря 2012 года N 230-ФЗ "О контроле за соответствием расходов лиц, замещающих государственные должности, и иных лиц их доходам" (Собрание законодательства Российской Федерации, 2012, N 50, ст. 6953; 2014, N 52, ст. 7542; 2015, N 45, ст. 6204; 2018, N 24, ст. 3400) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId53" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 1 статьи 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId54" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить подпунктом "о" следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "о) должности атаманов войсковых казачьих обществ, внесенных в государственный реестр казачьих обществ в Российской Федерации;";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId55" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     пунктом 1.1 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     "1.1) лиц, замещавших (занимавших) должности, указанные в пункте 1 настоящей части, и освобожденных от государственных должностей Российской Федерации, должностей членов Совета директоров Банка России, государственных должностей субъектов Российской Федерации, муниципальных должностей, должностей атаманов войсковых казачьих обществ, внесенных в государственный реестр казачьих обществ в Российской Федерации, либо уволенных с федеральной государственной службы, государственной гражданской службы субъектов Российской Федерации, муниципальной службы, из Банка России, государственных корпораций, Пенсионного фонда Российской Федерации, Фонда социального страхования Российской Федерации, Федерального фонда обязательного медицинского страхования, иных организаций, созданных Российской Федерацией на основании федеральных законов, организаций, созданных для выполнения задач, поставленных перед федеральными государственными органами (далее - лица, замещавшие (занимавшие) должности);";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     в)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId56" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      пункт 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "замещающих (занимающих)" дополнить словами "или замещавших (занимавших)";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId57" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статье 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId58" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     частью 1.1 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "1.1. Основанием для принятия решения об осуществлении контроля за расходами лица, замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей является поступление в органы прокуратуры Российской Федерации материалов, предусмотренных частью 6 статьи 16 настоящего Федерального закона.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId59" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "замещающих (занимающих)" дополнить словами "или замещавших (занимавших)";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     в)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId60" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      абзац первый части 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "замещающего (занимающего)" дополнить словами "или замещавшего (занимавшего)";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId61" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статье 5
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId62" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "лиц, замещающих (занимающих) должности, указанные в подпунктах "а" и "б" пункта 1 части 1 статьи 2 настоящего Федерального закона" заменить словами "лиц, замещающих (занимающих) должности, указанные в подпунктах "а", "б" и "о" пункта 1 части 1 статьи 2 настоящего Федерального закона";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId63" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     частью 7 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "7. Решение об осуществлении контроля за расходами лиц, замещавших (занимавших) должности, указанные в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами их супруг (супругов) и несовершеннолетних детей принимается Генеральным прокурором Российской Федерации или подчиненными ему прокурорами отдельно в отношении каждого такого лица и оформляется в письменной форме.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     4) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId64" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 1 статьи 6
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "лиц, замещающих (занимающих) должности, указанные в подпунктах "а" и "б" пункта 1 части 1 статьи 2 настоящего Федерального закона" заменить словами "лиц, замещающих (занимающих) должности, указанные в подпунктах "а", "б" и "о" пункта 1 части 1 статьи 2 настоящего Федерального закона";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     5)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId65" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 7
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить частью 3 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     "3. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры не позднее чем через два рабочих дня со дня принятия решения об осуществлении контроля за
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     расходами лица, замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей обязаны уведомить его в письменной форме о принятом решении и о необходимости представить сведения, предусмотренные пунктом 1 части 4 статьи 4 настоящего Федерального закона. В уведомлении должна содержаться информация о порядке представления и проверки достоверности и полноты этих сведений. В случае, если лицо, замещавшее (занимавшее) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, обратилось с ходатайством в соответствии с частью 4 статьи 9 настоящего Федерального закона, с данным лицом в течение семи рабочих дней со дня поступления ходатайства (в случае наличия уважительной причины - в срок, согласованный с данным лицом) проводится беседа, в ходе которой должны быть даны разъяснения по интересующим его вопросам. Копия уведомления направляется в государственный орган, орган местного самоуправления или организацию, где данное лицо замещало (занимало) должность.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     6)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId66" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 4 статьи 8
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "иных организаций, созданных Российской Федерацией на основании федеральных законов," дополнить словами "войсковых казачьих обществ, внесенных в государственный реестр казачьих обществ в Российской Федерации,";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     7) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId67" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статье 9
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId68" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 1
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "замещающее (занимающее)" дополнить словами "или замещавшее (занимавшее)";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId69" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     частью 4 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "4. Лицо, замещавшее (занимавшее) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, в связи с осуществлением контроля за его расходами, а также за расходами его супруги (супруга) и несовершеннолетних детей наряду с правами, предусмотренными пунктами 1 и 2 части 2 настоящей статьи, имеет право обращаться с ходатайством к прокурору, принявшему решение об осуществлении контроля за расходами данного лица, его супруги (супруга) и несовершеннолетних детей, о проведении с ним беседы по вопросам, связанным с осуществлением такого контроля. Ходатайство подлежит обязательному удовлетворению.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     8)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId70" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 12
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "Статья 12
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     1. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры по решению Президента Российской Федерации, Председателя Правительства Российской Федерации либо должностного лица, определяемого Президентом Российской Федерации, вправе осуществлять в порядке, установленном настоящим Федеральным законом, контроль за расходами лица, замещающего (занимающего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     2. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры при получении материалов, предусмотренных частью 6 статьи 16 настоящего Федерального закона, осуществляют контроль за расходами лица, замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей в порядке, установленном настоящим Федеральным законом.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3. Контроль за расходами лица, замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     (супруга) и несовершеннолетних детей осуществляется в течение шести месяцев со дня освобождения данного лица от замещаемой (занимаемой) должности или его увольнения в отношении каждой сделки по приобретению земельного участка, другого объекта недвижимости, транспортного средства, ценных бумаг, акций (долей участия, паев в уставных (складочных) капиталах организаций), совершенной в период замещения (занятия) данным лицом указанной должности, если общая сумма таких сделок превышает общий доход данного лица и его супруги (супруга) за три последних года, предшествующих году совершения сделок.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     4. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры при осуществлении контроля за расходами лица, замещающего (занимающего) или замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей обязаны:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     1) истребовать от данного лица сведения, предусмотренные пунктом 1 части 4 статьи 4 настоящего Федерального закона;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     2) провести с данным лицом беседу в случае поступления ходатайства, предусмотренного частью 4 статьи 9 настоящего Федерального закона.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     5. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры при осуществлении контроля за расходами лица, замещающего (занимающего) или замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей вправе:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     1) проводить по своей инициативе беседу с данным лицом;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     2) изучать поступившие от данного лица дополнительные материалы;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     3) получать от данного лица пояснения по представленным им сведениям и материалам;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     4) направлять запросы в федеральные государственные органы, государственные органы субъектов Российской Федерации, территориальные органы федеральных органов исполнительной власти, органы местного самоуправления, общественные объединения и иные организации об имеющейся у них информации о доходах, расходах, об имуществе и обязательствах имущественного характера данного лица, его супруги (супруга) и несовершеннолетних детей, а также об источниках получения расходуемых средств;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     5) наводить справки у физических лиц и получать от них с их согласия информацию.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     6. Руководители органов и организаций, получившие запрос, предусмотренный пунктом 4 части 5 настоящей статьи, обязаны организовать его исполнение в соответствии с федеральными законами и иными нормативными правовыми актами Российской Федерации и предоставить в установленном порядке запрашиваемую информацию.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     7. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры после завершения контроля за расходами лица, замещающего (занимающего) или замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей информируют о результатах такого контроля Президента Российской Федерации, Председателя Правительства Российской Федерации, должностное лицо, определяемое Президентом Российской Федерации, или лицо, направившее в органы прокуратуры Российской Федерации материалы в соответствии с частью 6 статьи 16 настоящего Федерального закона.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     9)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId71" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 14
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "Статья 14
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     1. Лицо, замещающее (занимающее) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, должно быть проинформировано с соблюдением законодательства Российской Федерации о государственной тайне о результатах контроля за его расходами, а также за расходами его супруги (супруга) и несовершеннолетних детей.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     2. Информация о результатах контроля за расходами лица, замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей направляется данному лицу по его последнему известному месту жительства в Российской Федерации.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     10) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId72" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статье 16
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t>
+     :
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     а)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId73" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "Совершение правонарушения, предусмотренного частью 1 настоящей статьи, атаманом войскового казачьего общества, внесенного в государственный реестр казачьих обществ в Российской Федерации, влечет за собой досрочное прекращение его полномочий в установленном порядке.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     б)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId74" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     после слов "замещающего (занимающего)" дополнить словами "или замещавшего (занимавшего)";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     в)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId75" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     частью 5 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "5. В случае, если в ходе осуществления контроля за расходами лица, замещающего (занимающего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей данное лицо было освобождено от государственной должности Российской Федерации, должности члена Совета директоров Банка России, государственной должности субъекта Российской Федерации, муниципальной должности, должности атамана войскового казачьего общества, внесенного в государственный реестр казачьих обществ в Российской Федерации, либо уволено с федеральной государственной службы, государственной гражданской службы субъекта Российской Федерации, муниципальной службы, из Банка России, государственной корпорации, Пенсионного фонда Российской Федерации, Фонда социального страхования Российской Федерации, Федерального фонда обязательного медицинского страхования, иной организации, созданной Российской Федерацией на основании федерального закона, или организации, созданной для выполнения задач, поставленных перед федеральными государственными органами, орган, подразделение или должностное лицо, ответственные за профилактику коррупционных и иных правонарушений, представляет доклад о невозможности завершить такой контроль в связи с освобождением данного лица от замещаемой (занимаемой) должности или его увольнением лицу, принявшему решение об осуществлении контроля за расходами.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     г)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId76" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      дополнить
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     частью 6 следующего содержания:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "6. Материалы, полученные в ходе осуществления контроля за расходами лица, замещающего (занимающего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей, в том числе доклад о невозможности завершить такой контроль в связи с освобождением данного лица от замещаемой (занимаемой) должности или его увольнением, в тридцатидневный срок после его освобождения от должности или увольнения направляются лицом, принявшим решение об осуществлении этого контроля, в органы прокуратуры Российской Федерации.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     11)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId77" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 17
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "Статья 17
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     1. Генеральный прокурор Российской Федерации или подчиненные ему прокуроры в течение четырех месяцев со дня получения материалов, предусмотренных частью 3 статьи 16 настоящего Федерального закона, рассматривают их в пределах своей компетенции, установленной Федеральным законом "О прокуратуре Российской Федерации", после чего в порядке, предусмотренном законодательством о гражданском судопроизводстве, обращаются в суд с заявлением об обращении в доход Российской Федерации земельных участков, других объектов недвижимости, транспортных средств, ценных бумаг, акций (долей участия, паев в уставных (складочных) капиталах организаций), в отношении которых лицом, замещающим (занимающим) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, не представлено сведений, подтверждающих их приобретение на законные доходы, или об обращении в доход Российской Федерации денежной суммы, эквивалентной стоимости такого имущества, если его обращение в доход Российской Федерации невозможно.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     2. При выявлении в ходе осуществления контроля за расходами лица, замещающего (занимающего) или замещавшего (занимавшего) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, а также за расходами его супруги (супруга) и несовершеннолетних детей обстоятельств, свидетельствующих о несоответствии расходов данного лица, его супруги (супруга) и несовершеннолетних детей их общему доходу, Генеральный прокурор Российской Федерации или подчиненные ему прокуроры в порядке, установленном законодательством о гражданском судопроизводстве, обращаются в суд с заявлением об обращении в доход Российской Федерации земельных участков, других объектов недвижимости, транспортных средств, ценных бумаг, акций (долей участия, паев в уставных (складочных) капиталах организаций), в отношении которых данным лицом не представлено сведений, подтверждающих их приобретение на законные доходы, или об обращении в доход Российской Федерации денежной суммы, эквивалентной стоимости такого имущества, если его обращение в доход Российской Федерации невозможно.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     3. В случае, если при обращении Генерального прокурора Российской Федерации или подчиненных ему прокуроров в соответствии с частями 1 и 2 настоящей статьи в суд доля доходов, законность которых не доказана, оказывается незначительной с учетом обстоятельств дела, обращению в доход Российской Федерации подлежит только часть имущества, в отношении которого лицом, замещающим (занимающим) или замещавшим (занимавшим) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, не представлено сведений, подтверждающих его приобретение на законные доходы, или денежная сумма, эквивалентная стоимости этой части имущества.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     4. Информацию о результатах обращения в суд с заявлением об обращении в доход Российской Федерации земельных участков, других объектов недвижимости, транспортных средств, ценных бумаг, акций (долей участия, паев в уставных (складочных) капиталах организаций), в отношении которых лицом, замещающим (занимающим) или замещавшим (занимавшим) одну из должностей, указанных в пункте 1 части 1 статьи 2 настоящего Федерального закона, не представлено сведений, подтверждающих их приобретение на законные доходы, Генеральный прокурор Российской Федерации или подчиненные ему прокуроры в порядке, установленном Генеральным прокурором Российской Федерации, направляют в государственный орган, орган местного самоуправления или организацию, где данное лицо замещает (занимает) или замещало (занимало) такую должность.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 15
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Внести в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId78" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      статью 52
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     Федерального закона от 23 мая 2016 года N 141-ФЗ "О службе в
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     федеральной противопожарной службе Государственной противопожарной службы и внесении изменений в отдельные законодательные акты Российской Федерации" (Собрание законодательства Российской Федерации, 2016, N 22, ст. 3089) следующие изменения:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     1)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId79" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 2
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     дополнить предложением следующего содержания: "С согласия сотрудника федеральной противопожарной службы и при условии признания им факта совершения коррупционного правонарушения взыскание, за исключением увольнения в связи с утратой доверия, может быть наложено на основании доклада подразделения по профилактике коррупционных и иных правонарушений кадровой службы федерального органа исполнительной власти в области пожарной безопасности или подразделения о совершении коррупционного правонарушения, в котором излагаются фактические обстоятельства его совершения, и письменного объяснения такого сотрудника.";
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     2) в
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId80" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      части 4
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     слова "на основании рекомендации комиссии по соблюдению требований к служебному поведению федеральных государственных служащих и урегулированию конфликта интересов (аттестационной комиссии)" исключить;
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     3)
+    </w:t>
+   </w:r>
+   <w:hyperlink r:id="rId81" w:history="1">
+    <w:r>
+     <w:rPr>
+      <w:color w:val="0000FF"/>
+     </w:rPr>
+     <w:t>
+      часть 5
+     </w:t>
+    </w:r>
+   </w:hyperlink>
+   <w:r>
+    <w:t xml:space="preserve">
+     изложить в следующей редакции:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     "5. Взыскания, предусмотренные статьями 50 и 84 настоящего Федерального закона, налагаются не позднее шести месяцев со дня поступления информации о совершении сотрудником федеральной противопожарной службы коррупционного правонарушения и не позднее трех лет со дня его совершения.".
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusTitle"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Статья 16
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:ind w:firstLine="540"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Настоящий Федеральный закон вступает в силу со дня его официального опубликования.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Президент
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Российской Федерации
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     В.ПУТИН
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Москва, Кремль
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     3 августа 2018 года
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:spacing w:before="220"/>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     N 307-ФЗ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:jc w:val="both"/>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="006A51EF" w:rsidRDefault="006A51EF">
+   <w:pPr>
+    <w:pStyle w:val="ConsPlusNormal"/>
+    <w:pBdr>
+     <w:top w:color="auto" w:space="0" w:sz="6" w:val="single"/>
+    </w:pBdr>
+    <w:spacing w:after="100" w:before="100"/>
+    <w:jc w:val="both"/>
+    <w:rPr>
+     <w:sz w:val="2"/>
+     <w:szCs w:val="2"/>
+    </w:rPr>
+   </w:pPr>
+  </w:p>
+  <w:p w:rsidR="002749B2" w:rsidRDefault="002749B2"/>
+  <w:sectPr w:rsidR="002749B2" w:rsidSect="00D63B91">
+   <w:pgSz w:h="16838" w:w="11906"/>
+   <w:pgMar w:bottom="1134" w:footer="708" w:gutter="0" w:header="708" w:left="1701" w:right="850" w:top="1134"/>
+   <w:cols w:space="708"/>
+   <w:docGrid w:linePitch="360"/>
+  </w:sectPr>
+ </w:body>
+</w:document>
