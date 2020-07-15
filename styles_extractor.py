@@ -42,7 +42,8 @@ class StylesExtractor:
         # TODO numbering is more important
         # TODO aliases, name
         # TODO qFormat
-        # TODO information in numPr for indent
+        # TODO information in numPr for indent !!!!!
+        # TODO default='1' !!!!!
 
         if not style_id:
             style = self.styles.docDefaults
@@ -54,44 +55,39 @@ class StylesExtractor:
             return p_info
 
         # size
-        size = style.sz
-        if size:
+        if style.sz:
             try:
-                p_info['size'] = int(size['w:val'])
+                p_info['size'] = int(style.sz['w:val'])
             except KeyError:
                 pass
         # indent
         # TODO different attributes for indent
-        indent = style.ind
-        if indent:
+        if style.ind:
             try:
-                p_info['indent'] = int(indent['w:firstLine'])
+                p_info['indent'] = int(style.ind['w:firstLine'])
             except KeyError:
                 try:
-                    p_info['indent'] = int(indent['w:left'])
+                    p_info['indent'] = int(style.ind['w:left'])
                 except KeyError:
                     pass
         # bold
-        bold = style.b
-        if bold:
+        if style.b:
             try:
-                p_info['bold'] = bold['w:val']
+                p_info['bold'] = style.b['w:val']
             except KeyError:
                 p_info['bold'] = '1'
 
         # italic
-        italic = style.i
-        if italic:
+        if style.i:
             try:
-                p_info['italic'] = italic['w:val']
+                p_info['italic'] = style.i['w:val']
             except KeyError:
                 p_info['italic'] = '1'
 
         # underlined
-        underlined = style.u
-        if underlined:
+        if style.u:
             try:
-                p_info['underlined'] = underlined['w:val']
+                p_info['underlined'] = style.u['w:val']
             except KeyError:
                 pass
         return p_info

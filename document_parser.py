@@ -5,8 +5,6 @@ from styles_extractor import StylesExtractor
 
 class DocumentParser:
 
-    # TODO more complex structure extraction
-
     def __init__(self, file):
         # file - name of the docx file
         # TODO check ending with .docx
@@ -14,13 +12,13 @@ class DocumentParser:
         self.document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
         self.styles_extractor = StylesExtractor(BeautifulSoup(document.read('word/styles.xml'), 'xml'))
         self.data = []
-        self.default_p_info = self.styles_extractor.parse(None)  # default style
-        self.default_p_info['text'] = ''
+        self.default_p_info = {'text': '', 'properties': [[0, 0, self.styles_extractor.parse(None)]]}  # default style
         self.cur_p_info = self.default_p_info.copy()
 
     def parse(self):
         # returns the list of dictionaries for each paragraph
-        # [{size, indent, bold, italic, underlined, text}, ...]
+        # [{"text": "", "properties": [[start, end, {indent, size, bold, italic, underlined}], ...] }, ...]
+        # start, end - character's positions begin with 0, end isn't included
 
         body = self.document_bs.body
         if not body:
@@ -29,71 +27,105 @@ class DocumentParser:
         for paragraph in body:
 
             if paragraph.pStyle:
-                self.cur_p_info = self.styles_extractor.parse(paragraph.pStyle['w:val'])
-                self.cur_p_info['text'] = ''
+                style_info = self.styles_extractor.parse(paragraph.pStyle['w:val'])
             else:
-                self.cur_p_info = self.default_p_info.copy()
+                style_info = self.default_p_info['properties'][0][2]
+            self.cur_p_info = {'text': '', 'properties': []}
 
-            # size
-            if paragraph.sz:
-                try:
-                    self.cur_p_info['size'] = paragraph.sz['w:val']
-                except KeyError:
-                    pass
-            self.cur_p_info['size'] = int(self.cur_p_info['size'])
             # indent
             # TODO different attributes for indent
             # TODO more accurate with previous paragraphs
-            indent = paragraph.ind
-            if indent:
+            # indent is common for all runs in the paragraph
+            indent = style_info['indent']
+            if paragraph.ind:
                 try:
-                    self.cur_p_info['indent'] = int(indent['w:firstLine'])
+                    indent = int(paragraph.ind['w:firstLine'])
                 except KeyError:
                     try:
-                        self.cur_p_info['indent'] = int(indent['w:left'])
+                        indent = int(paragraph.ind['w:left'])
                     except KeyError:
                         pass
 
-            # bold
-            # tag b in styles without value means '1'
-            # tag b in pPr without value means '1'
-            # TODO different values the same attribute in the same paragraph
-            if paragraph.pPr:
-                self.set_tag_value(paragraph.pPr.b, 'bold')
-
-            # italic
-            if paragraph.pPr:
-                self.set_tag_value(paragraph.pPr.i, 'italic')
-
-            # underlined
-            if paragraph.u:
-                try:
-                    self.cur_p_info['underlined'] = paragraph.u['w:val']
-                except KeyError:
-                    pass
-
             raw_list = paragraph.find_all('w:r')
+            prev_properties = style_info.copy()
             for raw in raw_list:
                 # text
-                t = raw.t
-                if t:
-                    if t.text:
-                        if not self.cur_p_info['text']:
-                            self.cur_p_info['text'] = t.text
-                        else:
-                            self.cur_p_info['text'] += t.text
+                if not raw.t or not raw.t.text:
+                    continue
+                start, end = len(self.cur_p_info['text']), len(self.cur_p_info['text']) + len(raw.t.text)
+                if not self.cur_p_info['text']:
+                    self.cur_p_info['text'] = raw.t.text
+                else:
+                    self.cur_p_info['text'] += raw.t.text
+
+                # size
+                # 1) properties in style
+                # 2) properties in the paragraph
+                # 3) properties in the raw
+                size = style_info['size']
+                if paragraph.pPr:
+                    res = self.get_tag_value(paragraph.pPr.sz)
+                    if res:
+                        size = res
+                res = self.get_tag_value(raw.sz)
+                if res:
+                    size = res
+                size = int(size)
+
+                # bold
+                # tag b in styles without value means '1'
+                # tag b in pPr without value means '1'
+                bold = style_info['bold']
+                if paragraph.pPr:
+                    res = self.get_tag_value(paragraph.pPr.b, '1')
+                    if res:
+                        bold = res
+                res = self.get_tag_value(raw.b, '1')
+                if res:
+                    bold = res
+
+                # italic
+                italic = style_info['italic']
+                if paragraph.pPr:
+                    res = self.get_tag_value(paragraph.pPr.i, '1')
+                    if res:
+                        italic = res
+                res = self.get_tag_value(raw.i, '1')
+                if res:
+                    italic = res
+
+                # underlined
+                underlined = style_info['underlined']
+                if paragraph.pPr:
+                    res = self.get_tag_value(paragraph.pPr.u, 'none')
+                    if res:
+                        underlined = res
+                res = self.get_tag_value(raw.u, 'none')
+                if res:
+                    underlined = res
+
+                cur_properties = {'indent': indent, 'size': size,
+                                  'bold': bold, 'italic': italic, 'underlined': underlined}
+                if prev_properties == cur_properties and self.cur_p_info['properties']:
+                    self.cur_p_info['properties'][-1][1] = end  # change the end of such style
+                else:
+                    self.cur_p_info['properties'].append([start, end, cur_properties])
+                    prev_properties = cur_properties
 
             self.data.append(self.cur_p_info.copy())
 
         return self.data
 
-    def set_tag_value(self, tag, tag_name):
-        # TODO more accurate with previous paragraphs
+    @staticmethod
+    def get_tag_value(tag, default=None):
+        value = None
         if tag:
             try:
-                self.cur_p_info[tag_name] = tag['w:val']
+                value = tag['w:val']
             except KeyError:
-                self.cur_p_info[tag_name] = '1'
+                if default:
+                    value = default
+        return value
 
 
 if __name__ == "__main__":
@@ -101,4 +133,7 @@ if __name__ == "__main__":
     p = DocumentParser(filename)
     lines_info = p.parse()
     for line in lines_info:
-        print(line)
+        print(line['text'])
+        for raw_info in line['properties']:
+            print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]))
+        print()
