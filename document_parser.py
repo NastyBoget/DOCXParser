@@ -5,6 +5,8 @@ from styles_extractor import StylesExtractor
 
 class DocumentParser:
 
+    # TODO more complex structure extraction
+
     def __init__(self, file):
         # file - name of the docx file
         # TODO check ending with .docx
@@ -14,29 +16,30 @@ class DocumentParser:
         self.data = []
         self.default_p_info = self.styles_extractor.parse(None)  # default style
         self.default_p_info['text'] = ''
-        self.cur_p_info = self.default_p_info
-        self.prev_p_info = None
+        self.cur_p_info = self.default_p_info.copy()
 
     def parse(self):
         # returns the list of dictionaries for each paragraph
         # [{size, indent, bold, italic, underlined, text}, ...]
-        # assumptions:
-        # tag b in styles without value means '1'
-        # tag b in pPr without value means '1'
+
         body = self.document_bs.body
         if not body:
             return self.data
 
         for paragraph in body:
-            self.prev_p_info = self.cur_p_info
-            self.cur_p_info = self.default_p_info.copy()
 
             if paragraph.pStyle:
                 self.cur_p_info = self.styles_extractor.parse(paragraph.pStyle['w:val'])
                 self.cur_p_info['text'] = ''
+            else:
+                self.cur_p_info = self.default_p_info.copy()
+
             # size
-            size = paragraph.sz
-            self.set_tag_value(size, 'size')
+            if paragraph.sz:
+                try:
+                    self.cur_p_info['size'] = paragraph.sz['w:val']
+                except KeyError:
+                    pass
             self.cur_p_info['size'] = int(self.cur_p_info['size'])
             # indent
             # TODO different attributes for indent
@@ -50,23 +53,24 @@ class DocumentParser:
                         self.cur_p_info['indent'] = int(indent['w:left'])
                     except KeyError:
                         pass
-            else:
-                self.cur_p_info['indent'] = self.prev_p_info['indent']
 
             # bold
+            # tag b in styles without value means '1'
+            # tag b in pPr without value means '1'
             # TODO different values the same attribute in the same paragraph
-            bold = paragraph.b
-            self.set_tag_value(bold, 'bold')
-            # TODO check the assumption
             if paragraph.pPr:
-                if paragraph.pPr.b:
-                    self.cur_p_info['bold'] = '1'
+                self.set_tag_value(paragraph.pPr.b, 'bold')
+
             # italic
-            italic = paragraph.i
-            self.set_tag_value(italic, 'italic')
+            if paragraph.pPr:
+                self.set_tag_value(paragraph.pPr.i, 'italic')
+
             # underlined
-            underlined = paragraph.u
-            self.set_tag_value(underlined, 'underlined')
+            if paragraph.u:
+                try:
+                    self.cur_p_info['underlined'] = paragraph.u['w:val']
+                except KeyError:
+                    pass
 
             raw_list = paragraph.find_all('w:r')
             for raw in raw_list:
@@ -89,9 +93,7 @@ class DocumentParser:
             try:
                 self.cur_p_info[tag_name] = tag['w:val']
             except KeyError:
-                pass
-        else:
-            self.cur_p_info[tag_name] = self.prev_p_info[tag_name]
+                self.cur_p_info[tag_name] = '1'
 
 
 if __name__ == "__main__":

@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:document mc:Ignorable="w14" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+ <w:body>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     The first line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="24"/>
+     <w:szCs w:val="24"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:sz w:val="24"/>
+     <w:szCs w:val="24"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     The second line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     The third line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+    </w:rPr>
+   </w:pPr>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     5 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     6 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     7 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:sz w:val="28"/>
+     <w:szCs w:val="28"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:sz w:val="28"/>
+     <w:szCs w:val="28"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     8 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:outline w:val="0"/>
+     <w:color w:val="5b5b5b"/>
+     <w:sz w:val="28"/>
+     <w:szCs w:val="28"/>
+     <w14:textFill>
+      <w14:solidFill>
+       <w14:srgbClr w14:val="5B5B5B"/>
+      </w14:solidFill>
+     </w14:textFill>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:outline w:val="0"/>
+     <w:color w:val="5b5b5b"/>
+     <w:sz w:val="28"/>
+     <w:szCs w:val="28"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+     <w14:textFill>
+      <w14:solidFill>
+       <w14:srgbClr w14:val="5B5B5B"/>
+      </w14:solidFill>
+     </w14:textFill>
+    </w:rPr>
+    <w:t>
+     10 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     11 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     12 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:u w:val="single"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:u w:val="single"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     13 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:rPr>
+     <w:strike w:val="1"/>
+     <w:dstrike w:val="0"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:strike w:val="1"/>
+     <w:dstrike w:val="0"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     14 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:jc w:val="center"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     15 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:jc w:val="right"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     16 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     17 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:bidi w:val="0"/>
+    <w:ind w:left="720"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     18 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:bidi w:val="0"/>
+    <w:ind w:left="1440"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     19 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:bidi w:val="0"/>
+    <w:ind w:left="720"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     20 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     21
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     22 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     23 line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="4"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     24
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     line
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     25
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     строка
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:tbl>
+   <w:tblPr>
+    <w:tblW w:type="dxa" w:w="8951"/>
+    <w:jc w:val="left"/>
+    <w:tblInd w:type="dxa" w:w="108"/>
+    <w:tblBorders>
+     <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+     <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+     <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+     <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+     <w:insideH w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+     <w:insideV w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+    </w:tblBorders>
+    <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+    <w:tblLayout w:type="fixed"/>
+   </w:tblPr>
+   <w:tblGrid>
+    <w:gridCol w:w="2237"/>
+    <w:gridCol w:w="2238"/>
+    <w:gridCol w:w="2238"/>
+    <w:gridCol w:w="2238"/>
+   </w:tblGrid>
+   <w:tr>
+    <w:tblPrEx>
+     <w:shd w:color="auto" w:fill="bdc0bf" w:val="clear"/>
+    </w:tblPrEx>
+    <w:trPr>
+     <w:trHeight w:hRule="atLeast" w:val="251"/>
+     <w:tblHeader/>
+    </w:trPr>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="bdc0bf" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:keepNext w:val="0"/>
+       <w:keepLines w:val="0"/>
+       <w:pageBreakBefore w:val="0"/>
+       <w:widowControl w:val="1"/>
+       <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+       <w:suppressAutoHyphens w:val="0"/>
+       <w:bidi w:val="0"/>
+       <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+       <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+       <w:jc w:val="right"/>
+       <w:outlineLvl w:val="9"/>
+       <w:rPr>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:b w:val="1"/>
+        <w:bCs w:val="1"/>
+        <w:i w:val="0"/>
+        <w:iCs w:val="0"/>
+        <w:caps w:val="0"/>
+        <w:smallCaps w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:outline w:val="0"/>
+        <w:color w:val="000000"/>
+        <w:spacing w:val="0"/>
+        <w:kern w:val="0"/>
+        <w:position w:val="0"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none"/>
+        <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+        <w:vertAlign w:val="baseline"/>
+        <w:rtl w:val="0"/>
+        <w14:textOutline>
+         <w14:noFill/>
+        </w14:textOutline>
+        <w14:textFill>
+         <w14:solidFill>
+          <w14:srgbClr w14:val="000000"/>
+         </w14:solidFill>
+        </w14:textFill>
+       </w:rPr>
+       <w:t>
+        1
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="bdc0bf" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:keepNext w:val="0"/>
+       <w:keepLines w:val="0"/>
+       <w:pageBreakBefore w:val="0"/>
+       <w:widowControl w:val="1"/>
+       <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+       <w:suppressAutoHyphens w:val="0"/>
+       <w:bidi w:val="0"/>
+       <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+       <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+       <w:jc w:val="right"/>
+       <w:outlineLvl w:val="9"/>
+       <w:rPr>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:b w:val="1"/>
+        <w:bCs w:val="1"/>
+        <w:i w:val="0"/>
+        <w:iCs w:val="0"/>
+        <w:caps w:val="0"/>
+        <w:smallCaps w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:outline w:val="0"/>
+        <w:color w:val="000000"/>
+        <w:spacing w:val="0"/>
+        <w:kern w:val="0"/>
+        <w:position w:val="0"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none"/>
+        <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+        <w:vertAlign w:val="baseline"/>
+        <w:rtl w:val="0"/>
+        <w14:textOutline>
+         <w14:noFill/>
+        </w14:textOutline>
+        <w14:textFill>
+         <w14:solidFill>
+          <w14:srgbClr w14:val="000000"/>
+         </w14:solidFill>
+        </w14:textFill>
+       </w:rPr>
+       <w:t>
+        2
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="bdc0bf" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:keepNext w:val="0"/>
+       <w:keepLines w:val="0"/>
+       <w:pageBreakBefore w:val="0"/>
+       <w:widowControl w:val="1"/>
+       <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+       <w:suppressAutoHyphens w:val="0"/>
+       <w:bidi w:val="0"/>
+       <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+       <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+       <w:jc w:val="right"/>
+       <w:outlineLvl w:val="9"/>
+       <w:rPr>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:b w:val="1"/>
+        <w:bCs w:val="1"/>
+        <w:i w:val="0"/>
+        <w:iCs w:val="0"/>
+        <w:caps w:val="0"/>
+        <w:smallCaps w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:outline w:val="0"/>
+        <w:color w:val="000000"/>
+        <w:spacing w:val="0"/>
+        <w:kern w:val="0"/>
+        <w:position w:val="0"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none"/>
+        <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+        <w:vertAlign w:val="baseline"/>
+        <w:rtl w:val="0"/>
+        <w14:textOutline>
+         <w14:noFill/>
+        </w14:textOutline>
+        <w14:textFill>
+         <w14:solidFill>
+          <w14:srgbClr w14:val="000000"/>
+         </w14:solidFill>
+        </w14:textFill>
+       </w:rPr>
+       <w:t>
+        3
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="bdc0bf" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:keepNext w:val="0"/>
+       <w:keepLines w:val="0"/>
+       <w:pageBreakBefore w:val="0"/>
+       <w:widowControl w:val="1"/>
+       <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+       <w:suppressAutoHyphens w:val="0"/>
+       <w:bidi w:val="0"/>
+       <w:spacing w:after="0" w:before="0" w:line="240" w:lineRule="auto"/>
+       <w:ind w:firstLine="0" w:left="0" w:right="0"/>
+       <w:jc w:val="right"/>
+       <w:outlineLvl w:val="9"/>
+       <w:rPr>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:b w:val="1"/>
+        <w:bCs w:val="1"/>
+        <w:i w:val="0"/>
+        <w:iCs w:val="0"/>
+        <w:caps w:val="0"/>
+        <w:smallCaps w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:outline w:val="0"/>
+        <w:color w:val="000000"/>
+        <w:spacing w:val="0"/>
+        <w:kern w:val="0"/>
+        <w:position w:val="0"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none"/>
+        <w:shd w:color="auto" w:fill="auto" w:val="nil"/>
+        <w:vertAlign w:val="baseline"/>
+        <w:rtl w:val="0"/>
+        <w14:textOutline>
+         <w14:noFill/>
+        </w14:textOutline>
+        <w14:textFill>
+         <w14:solidFill>
+          <w14:srgbClr w14:val="000000"/>
+         </w14:solidFill>
+        </w14:textFill>
+       </w:rPr>
+       <w:t>
+        4
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+   </w:tr>
+   <w:tr>
+    <w:tblPrEx>
+     <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+    </w:tblPrEx>
+    <w:trPr>
+     <w:trHeight w:hRule="atLeast" w:val="251"/>
+    </w:trPr>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="dcdcdc" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:pStyle w:val="Table Style 1"/>
+       <w:bidi w:val="0"/>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+       <w:t>
+        V1
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:pStyle w:val="Table Style 2"/>
+       <w:bidi w:val="0"/>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+       <w:t>
+        V2
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:pStyle w:val="Table Style 2"/>
+       <w:bidi w:val="0"/>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+       <w:t>
+        V3
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+    <w:tc>
+     <w:tcPr>
+      <w:tcW w:type="dxa" w:w="2237"/>
+      <w:tcBorders>
+       <w:top w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="6" w:val="single"/>
+       <w:left w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:bottom w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+       <w:right w:color="000000" w:frame="0" w:shadow="0" w:space="0" w:sz="2" w:val="single"/>
+      </w:tcBorders>
+      <w:shd w:color="auto" w:fill="auto" w:val="clear"/>
+      <w:tcMar>
+       <w:top w:type="dxa" w:w="80"/>
+       <w:left w:type="dxa" w:w="80"/>
+       <w:bottom w:type="dxa" w:w="80"/>
+       <w:right w:type="dxa" w:w="80"/>
+      </w:tcMar>
+      <w:vAlign w:val="top"/>
+     </w:tcPr>
+     <w:p>
+      <w:pPr>
+       <w:pStyle w:val="Table Style 2"/>
+       <w:bidi w:val="0"/>
+      </w:pPr>
+      <w:r>
+       <w:rPr>
+        <w:rFonts w:ascii="Helvetica Neue" w:cs="Arial Unicode MS" w:eastAsia="Arial Unicode MS" w:hAnsi="Helvetica Neue"/>
+        <w:rtl w:val="0"/>
+       </w:rPr>
+       <w:t>
+        V4
+       </w:t>
+      </w:r>
+     </w:p>
+    </w:tc>
+   </w:tr>
+  </w:tbl>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="ru-RU"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     26
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="ru-RU"/>
+    </w:rPr>
+    <w:t>
+     строка
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:sectPr>
+   <w:headerReference r:id="rId4" w:type="default"/>
+   <w:footerReference r:id="rId5" w:type="default"/>
+   <w:pgSz w:h="16838" w:orient="portrait" w:w="11906"/>
+   <w:pgMar w:bottom="1134" w:footer="850" w:header="709" w:left="1134" w:right="1134" w:top="1134"/>
+   <w:bidi w:val="0"/>
+  </w:sectPr>
+ </w:body>
+</w:document>

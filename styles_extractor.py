@@ -49,7 +49,7 @@ class StylesExtractor:
             p_info = {'size': 0, 'indent': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'}
         else:
             style = self.find_style(style_id)
-            p_info = self.default_info
+            p_info = self.default_info.copy()
         if not style:
             return p_info
 
@@ -72,13 +72,12 @@ class StylesExtractor:
                 except KeyError:
                     pass
         # bold
-        # TODO find out the behaviour if there isn't value attribute
         bold = style.b
         if bold:
             try:
                 p_info['bold'] = bold['w:val']
             except KeyError:
-                p_info['bold'] = '1'  # TODO check behaviour
+                p_info['bold'] = '1'
 
         # italic
         italic = style.i
@@ -86,7 +85,7 @@ class StylesExtractor:
             try:
                 p_info['italic'] = italic['w:val']
             except KeyError:
-                pass
+                p_info['italic'] = '1'
 
         # underlined
         underlined = style.u

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:document mc:Ignorable="w14" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+ <w:body>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="1"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     One
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="1"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     Two
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="1"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     Two-one
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="1"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     Two-two
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Body"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="1"/>
+    </w:numPr>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+    <w:t>
+     Three
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Default"/>
+    <w:tabs>
+     <w:tab w:pos="1276" w:val="left"/>
+     <w:tab w:pos="1416" w:val="left"/>
+     <w:tab w:pos="2124" w:val="left"/>
+     <w:tab w:pos="2832" w:val="left"/>
+     <w:tab w:pos="3540" w:val="left"/>
+     <w:tab w:pos="4248" w:val="left"/>
+     <w:tab w:pos="4956" w:val="left"/>
+     <w:tab w:pos="5664" w:val="left"/>
+     <w:tab w:pos="6372" w:val="left"/>
+     <w:tab w:pos="7080" w:val="left"/>
+     <w:tab w:pos="7788" w:val="left"/>
+     <w:tab w:pos="8496" w:val="left"/>
+     <w:tab w:pos="9204" w:val="left"/>
+    </w:tabs>
+    <w:bidi w:val="0"/>
+    <w:spacing w:before="0"/>
+    <w:ind w:firstLine="709" w:left="0" w:right="0"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+     <w:u w:color="000000"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="ru-RU"/>
+    </w:rPr>
+   </w:pPr>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Default"/>
+    <w:tabs>
+     <w:tab w:pos="1276" w:val="left"/>
+     <w:tab w:pos="1416" w:val="left"/>
+     <w:tab w:pos="2124" w:val="left"/>
+     <w:tab w:pos="2832" w:val="left"/>
+     <w:tab w:pos="3540" w:val="left"/>
+     <w:tab w:pos="4248" w:val="left"/>
+     <w:tab w:pos="4956" w:val="left"/>
+     <w:tab w:pos="5664" w:val="left"/>
+     <w:tab w:pos="6372" w:val="left"/>
+     <w:tab w:pos="7080" w:val="left"/>
+     <w:tab w:pos="7788" w:val="left"/>
+     <w:tab w:pos="8496" w:val="left"/>
+     <w:tab w:pos="9204" w:val="left"/>
+    </w:tabs>
+    <w:bidi w:val="0"/>
+    <w:spacing w:before="0"/>
+    <w:ind w:firstLine="709" w:left="0" w:right="0"/>
+    <w:jc w:val="both"/>
+    <w:outlineLvl w:val="0"/>
+    <w:rPr>
+     <w:rtl w:val="0"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="26"/>
+     <w:szCs w:val="26"/>
+     <w:u w:color="000000"/>
+     <w:rtl w:val="0"/>
+     <w:lang w:val="ru-RU"/>
+    </w:rPr>
+   </w:r>
+  </w:p>
+  <w:sectPr>
+   <w:headerReference r:id="rId4" w:type="default"/>
+   <w:footerReference r:id="rId5" w:type="default"/>
+   <w:pgSz w:h="16838" w:orient="portrait" w:w="11906"/>
+   <w:pgMar w:bottom="1134" w:footer="850" w:header="709" w:left="1134" w:right="1134" w:top="1134"/>
+   <w:bidi w:val="0"/>
+  </w:sectPr>
+ </w:body>
+</w:document>
