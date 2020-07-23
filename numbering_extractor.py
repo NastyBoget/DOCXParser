@@ -4,7 +4,9 @@ from collections import defaultdict
 from styles_extractor import StylesExtractor
 import re
 
+# pages 691 - 733 in the documentation
 
+# page 1424
 numFmtList = {"bullet": "●",  # value in lvlText
               "decimal": "1",  # 1, 2, 3, ..., 10, 11, 12, ...
               "lowerLetter": "a",  # a, b, c, ..., y, z, aa, bb, cc, ..., yy, zz, aaa, bbb, ccc, ...
@@ -16,35 +18,40 @@ numFmtList = {"bullet": "●",  # value in lvlText
               "upperRoman": "I",  # I, II, III, IV, ..., XVIII, XIX, XX, XXI, ...
               }
 
-getSuffix = {"nothing": "",  # page 1402
+# page 1402
+getSuffix = {"nothing": "",
              "space": " ",
              "tab": "\t"}
 
 
 class AbstractNum:
 
-    def __init__(self, tree):
+    def __init__(self, tree, styles_extractor):
         # tree - BeautifulSoup tree with abstractNum content
-        self.tree = tree
+        # styles - StylesExtractor
+        self.styles_extractor = styles_extractor
         self.abstract_num_id = tree['w:abstractNumId']
-        self.lvl_list = tree.find_all('w:lvl')
         self.properties = {}  # properties for all levels
-        # properties for each list level {level number: properties}
-        self.levels = {}
-        self.parse()
 
-    def parse(self):
+        if tree.numStyleLink:
+            style_id = tree.numStyleLink['w:val']
+            style = self.styles_extractor.styles.find('w:style', attrs={'w:styleId': style_id, 'w:type': 'numbering'})
+            self.properties['numId'] = style.numId['w:val']  # numId -> abstractNumId of the other numbering
+        else:
+            self.properties['numId'] = None
         # TODO extract style
-        if self.tree.numStyleLink:
-            self.properties['style'] = self.tree.numStyleLink['w:val']
-        if self.tree.styleLink:
-            self.properties['style'] = self.tree.styleLink['w:val']
+        if tree.styleLink:
+            self.properties['style'] = tree.styleLink['w:val']
         try:
-            if self.tree['restartNumberingAfterBreak']:
-                self.properties['restart'] = bool(int(self.tree['restartNumberingAfterBreak']))
+            if tree['restartNumberingAfterBreak']:
+                self.properties['restart'] = bool(int(tree['restartNumberingAfterBreak']))
         except KeyError:
             self.properties['restart'] = True
+        # properties for each list level {level number: properties}
+        self.levels = {}
+        self.parse(tree.find_all('w:lvl'))
 
+    def parse(self, lvl_list):
         # isLgl (only mention)
         # lvlText (val="some text %num some text")
         # numFmt (val="bullet", "decimal")
@@ -55,50 +62,59 @@ class AbstractNum:
         # suff (w:val="nothing", "tab" - default, "space")
         # lvlJc (Justification, val="start", "end")
         # lvlRestart (w:val="0")
-        for lvl in self.lvl_list:
-            lvl_info = dict()
-            lvl_info['lvlText'] = lvl.lvlText['w:val']
+        for lvl in lvl_list:
+            ilvl = lvl['w:ilvl']
+            if ilvl not in self.levels:
+                self.levels[ilvl] = {}
+            if lvl.lvlText:
+                self.levels[ilvl]['lvlText'] = lvl.lvlText['w:val']
+
             if lvl.isLgl:
-                lvl_info['numFmt'] = 'decimal'
+                self.levels[ilvl]['numFmt'] = 'decimal'
             else:
-                lvl_info['numFmt'] = lvl.numFmt['w:val']
-            lvl_info['start'] = int(lvl.start['w:val'])
+                self.levels[ilvl]['numFmt'] = lvl.numFmt['w:val']
+
+            if lvl.start:
+                self.levels[ilvl]['start'] = int(lvl.start['w:val'])
+
             if lvl.lvlRestart:
-                lvl_info['lvlRestart'] = bool(int(lvl.lvlRestart['w:val']))
+                self.levels[ilvl]['lvlRestart'] = bool(int(lvl.lvlRestart['w:val']))
             else:
-                lvl_info['lvlRestart'] = True
+                self.levels[ilvl]['lvlRestart'] = True
             # TODO extract information from paragraphs and raws properties
             if lvl.suff:
-                lvl_info['suff'] = getSuffix[lvl.suff['w:val']]
+                self.levels[ilvl]['suff'] = getSuffix[lvl.suff['w:val']]
             else:
-                lvl_info['suff'] = getSuffix["tab"]
-            if lvl_info['numFmt'] == "bullet":
-                lvl_info['firstItem'] = lvl_info['lvlText']
-            else:
-                lvl_info['firstItem'] = numFmtList[lvl_info['numFmt']]
-            self.levels[lvl['w:ilvl']] = lvl_info.copy()
+                self.levels[ilvl]['suff'] = getSuffix["tab"]
 
-    def get_properties(self):
-        return self.properties
+            if 'numFmt' in self.levels[ilvl] and self.levels[ilvl]['numFmt'] == "bullet":
+                self.levels[ilvl]['firstItem'] = self.levels[ilvl]['lvlText']
+            elif 'numFmt' in self.levels[ilvl]:
+                self.levels[ilvl]['firstItem'] = numFmtList[self.levels[ilvl]['numFmt']]
 
-    def get_levels(self):
-        return self.levels
+
+class Num(AbstractNum):
+
+    def __init__(self, num_id, abstract_num_list, num_list, styles_extractor):
+        # abstract_num_list - dictionary with abstractNum BeautifulSoup trees
+        # num_list - dictionary with num BeautifulSoup trees
+        self.num_id = num_id
+        num_tree = num_list[num_id]
+        abstract_num_tree = abstract_num_list[num_tree.abstractNumId['w:val']]
+        super().__init__(abstract_num_tree, styles_extractor)  # create properties
+        # extract the information from numStyleLink
+        while self.properties['numId']:
+            # extract levels info from Num but not from AbstractNum
+            abstract_num_id = num_list[self.properties['numId']].abstractNumId['w:val']
+            abstract_num_tree = abstract_num_list[abstract_num_id]
+            super().__init__(abstract_num_tree, styles_extractor)
+
+        # override some of abstractNum properties
+        if num_tree.lvlOverride:
+            self.parse(num_tree.lvlOverride.find_all('w:lvl'))
 
     def get_level_info(self, level_num):
         return self.levels[level_num]
-
-
-class Num:
-
-    def __init__(self, tree):
-        # tree - BeautifulSoup tree with num content
-        self.num_id = tree['w:numId']
-        self.abstract_num_id = tree.abstractNumId['w:val']
-        self.lvl_override = tree.lvlOverride
-        # TODO lvlOverride processing
-
-    def get_abstract_num_id(self):
-        return self.abstract_num_id
 
 
 class NumberingExtractor:
@@ -121,28 +137,27 @@ class NumberingExtractor:
         self.numerations = defaultdict(int)  # {(numId, ilvl): current number for list element}
         self.prev_lvl = None  # previous list level in the document
 
-        # dictionary with abstractNum properties
-        self.abstract_num_list = {abstract_num['w:abstractNumId']: AbstractNum(abstract_num)
-                                  for abstract_num in xml.find_all('w:abstractNum')}
+        abstract_num_list = {abstract_num['w:abstractNumId']: abstract_num
+                             for abstract_num in xml.find_all('w:abstractNum')}
+        num_list = {num['w:numId']: num for num in xml.find_all('w:num')}
 
-        try:
-            # dictionary with num properties
-            self.num_list = {num['w:numId']: Num(num) for num in xml.find_all('w:num')}
-        except KeyError:
-            raise Exception("wrong numbering.xml file")
+        # dictionary with num properties
+        self.num_list = {num_id: Num(num_id, abstract_num_list, num_list, styles_extractor) for num_id in num_list}
 
     def get_list_text(self, ilvl, num_id):
         if num_id not in self.num_list:
             return ""
 
-        abstract_num = self.abstract_num_list[self.num_list[num_id].get_abstract_num_id()]
-        lvl_info = abstract_num.get_level_info(ilvl)
+        lvl_info = self.num_list[num_id].get_level_info(ilvl)
 
+        # TODO more accurate restarting
         if self.prev_lvl:
+            # TODO prev level may be with other numId!!!
+            prev_lvl_info = self.num_list[num_id].get_level_info(self.prev_lvl)
             if self.prev_lvl >= ilvl:
-                self.numerations[(num_id, ilvl)] += 1  # not count lvlRestart
-                if self.prev_lvl > ilvl and lvl_info['lvlRestart']:
-                    self.numerations[(num_id, self.prev_lvl)] = 0
+                self.numerations[(num_id, ilvl)] += 1
+                if self.prev_lvl > ilvl and prev_lvl_info['lvlRestart']:
+                    self.numerations[(num_id, self.prev_lvl)] = prev_lvl_info['start'] - 1
             else:
                 self.numerations[(num_id, ilvl)] = lvl_info['start']
         else:
@@ -160,16 +175,13 @@ class NumberingExtractor:
         return text
 
     def get_next_number(self, num_id, level):
-        # level = ilvl+1
+        # level = ilvl + 1
         ilvl = str(int(level) - 1)
-        abstract_num = self.abstract_num_list[self.num_list[num_id].get_abstract_num_id()]
-        lvl_info = abstract_num.get_level_info(ilvl)
+        lvl_info = self.num_list[num_id].get_level_info(ilvl)
 
-        if self.numerations[(num_id, ilvl)]:
-            shift = self.numerations[(num_id, ilvl)] - 1
-        else:
+        if not self.numerations[(num_id, ilvl)]:
             self.numerations[(num_id, ilvl)] += 1
-            shift = 0
+        shift = self.numerations[(num_id, ilvl)] - 1
 
         # TODO more types of lists
         if lvl_info['numFmt'] == "bullet":
@@ -180,7 +192,7 @@ class NumberingExtractor:
             num_fmt = chr(ord(lvl_info['firstItem']) + shift)
         return num_fmt
 
-    def parse(self, xml):
+    def parse(self, xml):  # TODO
         # xml - # xml - BeautifulSoup tree with document.xml
         # the method finds lists elements in the document and extracts the text and properties of these elements
         # returns dict:
@@ -192,18 +204,22 @@ class NumberingExtractor:
 if __name__ == "__main__":
     filename = input()
     document = zipfile.ZipFile('examples/' + filename)
-    numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
-    document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
-    styles_bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
-    se = StylesExtractor(styles_bs)
-    ne = NumberingExtractor(numbering_bs, se)
-    for paragraph in document_bs.body:
-        if paragraph.numPr:
-            ilvl = paragraph.numPr.ilvl['w:val']
-            numId = paragraph.numPr.numId['w:val']
-            list_text = ne.get_list_text(ilvl, numId)
-            paragraph_text = map(lambda x: x.text, paragraph.find_all('w:t'))
-            res = ""
-            for item in paragraph_text:
-                res += item
-            print(list_text + res)
+    try:
+        numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
+    except KeyError:
+        print(document.namelist())
+    else:
+        document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
+        styles_bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
+        se = StylesExtractor(styles_bs)
+        ne = NumberingExtractor(numbering_bs, se)
+        for paragraph in document_bs.body:
+            if paragraph.numPr:
+                ilvl = paragraph.numPr.ilvl['w:val']
+                numId = paragraph.numPr.numId['w:val']
+                list_text = ne.get_list_text(ilvl, numId)
+                paragraph_text = map(lambda x: x.text, paragraph.find_all('w:t'))
+                res = ""
+                for item in paragraph_text:
+                    res += item
+                print(list_text + res)
