@@ -118,7 +118,7 @@ class NumberingExtractor:
         else:
             raise Exception("styles extractor must not be empty")
 
-        self.numerations = defaultdict(int)  # {numId: current number for list element}
+        self.numerations = defaultdict(int)  # {(numId, ilvl): current number for list element}
         self.prev_lvl = None  # previous list level in the document
 
         # dictionary with abstractNum properties
@@ -139,10 +139,12 @@ class NumberingExtractor:
         lvl_info = abstract_num.get_level_info(ilvl)
 
         if self.prev_lvl:
-            # if self.prev_lvl >= ilvl:
-            self.numerations[(num_id, ilvl)] += 1  # not count lvlRestart
-            # else:
-            #     self.numerations[(num_id, ilvl)] = lvl_info['start']
+            if self.prev_lvl >= ilvl:
+                self.numerations[(num_id, ilvl)] += 1  # not count lvlRestart
+                if self.prev_lvl > ilvl and lvl_info['lvlRestart']:
+                    self.numerations[(num_id, self.prev_lvl)] = 0
+            else:
+                self.numerations[(num_id, ilvl)] = lvl_info['start']
         else:
             self.numerations[(num_id, ilvl)] = lvl_info['start']
         self.prev_lvl = ilvl
@@ -151,12 +153,15 @@ class NumberingExtractor:
 
         levels = re.findall(r'%\d+', text)
         for level in levels:
+            # level = ilvl + 1
             level = level[1:]
-            text = re.sub(r'\d+%', self.get_next_number(num_id, level), text[::-1], count=1)[::-1]
+            text = re.sub(r'%\d+', self.get_next_number(num_id, level), text, count=1)
         text += lvl_info['suff']
         return text
 
-    def get_next_number(self, num_id, ilvl):
+    def get_next_number(self, num_id, level):
+        # level = ilvl+1
+        ilvl = str(int(level) - 1)
         abstract_num = self.abstract_num_list[self.num_list[num_id].get_abstract_num_id()]
         lvl_info = abstract_num.get_level_info(ilvl)
 
