@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:document mc:Ignorable="w14 w15 w16se wp14" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+ <w:body>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00372311" w:rsidRDefault="00372311"/>
+  <w:p w:rsidP="00E26009" w:rsidR="00E26009" w:rsidRDefault="00E26009">
+   <w:pPr>
+    <w:pStyle w:val="1"/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:lang w:val="en-US"/>
+    </w:rPr>
+    <w:t>
+     Header
+    </w:t>
+   </w:r>
+   <w:r w:rsidR="00DF3B60">
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     НАИМЕНОВАНИЕ, ШИФР ОКР, ОСНОВАНИЕ, ИСПОЛНИТЕЛЬ И СРОКИ ВЫПОЛНЕНИЯ ОКР
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     ЦЕЛЬ ВЫПОЛНЕНИЯ ОКР, НАИМЕНОВАНИЕ И ИНДЕКС ИЗДЕЛИЯ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Тактико-технические требования к изделию
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Состав изделия
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования назначения
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="2"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к возможностям и характеристикам Пользовательской подсистемы
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="2"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к разделам и сервисам Сайта МО РФ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="2"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Требования к функциям мобильного приложения «Министерство обороны»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Общие требования к приложению
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к совместимости
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к реакции на внешние прерывания
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к обеспечению постоянной обратной связи с пользователем
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к размещению в магазинах приложений
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к дизайну и интерфейсу мобильного приложения «Министерство обороны»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     Требования к экрану загрузки
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к главному экрану
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к разделу «Минобороны Инфо»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к функциям кольца сайтов о
+    </w:t>
+   </w:r>
+   <w:r w:rsidR="002E54E3">
+    <w:t>
+     бразовательных учреждений МО РФ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к возможностям типового сайта кольца образовательных учреждений МО РФ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к дизайну типового сайта кольца образовательных учреждений МО РФ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к структуре типового сайта кольца образовательных учреждений МО РФ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     О ВУЗе:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Новости
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Образование
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Образовательные программы (образовательные стандарты)
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Дополнительное образование
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Наука
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     Учебно-материальная база
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Поступающим
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Обучающимся
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Контакты
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="3"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Выдающиеся выпускники
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:r>
+    <w:t>
+     Шаблон сайта учебного заведения среднего образования должен содержать типовые разделы:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Сведения об образовательной организации
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Новости
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Образование
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Образовательные стандарты
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Материально-техническое обеспечение и оснащенность образовательного процесса
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Платные образовательные услуги
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Поступающим
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Приём в училище (школу, пансион, корпус)
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Вакантные места для приема (перевода)
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Ученикам
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Стипендии и иные виды материальной поддержки
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Секции, кружки, клубы
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Правила внутреннего распорядка
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="5"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Контакты
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к функциям кольца сайтов подразделений и организаций МО РФ
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="3"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к функциям сайта «Жилье военнослужащим»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00F31C9D" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к возможностям сайта «Жилье военнослужащим»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:ind w:left="2940"/>
+   </w:pPr>
+   <w:r>
+    <w:t xml:space="preserve">
+     В Систему должен входить сайт «Жилье военнослужащим». Сайт должен располагаться на
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r>
+    <w:t>
+     поддомене
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r>
+    <w:t xml:space="preserve">
+     dom.mil.ru.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к структуре сайта «Жилье военнослужащим»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:r>
+    <w:t xml:space="preserve">
+     Сайт «Жилье военнослужащим» должен иметь следующую структуру:
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Информация
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Обеспечение жильем
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Постоянное жилье
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t>
+     Специализированный жилищный фонд
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:proofErr w:type="spellStart"/>
+   <w:r>
+    <w:t>
+     Накопительно
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r>
+    <w:t>
+     -ипотечная система
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Вопросы и ответы
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Единый реестр
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="7"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Действующие нормативные правовые документы
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Сервис «Единый реестр жилья военнослужащих»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="4"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Сервис «Калькулятор жилищных субсидий»
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="2"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к возможностям и характеристикам Служебной подсистемы
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования радиоэлектронной защиты
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:r>
+    <w:t xml:space="preserve">
+     Требования не предъявляются.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования живучести и стойкости к внешним воздействиям
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования надежности
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования эргономики, обитаемости и технической эстетики
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к эксплуатации, хранению, удобству технического обслуживания и ремонта
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования транспортабельности
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:r>
+    <w:t>
+     Изделие должно допускать транспортирование в тарной упаковке автомобильным, железнодорожным, водным и авиационным видами транспорта в средних условиях по ГОСТ В 9.001 в соответствии с правилами, действующими на соответствующем виде транспорта.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:r>
+    <w:t>
+     В транспортных средствах, где перевозится изделие, не должно быть паров кислот, щелочей или других химически активных веществ, пары и газы которых могут вызвать коррозию.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования безопасности
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к обеспечению режима секретности
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования защиты от ИТР
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования стандартизации, унификации и каталогизации
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования технологичности
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Конструктивные требования
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="1"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к наполнению и обеспечени
+    </w:t>
+   </w:r>
+   <w:r w:rsidR="00C4555F">
+    <w:t>
+     ю доступности компонент Системы
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Технико-экономические требования
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00C4555F">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к видам обеспечения
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к сырью, материалам и комплектующим изделиям
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00DF3B60" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:r>
+    <w:lastRenderedPageBreak/>
+    <w:t xml:space="preserve">
+     Сырье, материалы, комплектующие изделия должны соответствовать «Перечню
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r>
+    <w:t>
+     электрорадиоизделий
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r>
+    <w:t xml:space="preserve">
+     (ЭРИ), разрешенных для применения при разработке и модернизации военной аппаратуры, при
+    </w:t>
+   </w:r>
+   <w:r w:rsidR="004A3AC2">
+    <w:t>
+     боров и другой военной техники.
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к консервации, упаковке и маркировке
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к учебно-тренировочным средствам
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Специальные требования
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00DF3B60" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к защите государственной тайны при выполнении ОКР
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p w:rsidP="00F31C9D" w:rsidR="00FD24EB" w:rsidRDefault="00DF3B60">
+   <w:pPr>
+    <w:pStyle w:val="a3"/>
+    <w:numPr>
+     <w:ilvl w:val="0"/>
+     <w:numId w:val="2"/>
+    </w:numPr>
+   </w:pPr>
+   <w:r>
+    <w:t>
+     Требования к порядку разработки конструкторско
+    </w:t>
+   </w:r>
+   <w:r w:rsidR="00AE34B5">
+    <w:t>
+     й документации на военное время
+    </w:t>
+   </w:r>
+   <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+   <w:bookmarkEnd w:id="0"/>
+  </w:p>
+  <w:sectPr w:rsidR="00FD24EB">
+   <w:pgSz w:h="16838" w:w="11906"/>
+   <w:pgMar w:bottom="1134" w:footer="708" w:gutter="0" w:header="708" w:left="1701" w:right="850" w:top="1134"/>
+   <w:cols w:space="708"/>
+   <w:docGrid w:linePitch="360"/>
+  </w:sectPr>
+ </w:body>
+</w:document>

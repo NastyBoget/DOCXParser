@@ -1,0 +1,1935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:styles mc:Ignorable="w14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml">
+ <w:docDefaults>
+  <w:rPrDefault>
+   <w:rPr>
+    <w:rFonts w:ascii="Liberation Serif" w:cs="FreeSans" w:eastAsia="Noto Sans CJK SC Regular" w:hAnsi="Liberation Serif"/>
+    <w:szCs w:val="24"/>
+    <w:lang w:bidi="hi-IN" w:eastAsia="zh-CN" w:val="ru-RU"/>
+   </w:rPr>
+  </w:rPrDefault>
+  <w:pPrDefault>
+   <w:pPr/>
+  </w:pPrDefault>
+ </w:docDefaults>
+ <w:style w:styleId="Normal" w:type="paragraph">
+  <w:name w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:widowControl/>
+   <w:bidi w:val="0"/>
+   <w:ind w:firstLine="720"/>
+   <w:jc w:val="both"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+   <w:color w:val="auto"/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="20"/>
+   <w:lang w:bidi="ar-SA" w:eastAsia="zh-CN" w:val="ru-RU"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading1" w:type="paragraph">
+  <w:name w:val="Heading 1"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:pageBreakBefore/>
+   <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="0"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:cs="Arial"/>
+   <w:b/>
+   <w:bCs/>
+   <w:caps/>
+   <w:kern w:val="2"/>
+   <w:szCs w:val="32"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading2" w:type="paragraph">
+  <w:name w:val="Heading 2"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:numPr>
+    <w:ilvl w:val="1"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="1"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:cs="Arial"/>
+   <w:b/>
+   <w:bCs/>
+   <w:iCs/>
+   <w:szCs w:val="28"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading3" w:type="paragraph">
+  <w:name w:val="Heading 3"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:numPr>
+    <w:ilvl w:val="2"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:jc w:val="left"/>
+   <w:outlineLvl w:val="2"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:cs="Arial"/>
+   <w:b/>
+   <w:bCs/>
+   <w:szCs w:val="26"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading4" w:type="paragraph">
+  <w:name w:val="Heading 4"/>
+  <w:basedOn w:val="Heading3"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:numPr>
+    <w:ilvl w:val="3"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:outlineLvl w:val="3"/>
+  </w:pPr>
+  <w:rPr>
+   <w:iCs/>
+   <w:szCs w:val="28"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading5" w:type="paragraph">
+  <w:name w:val="Heading 5"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:spacing w:after="0" w:before="60"/>
+   <w:ind w:hanging="0" w:left="709"/>
+   <w:outlineLvl w:val="4"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading6" w:type="paragraph">
+  <w:name w:val="Heading 6"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:numPr>
+    <w:ilvl w:val="5"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:outlineLvl w:val="5"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:sz w:val="22"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading7" w:type="paragraph">
+  <w:name w:val="Heading 7"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:numPr>
+    <w:ilvl w:val="6"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:outlineLvl w:val="6"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:sz w:val="22"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading8" w:type="paragraph">
+  <w:name w:val="Heading 8"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:numPr>
+    <w:ilvl w:val="7"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:outlineLvl w:val="7"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:sz w:val="22"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Heading9" w:type="paragraph">
+  <w:name w:val="Heading 9"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:numPr>
+    <w:ilvl w:val="8"/>
+    <w:numId w:val="1"/>
+   </w:numPr>
+   <w:spacing w:after="0" w:before="120"/>
+   <w:outlineLvl w:val="8"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:sz w:val="22"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num1z0" w:type="character">
+  <w:name w:val="WW8Num1z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num2z0" w:type="character">
+  <w:name w:val="WW8Num2z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num2z1" w:type="character">
+  <w:name w:val="WW8Num2z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num2z3" w:type="character">
+  <w:name w:val="WW8Num2z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num3z0" w:type="character">
+  <w:name w:val="WW8Num3z0"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num4z0" w:type="character">
+  <w:name w:val="WW8Num4z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num4z1" w:type="character">
+  <w:name w:val="WW8Num4z1"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num4z2" w:type="character">
+  <w:name w:val="WW8Num4z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num4z4" w:type="character">
+  <w:name w:val="WW8Num4z4"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num5z0" w:type="character">
+  <w:name w:val="WW8Num5z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num5z1" w:type="character">
+  <w:name w:val="WW8Num5z1"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num5z3" w:type="character">
+  <w:name w:val="WW8Num5z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num5z4" w:type="character">
+  <w:name w:val="WW8Num5z4"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num6z0" w:type="character">
+  <w:name w:val="WW8Num6z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num6z1" w:type="character">
+  <w:name w:val="WW8Num6z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num6z2" w:type="character">
+  <w:name w:val="WW8Num6z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num7z0" w:type="character">
+  <w:name w:val="WW8Num7z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+   <w:lang w:val="ru-MD"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num7z1" w:type="character">
+  <w:name w:val="WW8Num7z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num7z2" w:type="character">
+  <w:name w:val="WW8Num7z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num8z0" w:type="character">
+  <w:name w:val="WW8Num8z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num8z1" w:type="character">
+  <w:name w:val="WW8Num8z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num8z2" w:type="character">
+  <w:name w:val="WW8Num8z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num9z0" w:type="character">
+  <w:name w:val="WW8Num9z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num9z1" w:type="character">
+  <w:name w:val="WW8Num9z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num9z2" w:type="character">
+  <w:name w:val="WW8Num9z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num9z3" w:type="character">
+  <w:name w:val="WW8Num9z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num9z5" w:type="character">
+  <w:name w:val="WW8Num9z5"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num10z0" w:type="character">
+  <w:name w:val="WW8Num10z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num10z1" w:type="character">
+  <w:name w:val="WW8Num10z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num10z2" w:type="character">
+  <w:name w:val="WW8Num10z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num10z3" w:type="character">
+  <w:name w:val="WW8Num10z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num11z0" w:type="character">
+  <w:name w:val="WW8Num11z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num11z1" w:type="character">
+  <w:name w:val="WW8Num11z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num11z2" w:type="character">
+  <w:name w:val="WW8Num11z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num12z0" w:type="character">
+  <w:name w:val="WW8Num12z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+   <w:lang w:val="en-US"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num12z1" w:type="character">
+  <w:name w:val="WW8Num12z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num12z3" w:type="character">
+  <w:name w:val="WW8Num12z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num13z0" w:type="character">
+  <w:name w:val="WW8Num13z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num13z1" w:type="character">
+  <w:name w:val="WW8Num13z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num13z2" w:type="character">
+  <w:name w:val="WW8Num13z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num14z0" w:type="character">
+  <w:name w:val="WW8Num14z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num14z1" w:type="character">
+  <w:name w:val="WW8Num14z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num14z3" w:type="character">
+  <w:name w:val="WW8Num14z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num15z0" w:type="character">
+  <w:name w:val="WW8Num15z0"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z1" w:type="character">
+  <w:name w:val="WW8Num15z1"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z2" w:type="character">
+  <w:name w:val="WW8Num15z2"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z3" w:type="character">
+  <w:name w:val="WW8Num15z3"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z4" w:type="character">
+  <w:name w:val="WW8Num15z4"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z5" w:type="character">
+  <w:name w:val="WW8Num15z5"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z6" w:type="character">
+  <w:name w:val="WW8Num15z6"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z7" w:type="character">
+  <w:name w:val="WW8Num15z7"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num15z8" w:type="character">
+  <w:name w:val="WW8Num15z8"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num16z0" w:type="character">
+  <w:name w:val="WW8Num16z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num16z1" w:type="character">
+  <w:name w:val="WW8Num16z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num16z2" w:type="character">
+  <w:name w:val="WW8Num16z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num16z5" w:type="character">
+  <w:name w:val="WW8Num16z5"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num17z0" w:type="character">
+  <w:name w:val="WW8Num17z0"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num18z0" w:type="character">
+  <w:name w:val="WW8Num18z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num18z1" w:type="character">
+  <w:name w:val="WW8Num18z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num18z2" w:type="character">
+  <w:name w:val="WW8Num18z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num18z3" w:type="character">
+  <w:name w:val="WW8Num18z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num19z0" w:type="character">
+  <w:name w:val="WW8Num19z0"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z1" w:type="character">
+  <w:name w:val="WW8Num19z1"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z2" w:type="character">
+  <w:name w:val="WW8Num19z2"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z3" w:type="character">
+  <w:name w:val="WW8Num19z3"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z4" w:type="character">
+  <w:name w:val="WW8Num19z4"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z5" w:type="character">
+  <w:name w:val="WW8Num19z5"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z6" w:type="character">
+  <w:name w:val="WW8Num19z6"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z7" w:type="character">
+  <w:name w:val="WW8Num19z7"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num19z8" w:type="character">
+  <w:name w:val="WW8Num19z8"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num20z0" w:type="character">
+  <w:name w:val="WW8Num20z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num20z1" w:type="character">
+  <w:name w:val="WW8Num20z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num20z2" w:type="character">
+  <w:name w:val="WW8Num20z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num21z0" w:type="character">
+  <w:name w:val="WW8Num21z0"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z1" w:type="character">
+  <w:name w:val="WW8Num21z1"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z2" w:type="character">
+  <w:name w:val="WW8Num21z2"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z3" w:type="character">
+  <w:name w:val="WW8Num21z3"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z4" w:type="character">
+  <w:name w:val="WW8Num21z4"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z5" w:type="character">
+  <w:name w:val="WW8Num21z5"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z6" w:type="character">
+  <w:name w:val="WW8Num21z6"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z7" w:type="character">
+  <w:name w:val="WW8Num21z7"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num21z8" w:type="character">
+  <w:name w:val="WW8Num21z8"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num22z0" w:type="character">
+  <w:name w:val="WW8Num22z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num22z1" w:type="character">
+  <w:name w:val="WW8Num22z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num22z2" w:type="character">
+  <w:name w:val="WW8Num22z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num22z3" w:type="character">
+  <w:name w:val="WW8Num22z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num23z0" w:type="character">
+  <w:name w:val="WW8Num23z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num23z1" w:type="character">
+  <w:name w:val="WW8Num23z1"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num23z2" w:type="character">
+  <w:name w:val="WW8Num23z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num23z4" w:type="character">
+  <w:name w:val="WW8Num23z4"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num23z7" w:type="character">
+  <w:name w:val="WW8Num23z7"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num24z0" w:type="character">
+  <w:name w:val="WW8Num24z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num24z1" w:type="character">
+  <w:name w:val="WW8Num24z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num24z2" w:type="character">
+  <w:name w:val="WW8Num24z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num25z0" w:type="character">
+  <w:name w:val="WW8Num25z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num25z1" w:type="character">
+  <w:name w:val="WW8Num25z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num25z2" w:type="character">
+  <w:name w:val="WW8Num25z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num26z0" w:type="character">
+  <w:name w:val="WW8Num26z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num26z1" w:type="character">
+  <w:name w:val="WW8Num26z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num26z3" w:type="character">
+  <w:name w:val="WW8Num26z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num27z0" w:type="character">
+  <w:name w:val="WW8Num27z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num27z1" w:type="character">
+  <w:name w:val="WW8Num27z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num27z3" w:type="character">
+  <w:name w:val="WW8Num27z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num28z0" w:type="character">
+  <w:name w:val="WW8Num28z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num28z1" w:type="character">
+  <w:name w:val="WW8Num28z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num28z2" w:type="character">
+  <w:name w:val="WW8Num28z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num28z4" w:type="character">
+  <w:name w:val="WW8Num28z4"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num29z0" w:type="character">
+  <w:name w:val="WW8Num29z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num29z1" w:type="character">
+  <w:name w:val="WW8Num29z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num29z2" w:type="character">
+  <w:name w:val="WW8Num29z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num30z0" w:type="character">
+  <w:name w:val="WW8Num30z0"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="WW8Num31z0" w:type="character">
+  <w:name w:val="WW8Num31z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num31z1" w:type="character">
+  <w:name w:val="WW8Num31z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num31z2" w:type="character">
+  <w:name w:val="WW8Num31z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num32z0" w:type="character">
+  <w:name w:val="WW8Num32z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:lang w:val="ru-MD"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num32z1" w:type="character">
+  <w:name w:val="WW8Num32z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num32z2" w:type="character">
+  <w:name w:val="WW8Num32z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num32z3" w:type="character">
+  <w:name w:val="WW8Num32z3"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num33z0" w:type="character">
+  <w:name w:val="WW8Num33z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num33z1" w:type="character">
+  <w:name w:val="WW8Num33z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num33z2" w:type="character">
+  <w:name w:val="WW8Num33z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num34z0" w:type="character">
+  <w:name w:val="WW8Num34z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num34z1" w:type="character">
+  <w:name w:val="WW8Num34z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num34z2" w:type="character">
+  <w:name w:val="WW8Num34z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num35z0" w:type="character">
+  <w:name w:val="WW8Num35z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:hAnsi="Times New Roman"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num36z0" w:type="character">
+  <w:name w:val="WW8Num36z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num36z1" w:type="character">
+  <w:name w:val="WW8Num36z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num36z2" w:type="character">
+  <w:name w:val="WW8Num36z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num37z0" w:type="character">
+  <w:name w:val="WW8Num37z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num37z1" w:type="character">
+  <w:name w:val="WW8Num37z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num37z2" w:type="character">
+  <w:name w:val="WW8Num37z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num38z0" w:type="character">
+  <w:name w:val="WW8Num38z0"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Symbol" w:cs="Symbol" w:hAnsi="Symbol"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num38z1" w:type="character">
+  <w:name w:val="WW8Num38z1"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num38z2" w:type="character">
+  <w:name w:val="WW8Num38z2"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:rFonts w:ascii="Wingdings" w:cs="Wingdings" w:hAnsi="Wingdings"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style5" w:type="character">
+  <w:name w:val="Основной шрифт абзаца"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="FootnoteCharacters" w:type="character">
+  <w:name w:val="Footnote Characters"/>
+  <w:basedOn w:val="Style5"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:vertAlign w:val="superscript"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="InternetLink" w:type="character">
+  <w:name w:val="Internet Link"/>
+  <w:basedOn w:val="Style5"/>
+  <w:rPr>
+   <w:color w:val="0000FF"/>
+   <w:u w:val="single"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style6" w:type="character">
+  <w:name w:val="Знак примечания"/>
+  <w:basedOn w:val="Style5"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:sz w:val="16"/>
+   <w:szCs w:val="16"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="VisitedInternetLink" w:type="character">
+  <w:name w:val="Visited Internet Link"/>
+  <w:basedOn w:val="Style5"/>
+  <w:rPr>
+   <w:color w:val="800080"/>
+   <w:u w:val="single"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="StrongEmphasis" w:type="character">
+  <w:name w:val="Strong Emphasis"/>
+  <w:basedOn w:val="Style5"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:b/>
+   <w:bCs/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="PhNormal" w:type="character">
+  <w:name w:val="ph_Normal Знак Знак"/>
+  <w:basedOn w:val="Style5"/>
+  <w:qFormat/>
+  <w:rPr>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+   <w:lang w:bidi="ar-SA" w:val="ru-RU"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="PageNumber" w:type="character">
+  <w:name w:val="Page Number"/>
+  <w:basedOn w:val="Style5"/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="IndexLink" w:type="character">
+  <w:name w:val="Index Link"/>
+  <w:qFormat/>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Heading" w:type="paragraph">
+  <w:name w:val="Heading"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="TextBody"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:ind w:hanging="0"/>
+   <w:jc w:val="center"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:bCs/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="TextBody" w:type="paragraph">
+  <w:name w:val="Body Text"/>
+  <w:basedOn w:val="Normal"/>
+  <w:pPr>
+   <w:spacing w:after="0" w:before="0"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:color w:val="FF0000"/>
+   <w:szCs w:val="24"/>
+   <w:u w:val="single"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="List" w:type="paragraph">
+  <w:name w:val="List"/>
+  <w:basedOn w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:hanging="283" w:left="283"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Caption" w:type="paragraph">
+  <w:name w:val="Caption"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:suppressLineNumbers/>
+   <w:spacing w:after="120" w:before="120"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:cs="FreeSans"/>
+   <w:i/>
+   <w:iCs/>
+   <w:sz w:val="24"/>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Index" w:type="paragraph">
+  <w:name w:val="Index"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:suppressLineNumbers/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:cs="FreeSans"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Footnote" w:type="paragraph">
+  <w:name w:val="Footnote Text"/>
+  <w:basedOn w:val="Normal"/>
+  <w:pPr>
+   <w:spacing w:after="0" w:before="0"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="TimesET;Times New Roman" w:cs="TimesET;Times New Roman" w:hAnsi="TimesET;Times New Roman"/>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents1" w:type="paragraph">
+  <w:name w:val="TOC 1"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:spacing w:after="0" w:before="360"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial"/>
+   <w:b/>
+   <w:bCs/>
+   <w:caps/>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents2" w:type="paragraph">
+  <w:name w:val="TOC 2"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:spacing w:after="0" w:before="240"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:bCs/>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents3" w:type="paragraph">
+  <w:name w:val="TOC 3"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="240"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style7" w:type="paragraph">
+  <w:name w:val="Текст примечания"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr/>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style8" w:type="paragraph">
+  <w:name w:val="Текст выноски"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr/>
+  <w:rPr>
+   <w:rFonts w:ascii="Tahoma" w:cs="Tahoma" w:hAnsi="Tahoma"/>
+   <w:sz w:val="16"/>
+   <w:szCs w:val="16"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="TextBodyIndent" w:type="paragraph">
+  <w:name w:val="Body Text Indent"/>
+  <w:basedOn w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="318"/>
+   <w:jc w:val="right"/>
+  </w:pPr>
+  <w:rPr>
+   <w:color w:val="000000"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Footer" w:type="paragraph">
+  <w:name w:val="Footer"/>
+  <w:basedOn w:val="Normal"/>
+  <w:pPr>
+   <w:tabs>
+    <w:tab w:pos="720" w:val="clear"/>
+    <w:tab w:leader="none" w:pos="4677" w:val="center"/>
+    <w:tab w:leader="none" w:pos="9355" w:val="right"/>
+   </w:tabs>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Header" w:type="paragraph">
+  <w:name w:val="Header"/>
+  <w:basedOn w:val="Normal"/>
+  <w:pPr>
+   <w:tabs>
+    <w:tab w:pos="720" w:val="clear"/>
+    <w:tab w:leader="none" w:pos="4677" w:val="center"/>
+    <w:tab w:leader="none" w:pos="9355" w:val="right"/>
+   </w:tabs>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="2" w:type="paragraph">
+  <w:name w:val="Основной текст 2"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr/>
+  <w:rPr>
+   <w:color w:val="000000"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style9" w:type="paragraph">
+  <w:name w:val="Тема примечания"/>
+  <w:basedOn w:val="Style7"/>
+  <w:next w:val="Style7"/>
+  <w:qFormat/>
+  <w:pPr/>
+  <w:rPr>
+   <w:b/>
+   <w:bCs/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="3" w:type="paragraph">
+  <w:name w:val="Основной текст 3"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr/>
+  <w:rPr>
+   <w:color w:val="FF00FF"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="21" w:type="paragraph">
+  <w:name w:val="Основной текст с отступом 2"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="-993"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style10" w:type="paragraph">
+  <w:name w:val="Обычный (веб)"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:spacing w:after="280" w:before="280"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="1" w:type="paragraph">
+  <w:name w:val="1"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Style10"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:spacing w:after="280" w:before="280"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Verdana" w:cs="Verdana" w:hAnsi="Verdana"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="15"/>
+   <w:szCs w:val="15"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style11" w:type="paragraph">
+  <w:name w:val="Схема документа"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:shd w:fill="000080" w:val="clear"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Tahoma" w:cs="Tahoma" w:hAnsi="Tahoma"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="31" w:type="paragraph">
+  <w:name w:val="Основной текст с отступом 3"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="283"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="16"/>
+   <w:szCs w:val="16"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style12" w:type="paragraph">
+  <w:name w:val="Перечень"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="27"/>
+   </w:numPr>
+   <w:spacing w:after="60" w:before="0"/>
+   <w:ind w:hanging="284" w:left="851"/>
+  </w:pPr>
+  <w:rPr>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style13" w:type="paragraph">
+  <w:name w:val="Перечень последний"/>
+  <w:basedOn w:val="Style12"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="0"/>
+   </w:numPr>
+   <w:tabs>
+    <w:tab w:leader="none" w:pos="720" w:val="left"/>
+   </w:tabs>
+   <w:spacing w:after="240" w:before="0"/>
+   <w:ind w:hanging="284" w:left="851"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style14" w:type="paragraph">
+  <w:name w:val="Маркированный список"/>
+  <w:basedOn w:val="List"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepLines/>
+   <w:tabs>
+    <w:tab w:leader="none" w:pos="0" w:val="left"/>
+    <w:tab w:leader="none" w:pos="720" w:val="left"/>
+   </w:tabs>
+   <w:spacing w:after="60" w:before="0"/>
+   <w:ind w:hanging="360" w:left="720"/>
+  </w:pPr>
+  <w:rPr>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style15" w:type="paragraph">
+  <w:name w:val="Название объекта"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:spacing w:after="0" w:before="120"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:bCs/>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style16" w:type="paragraph">
+  <w:name w:val="Обычный список с цифрами"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:tabs>
+    <w:tab w:leader="none" w:pos="720" w:val="left"/>
+   </w:tabs>
+   <w:ind w:hanging="493" w:left="720"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style17" w:type="paragraph">
+  <w:name w:val="Обычный список"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="24"/>
+   </w:numPr>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Contents4" w:type="paragraph">
+  <w:name w:val="TOC 4"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="480"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents5" w:type="paragraph">
+  <w:name w:val="TOC 5"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="720"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents6" w:type="paragraph">
+  <w:name w:val="TOC 6"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="960"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents7" w:type="paragraph">
+  <w:name w:val="TOC 7"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="1200"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents8" w:type="paragraph">
+  <w:name w:val="TOC 8"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="1440"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Contents9" w:type="paragraph">
+  <w:name w:val="TOC 9"/>
+  <w:basedOn w:val="Normal"/>
+  <w:next w:val="Normal"/>
+  <w:pPr>
+   <w:ind w:firstLine="720" w:left="1680"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style18" w:type="paragraph">
+  <w:name w:val="Текст таблиц"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:ind w:hanging="0"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style19" w:type="paragraph">
+  <w:name w:val="Текст таблиц (с отрывом)"/>
+  <w:basedOn w:val="Style18"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="false"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style20" w:type="paragraph">
+  <w:name w:val="Текст таблиц для рисунков"/>
+  <w:basedOn w:val="Style18"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:tabs>
+    <w:tab w:pos="720" w:val="clear"/>
+    <w:tab w:leader="none" w:pos="1418" w:val="center"/>
+    <w:tab w:leader="none" w:pos="4536" w:val="center"/>
+    <w:tab w:leader="none" w:pos="7655" w:val="center"/>
+   </w:tabs>
+   <w:spacing w:line="324" w:lineRule="auto"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style21" w:type="paragraph">
+  <w:name w:val="Текст таблиц для рисунков отцетрированный"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:keepNext w:val="true"/>
+   <w:keepLines/>
+   <w:tabs>
+    <w:tab w:pos="720" w:val="clear"/>
+    <w:tab w:leader="none" w:pos="1418" w:val="center"/>
+    <w:tab w:leader="none" w:pos="4536" w:val="center"/>
+    <w:tab w:leader="none" w:pos="7655" w:val="center"/>
+   </w:tabs>
+   <w:ind w:hanging="0"/>
+   <w:jc w:val="center"/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style22" w:type="paragraph">
+  <w:name w:val="Текст"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:ind w:hanging="0"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="22" w:type="paragraph">
+  <w:name w:val="Маркированный список 2"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:numPr>
+    <w:ilvl w:val="0"/>
+    <w:numId w:val="2"/>
+   </w:numPr>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="Style23" w:type="paragraph">
+  <w:name w:val="Обычный отступ"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:tabs>
+    <w:tab w:pos="720" w:val="clear"/>
+    <w:tab w:leader="none" w:pos="357" w:val="left"/>
+   </w:tabs>
+   <w:spacing w:after="0" w:before="60"/>
+   <w:ind w:firstLine="709"/>
+  </w:pPr>
+  <w:rPr>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="StyleNormal" w:type="paragraph">
+  <w:name w:val="Style Normal +"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:ind w:hanging="0"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:eastAsia="PMingLiU;新細明體"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="HTML" w:type="paragraph">
+  <w:name w:val="Стандартный HTML"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:tabs>
+    <w:tab w:pos="720" w:val="clear"/>
+    <w:tab w:leader="none" w:pos="916" w:val="left"/>
+    <w:tab w:leader="none" w:pos="1832" w:val="left"/>
+    <w:tab w:leader="none" w:pos="2748" w:val="left"/>
+    <w:tab w:leader="none" w:pos="3664" w:val="left"/>
+    <w:tab w:leader="none" w:pos="4580" w:val="left"/>
+    <w:tab w:leader="none" w:pos="5496" w:val="left"/>
+    <w:tab w:leader="none" w:pos="6412" w:val="left"/>
+    <w:tab w:leader="none" w:pos="7328" w:val="left"/>
+    <w:tab w:leader="none" w:pos="8244" w:val="left"/>
+    <w:tab w:leader="none" w:pos="9160" w:val="left"/>
+    <w:tab w:leader="none" w:pos="10076" w:val="left"/>
+    <w:tab w:leader="none" w:pos="10992" w:val="left"/>
+    <w:tab w:leader="none" w:pos="11908" w:val="left"/>
+    <w:tab w:leader="none" w:pos="12824" w:val="left"/>
+    <w:tab w:leader="none" w:pos="13740" w:val="left"/>
+    <w:tab w:leader="none" w:pos="14656" w:val="left"/>
+   </w:tabs>
+   <w:ind w:hanging="0"/>
+   <w:jc w:val="left"/>
+  </w:pPr>
+  <w:rPr>
+   <w:rFonts w:ascii="Courier New" w:cs="Courier New" w:hAnsi="Courier New"/>
+   <w:color w:val="000000"/>
+   <w:sz w:val="20"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="PlainText2" w:type="paragraph">
+  <w:name w:val="Plain Text2"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:spacing w:line="360" w:lineRule="auto"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="28"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style24" w:type="paragraph">
+  <w:name w:val="_Обычный"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:spacing w:line="360" w:lineRule="auto"/>
+   <w:ind w:firstLine="709"/>
+  </w:pPr>
+  <w:rPr>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="Style25" w:type="paragraph">
+  <w:name w:val="Основной"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:spacing w:after="120" w:before="60" w:line="360" w:lineRule="auto"/>
+   <w:ind w:firstLine="709"/>
+  </w:pPr>
+  <w:rPr>
+   <w:sz w:val="26"/>
+   <w:szCs w:val="24"/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="TableContents" w:type="paragraph">
+  <w:name w:val="Table Contents"/>
+  <w:basedOn w:val="Normal"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:suppressLineNumbers/>
+  </w:pPr>
+  <w:rPr/>
+ </w:style>
+ <w:style w:styleId="TableHeading" w:type="paragraph">
+  <w:name w:val="Table Heading"/>
+  <w:basedOn w:val="TableContents"/>
+  <w:qFormat/>
+  <w:pPr>
+   <w:suppressLineNumbers/>
+   <w:jc w:val="center"/>
+  </w:pPr>
+  <w:rPr>
+   <w:b/>
+   <w:bCs/>
+  </w:rPr>
+ </w:style>
+ <w:style w:styleId="WW8Num1" w:type="numbering">
+  <w:name w:val="WW8Num1"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num2" w:type="numbering">
+  <w:name w:val="WW8Num2"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num3" w:type="numbering">
+  <w:name w:val="WW8Num3"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num4" w:type="numbering">
+  <w:name w:val="WW8Num4"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num5" w:type="numbering">
+  <w:name w:val="WW8Num5"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num6" w:type="numbering">
+  <w:name w:val="WW8Num6"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num7" w:type="numbering">
+  <w:name w:val="WW8Num7"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num8" w:type="numbering">
+  <w:name w:val="WW8Num8"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num9" w:type="numbering">
+  <w:name w:val="WW8Num9"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num10" w:type="numbering">
+  <w:name w:val="WW8Num10"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num11" w:type="numbering">
+  <w:name w:val="WW8Num11"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num12" w:type="numbering">
+  <w:name w:val="WW8Num12"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num13" w:type="numbering">
+  <w:name w:val="WW8Num13"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num14" w:type="numbering">
+  <w:name w:val="WW8Num14"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num15" w:type="numbering">
+  <w:name w:val="WW8Num15"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num16" w:type="numbering">
+  <w:name w:val="WW8Num16"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num17" w:type="numbering">
+  <w:name w:val="WW8Num17"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num18" w:type="numbering">
+  <w:name w:val="WW8Num18"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num19" w:type="numbering">
+  <w:name w:val="WW8Num19"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num20" w:type="numbering">
+  <w:name w:val="WW8Num20"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num21" w:type="numbering">
+  <w:name w:val="WW8Num21"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num22" w:type="numbering">
+  <w:name w:val="WW8Num22"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num23" w:type="numbering">
+  <w:name w:val="WW8Num23"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num24" w:type="numbering">
+  <w:name w:val="WW8Num24"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num25" w:type="numbering">
+  <w:name w:val="WW8Num25"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num26" w:type="numbering">
+  <w:name w:val="WW8Num26"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num27" w:type="numbering">
+  <w:name w:val="WW8Num27"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num28" w:type="numbering">
+  <w:name w:val="WW8Num28"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num29" w:type="numbering">
+  <w:name w:val="WW8Num29"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num30" w:type="numbering">
+  <w:name w:val="WW8Num30"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num31" w:type="numbering">
+  <w:name w:val="WW8Num31"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num32" w:type="numbering">
+  <w:name w:val="WW8Num32"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num33" w:type="numbering">
+  <w:name w:val="WW8Num33"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num34" w:type="numbering">
+  <w:name w:val="WW8Num34"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num35" w:type="numbering">
+  <w:name w:val="WW8Num35"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num36" w:type="numbering">
+  <w:name w:val="WW8Num36"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num37" w:type="numbering">
+  <w:name w:val="WW8Num37"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8Num38" w:type="numbering">
+  <w:name w:val="WW8Num38"/>
+  <w:qFormat/>
+ </w:style>
+ <w:style w:styleId="WW8StyleNum" w:type="numbering">
+  <w:name w:val="WW8StyleNum"/>
+  <w:qFormat/>
+ </w:style>
+</w:styles>
