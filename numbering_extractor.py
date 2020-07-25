@@ -2,7 +2,9 @@ import zipfile
 from bs4 import BeautifulSoup
 from styles_extractor import StylesExtractor
 import re
+import os
 
+bad_file_num = 0
 # pages 691 - 733 in the documentation
 
 # page 1424
@@ -193,7 +195,7 @@ class NumberingExtractor:
         text = lvl_info['lvlText']
         levels = re.findall(r'%\d+', text)
         for level in levels:
-            # level = ilvl + 1
+            # level = '%level'
             level = level[1:]
             text = re.sub(r'%\d+', self.get_next_number(num_id, level), text, count=1)
         text += lvl_info['suff']
@@ -208,7 +210,7 @@ class NumberingExtractor:
         try:
             shift = self.numerations[(abstract_num_id, ilvl)] - 1
         except KeyError:
-            print('KeyError {} {}'.format(abstract_num_id, ilvl))
+            # TODO this is very strange list behaviour
             return ""
 
         if lvl_info['numFmt'] == "bullet":
@@ -229,26 +231,59 @@ class NumberingExtractor:
 
 
 if __name__ == "__main__":
-    filename = input()
-    document = zipfile.ZipFile('examples/' + filename)
-    try:
-        numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
-    except KeyError:
-        print(document.namelist())
+    wrong_files = []
+    bad_zip_files = []
+    file_without_lists = 0
+    i = 0
+    choice = input()
+    if choice == 'test':
+        filenames = os.listdir('examples/docx/docx')
     else:
-        document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
-        styles_bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
-        se = StylesExtractor(styles_bs)
-        ne = NumberingExtractor(numbering_bs, se)
-        for paragraph in document_bs.body:
-            if paragraph.numPr:
-                ilvl = paragraph.numPr.ilvl['w:val']
-                numId = paragraph.numPr.numId['w:val']
-                paragraph_text = map(lambda x: x.text, paragraph.find_all('w:t'))
-                res = ""
-                for item in paragraph_text:
-                    res += item
-                # print(res)
-                list_text = ne.get_list_text(ilvl, numId)
-                print(list_text + res)
-                # print('======')
+        filenames = [choice]
+    total = len(filenames)
+    for filename in filenames:
+        i += 1
+        # document = zipfile.ZipFile('examples/' + filename)
+        try:
+            document = zipfile.ZipFile('examples/docx/docx/' + filename)
+            try:
+                numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
+            except KeyError:
+                file_without_lists += 1
+            else:
+                document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
+                styles_bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
+                se = StylesExtractor(styles_bs)
+                ne = NumberingExtractor(numbering_bs, se)
+                for paragraph in document_bs.body:
+                    if choice != 'test':
+                        paragraph_text = map(lambda x: x.text, paragraph.find_all('w:t'))
+                        res = ""
+                        for item in paragraph_text:
+                            res += item
+                    else:
+                        res = ""
+                    if paragraph.numPr:
+                        ilvl = paragraph.numPr.ilvl['w:val']
+                        numId = paragraph.numPr.numId['w:val']
+                        list_text = ne.get_list_text(ilvl, numId)
+                        if choice != 'test':
+                            print(list_text + res)
+                    else:
+                        if choice != 'test':
+                            print(res)
+            if choice == 'test':
+                print(f"\r{i} objects are processed...", end='', flush=True)
+        except zipfile.BadZipFile:
+            bad_zip_files.append(filename)
+        except KeyError:
+            bad_file_num += 1
+            wrong_files.append(filename)
+    # 2193 objects are processed...total: 2193, bad files: 371, without lists: 289
+    if choice == 'test':
+        print('total: {}, bad files: {}, without lists: {}'.format(total, bad_file_num, file_without_lists))
+        print('bad zip: ', bad_zip_files)
+        print('wrong_files: ', wrong_files)
+    # wrong_files:  ['doc_002400.docx', 'doc_002050.docx', 'doc_000201.docx', 'doc_001410.docx', 'doc_001555.docx',
+    # 'doc_000485.docx', 'doc_000606.docx', 'doc_000885.docx', 'doc_000186.docx', 'doc_002504.docx', 'doc_002857.docx',
+    # 'doc_001902.docx', 'doc_000581.docx', 'doc_001406.docx', 'doc_003084.docx', 'doc_001754.docx', 'doc_001216.docx']
