@@ -211,6 +211,9 @@ class NumberingExtractor:
             shift = self.numerations[(abstract_num_id, ilvl)] - 1
         except KeyError:
             # TODO this is very strange list behaviour
+            print('=================')
+            print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
+            print('=================')
             return ""
 
         if lvl_info['numFmt'] == "bullet":
@@ -228,6 +231,7 @@ class NumberingExtractor:
         pass
 
 # TODO numpr in styles!!!
+# TODO pStyle
 
 
 if __name__ == "__main__":
@@ -245,7 +249,10 @@ if __name__ == "__main__":
         i += 1
         # document = zipfile.ZipFile('examples/' + filename)
         try:
-            document = zipfile.ZipFile('examples/docx/docx/' + filename)
+            if choice == "test":
+                document = zipfile.ZipFile('examples/docx/docx/' + filename)
+            else:
+                document = zipfile.ZipFile('examples/' + filename)
             try:
                 numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
             except KeyError:
