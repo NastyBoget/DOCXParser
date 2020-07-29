@@ -74,13 +74,14 @@ class DOCXParser:
             item = {"text": "", "properties": []}
             prev_r_info = p_info.copy()
             # TODO check this behavior
-            if num_pr and num_pr["rPr"]:
+            if num_pr:
                 item["text"] += num_pr["text"]
                 start, end = 0, len(item["text"])
                 num_info = p_info.copy()
-                for r_property, value in num_pr["rPr"].items():
-                    if r_property != 'size' or value:  # size value should not be 0
-                        num_info[r_property] = value
+                if num_pr["rPr"]:
+                    for r_property, value in num_pr["rPr"].items():
+                        if r_property != 'size' or value:  # size value should not be 0
+                            num_info[r_property] = value
 
                 item["properties"].append([start, end, num_info.copy()])
                 prev_r_info = num_info
@@ -108,6 +109,7 @@ class DOCXParser:
                     item['properties'].append([start, end, r_info.copy()])
                     prev_r_info = r_info
 
+            print(item['text'])
             self.data.append(item.copy())
         return self.data
 
@@ -118,14 +120,26 @@ if __name__ == "__main__":
         filenames = os.listdir('examples/docx/docx')
     else:
         filenames = [choice]
-    for filename in filenames:
-        if choice == "test":
-            parser = DOCXParser('examples/docx/docx' + filename)
-        else:
-            parser = DOCXParser('examples/' + choice)
-        lines_info = parser.parse()
-        if choice != "test":
-            for line in lines_info:
-                print(line['text'])
-                for raw_info in line['properties']:
-                    print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]))
+    i = 0
+    try:
+        for filename in filenames:
+            i += 1
+            if choice == "test":
+                parser = DOCXParser('examples/docx/docx/' + filename)
+            else:
+                parser = DOCXParser('examples/' + choice)
+            lines_info = parser.parse()
+            if choice != "test":
+                for line in lines_info:
+                    print(line['text'])
+                    for raw_info in line['properties']:
+                        print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]))
+            if choice == 'test':
+                print(f"\r{i} objects are processed...", end='', flush=True)
+    except ValueError:
+        pass
+# Problems:
+# 1) intend 0
+# 2) example9.docx - error in numbering parse, \n in some paragraphs ???, bold='false'
+# 3) example9.docx АИС «УЗЕЛ ИНФРАСТРУКТУРЫ ПРОСТРАНСТВЕННЫХ ДАННЫХ РОССИЙСКОЙ ФЕДЕРАЦИИ» italic???
+# 4) rStyle
