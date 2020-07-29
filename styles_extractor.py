@@ -43,17 +43,17 @@ class StylesExtractor:
 
         # TODO information in numPr for styles !!!!!
 
-        p_info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                  'bold': '0', 'italic': '0', 'underlined': 'none'}
+        info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
+                'bold': '0', 'italic': '0', 'underlined': 'none'}
 
         if not style_id:
-            return p_info
+            return info
 
         # TODO hierarchy of styles: defaults -> paragraph -> numbering -> character
         styles = []
         style = self.find_style(style_id, style_type)
         if not style:
-            return p_info
+            return info
 
         # basedOn + hierarchy of styles
         current_style = style
@@ -76,9 +76,9 @@ class StylesExtractor:
                 styles = [self.styles.docDefaults] + styles
         for style in styles:  # apply styles in reverse order
             pe = PropertiesExtractor(style)
-            pe.get_properties(p_info)
+            pe.get_properties(info)
 
-        return p_info
+        return info
 
 
 if __name__ == "__main__":
