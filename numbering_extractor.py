@@ -95,11 +95,15 @@ class AbstractNum:
             if lvl.isLgl:
                 self.levels[ilvl]['numFmt'] = 'decimal'
             else:
-                self.levels[ilvl]['numFmt'] = lvl.numFmt['w:val']
+                if lvl.numFmt:
+                    self.levels[ilvl]['numFmt'] = lvl.numFmt['w:val']
+                else:
+                    self.levels[ilvl]['numFmt'] = 'none'
 
             if lvl.start:
                 self.levels[ilvl]['start'] = int(lvl.start['w:val'])
-
+            else:
+                self.levels[ilvl]['start'] = 1
             if lvl.lvlRestart:
                 self.levels[ilvl]['lvlRestart'] = bool(int(lvl.lvlRestart['w:val']))
             else:
@@ -108,14 +112,19 @@ class AbstractNum:
                 self.levels[ilvl]['suff'] = getSuffix[lvl.suff['w:val']]
             else:
                 self.levels[ilvl]['suff'] = getSuffix["tab"]
-            if 'start' not in self.levels[ilvl]:
-                self.levels[ilvl]['start'] = 1
 
             # extract information from paragraphs and raws properties
             if lvl.pStyle:
                 properties = self.styles_extractor.parse(lvl.pStyle['w:val'], "numbering")
+                if properties == {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
+                                  'bold': '0', 'italic': '0', 'underlined': 'none', 'qFormat': False}:
+                    properties = self.styles_extractor.parse(lvl.pStyle['w:val'], "paragraph")
             else:
                 properties = self.styles_extractor.parse(None)
+            style_not_important = not properties['qFormat']
+            del properties['qFormat']
+            if 'numPr' in properties:
+                del properties['numPr']
             # paragraph -> raw
             if lvl.pPr:
                 pe = PropertiesExtractor(lvl.pPr)
@@ -229,10 +238,12 @@ class NumberingExtractor:
             shift = self.numerations[(abstract_num_id, ilvl)] - 1
         except KeyError:
             # TODO handle very strange list behaviour
-            print('=================')
-            print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
-            print('=================')
-            return ""
+            # print('=================')
+            # print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
+            # print('=================')
+            # if we haven't found given abstractNumId we use previous
+            shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
+            # return ""
 
         if lvl_info['numFmt'] == "bullet":
             num_fmt = lvl_info['lvlText']
@@ -242,7 +253,6 @@ class NumberingExtractor:
 
     def parse(self, xml):
         # xml - BeautifulSoup tree with numPr from document.xml
-        # old_prop - properties for paragraph which can be changed by parse method, if there are such properties
         # in the paragraph properties of the list
         # the method the text and properties of the list element
         # returns dict:
@@ -250,9 +260,17 @@ class NumberingExtractor:
         # "pPr": {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
         # 'bold': '0', 'italic': '0', 'underlined': 'none'}, "rPr": None or
         # {'size': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'} for text }
-        ilvl, num_id = xml.ilvl, xml.numId
-        if not ilvl or not num_id:
+        if not xml:
             return None
+        ilvl, num_id = xml.ilvl, xml.numId
+        if not ilvl:
+            ilvl = '0'
+        else:
+            ilvl = ilvl['w:val']
+        if not num_id:
+            return None
+        else:
+            num_id = num_id['w:val']
         # try:
         #     ilvl, num_id = ilvl['w:val'], num_id['w:val']
         #     lvl_info = self.num_list[num_id].get_level_info(ilvl)
@@ -261,7 +279,6 @@ class NumberingExtractor:
         # except KeyError:
         #     print('error in numbering parse')
         #     return None
-        ilvl, num_id = ilvl['w:val'], num_id['w:val']
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
         text = self.get_list_text(ilvl, num_id)
         return {"text": text, "lvl": ilvl, "pPr": lvl_info['pPr'], "rPr": lvl_info['rPr']}
@@ -318,7 +335,7 @@ if __name__ == "__main__":
         except KeyError:
             bad_file_num += 1
             wrong_files.append(filename)
-    # 2193 objects are processed...total: 2193, bad files: 371, without lists: 289
+    # total: 2193, bad files: 371, without lists: 289
     if choice == 'test':
         print('total: {}, bad files: {}, without lists: {}'.format(total, bad_file_num, file_without_lists))
         print('bad zip: ', bad_zip_files)
@@ -326,6 +343,3 @@ if __name__ == "__main__":
     # wrong_files:  ['doc_002400.docx', 'doc_002050.docx', 'doc_000201.docx', 'doc_001410.docx', 'doc_001555.docx',
     # 'doc_000485.docx', 'doc_000606.docx', 'doc_000885.docx', 'doc_000186.docx', 'doc_002504.docx', 'doc_002857.docx',
     # 'doc_001902.docx', 'doc_000581.docx', 'doc_001406.docx', 'doc_003084.docx', 'doc_001754.docx', 'doc_001216.docx']
-
-# doc_002050.docx конверт № ... слетает нумерация (первый элемент пронумерован текстом, второй - автоматически)
-# doc_001555.docx вроде норм, извлекаем свойства списков с помощью стилей

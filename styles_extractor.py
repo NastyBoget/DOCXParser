@@ -39,11 +39,12 @@ class StylesExtractor:
         # returns dictionary with properties if the style was found
         # else returns default properties or the following dictionary:
         # {'size': 0, 'indent': {}, 'bold': '0', 'italic': '0', 'underlined': 'none'}
-        # indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0, 'numPr': style.numPr (optional)}
+        # indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0,
+        # 'numPr': style.numPr (optional), 'qFormat': False}
         # TODO firstLineChars etc.
 
         info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                'bold': '0', 'italic': '0', 'underlined': 'none'}
+                'bold': '0', 'italic': '0', 'underlined': 'none', 'qFormat': False}
 
         default_style = self.styles.find_all('w:style', attrs={'w:default': "1", 'w:type': style_type})
         if default_style:
@@ -66,6 +67,8 @@ class StylesExtractor:
         # TODO information in numPr for styles
         if style.numPr:
             info['numPr'] = style.numPr
+        if style.qFormat:
+            info['qFormat'] = True
 
         # basedOn + hierarchy of styles
         current_style = style
@@ -82,6 +85,7 @@ class StylesExtractor:
         if default_style:
             styles = [default_style] + styles
 
+        # TODO rPr and pPr in styles
         for style in styles:  # apply styles in reverse order
             pe = PropertiesExtractor(style)
             pe.get_properties(info)

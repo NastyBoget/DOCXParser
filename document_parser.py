@@ -40,8 +40,10 @@ class DOCXParser:
         # 4) numbering styles (styles.xml, numbering.xml)
         # 5) characters styles (styles.xml)
         # 6) direct formatting (document.xml)
-        for paragraph in body:
-
+        paragraphs = body.find_all('w:p')
+        for paragraph in paragraphs:
+            if not paragraph.t:
+                continue
             # paragraph styles
             if paragraph.pStyle:
                 p_info = self.styles_extractor.parse(paragraph.pStyle['w:val'], "paragraph")
@@ -58,11 +60,15 @@ class DOCXParser:
                     if paragraph.numPr:
                         num_pr = self.numbering_extractor.parse(paragraph.numPr)
                 del p_info['numPr']
+            if 'qFormat' in p_info:
+                style_not_important = not p_info['qFormat']
+                del p_info['qFormat']
+            else:
+                style_not_important = True
 
             # numbering properties
             if not num_pr and paragraph.numPr:
                 num_pr = self.numbering_extractor.parse(paragraph.numPr)
-
             # num_pr = {"text": text of list element,
             # "pPr": {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
             # 'bold': '0', 'italic': '0', 'underlined': 'none'}, "rPr": None or
@@ -93,18 +99,23 @@ class DOCXParser:
 
                 item["properties"].append([start, end, num_info.copy()])
                 prev_r_info = num_info
-
             # character direct formatting
             raw_list = paragraph.find_all('w:r')
             for raw in raw_list:
-                if not raw.t or not raw.t.text:
+                text = ""
+                for tag in raw:
+                    if tag.name == 't' and tag.text:
+                        text += tag.text
+                    elif tag.name == 'tab':
+                        text += '\t'
+                if not text:
                     continue
 
-                start, end = len(item['text']), len(item['text']) + len(raw.t.text)
+                start, end = len(item['text']), len(item['text']) + len(text)
                 if not item['text']:
-                    item['text'] = raw.t.text
+                    item['text'] = text
                 else:
-                    item['text'] += raw.t.text
+                    item['text'] += text
                 r_info = p_info.copy()
 
                 if raw.rStyle:
@@ -121,7 +132,7 @@ class DOCXParser:
 
                 if raw.rPr:
                     pe = PropertiesExtractor(raw.rPr)
-                    pe.get_properties(r_info)
+                    pe.get_properties(r_info)  # in different documents different behavior
 
                 if prev_r_info == r_info and item['properties']:
                     item['properties'][-1][1] = end  # change the end of such properties
@@ -129,7 +140,6 @@ class DOCXParser:
                     item['properties'].append([start, end, r_info.copy()])
                     prev_r_info = r_info
             print(item['text'])
-
             self.data.append(item.copy())
         return self.data
 
@@ -141,8 +151,8 @@ if __name__ == "__main__":
     else:
         filenames = [choice]
     i = 0
-    try:
-        for filename in filenames:
+    for filename in filenames:
+        try:
             i += 1
             if choice == "test":
                 parser = DOCXParser('examples/docx/docx/' + filename)
@@ -156,13 +166,14 @@ if __name__ == "__main__":
                         print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]))
             if choice == 'test':
                 print(f"\r{i} objects are processed...", end='', flush=True)
-    except ValueError:
-        pass
-    # except KeyError:
-    #     print(filename)
+        except ValueError:
+            pass
+        # except KeyError:
+        #     print(filename)
 # Problems:
-# 1) intend 0
-# 2) example9.docx - error in numbering parse, \n in some paragraphs - table, bold='false'
-# 3) example9.docx АИС «УЗЕЛ ИНФРАСТРУКТУРЫ ПРОСТРАНСТВЕННЫХ ДАННЫХ РОССИЙСКОЙ ФЕДЕРАЦИИ» italic???
-# 4) rStyle
-# 5) docx/docx/doc_002400.docx
+# 1) example9.docx - error in numbering parse, bold='false' Список ИСПОЛЬЗУЕМЫХ ТЕРМИНОВ И СОКРАЩЕНИЙ
+# 2) example9.docx АИС «УЗЕЛ ИНФРАСТРУКТУРЫ ПРОСТРАНСТВЕННЫХ ДАННЫХ РОССИЙСКОЙ ФЕДЕРАЦИИ» italic???
+# 3) docx/docx/doc_000578.docx
+
+# doc_002050.docx конверт № ... слетает нумерация (первый элемент пронумерован текстом, второй - автоматически)
+# doc_001555.docx вроде норм, извлекаем свойства списков с помощью стилей
