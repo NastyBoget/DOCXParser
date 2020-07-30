@@ -39,9 +39,8 @@ class StylesExtractor:
         # returns dictionary with properties if the style was found
         # else returns default properties or the following dictionary:
         # {'size': 0, 'indent': {}, 'bold': '0', 'italic': '0', 'underlined': 'none'}
-        # indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0} TODO firstLineChars etc.
-
-        # TODO information in numPr for styles !!!!!
+        # indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0, 'numPr': style.numPr (optional)}
+        # TODO firstLineChars etc.
 
         info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
                 'bold': '0', 'italic': '0', 'underlined': 'none'}
@@ -63,6 +62,10 @@ class StylesExtractor:
         style = self.find_style(style_id, style_type)
         if not style:
             return info
+
+        # TODO information in numPr for styles
+        if style.numPr:
+            info['numPr'] = style.numPr
 
         # basedOn + hierarchy of styles
         current_style = style

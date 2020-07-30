@@ -260,7 +260,6 @@ class NumberingExtractor:
         #     return {"text": text, "lvl": ilvl, "pPr": lvl_info['pPr'], "rPr": lvl_info['rPr']}
         # except KeyError:
         #     print('error in numbering parse')
-        #     print(ilvl, num_id)
         #     return None
         ilvl, num_id = ilvl['w:val'], num_id['w:val']
         lvl_info = self.num_list[num_id].get_level_info(ilvl)

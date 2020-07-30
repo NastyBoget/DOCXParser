@@ -47,14 +47,22 @@ class DOCXParser:
                 p_info = self.styles_extractor.parse(paragraph.pStyle['w:val'], "paragraph")
             else:
                 # cur_p_info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                # 'bold': '0', 'italic': '0', 'underlined': 'none'}
+                # 'bold': '0', 'italic': '0', 'underlined': 'none', 'numPr': (ilvl, numId)}
                 p_info = self.empty_p_info
 
+            num_pr = None
+            if 'numPr' in p_info:
+                try:
+                    num_pr = self.numbering_extractor.parse(p_info['numPr'])
+                except KeyError:
+                    if paragraph.numPr:
+                        num_pr = self.numbering_extractor.parse(paragraph.numPr)
+                del p_info['numPr']
+
             # numbering properties
-            if paragraph.numPr:
+            if not num_pr and paragraph.numPr:
                 num_pr = self.numbering_extractor.parse(paragraph.numPr)
-            else:
-                num_pr = None
+
             # num_pr = {"text": text of list element,
             # "pPr": {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
             # 'bold': '0', 'italic': '0', 'underlined': 'none'}, "rPr": None or
@@ -108,8 +116,8 @@ class DOCXParser:
                 else:
                     item['properties'].append([start, end, r_info.copy()])
                     prev_r_info = r_info
-
             print(item['text'])
+
             self.data.append(item.copy())
         return self.data
 
@@ -138,8 +146,11 @@ if __name__ == "__main__":
                 print(f"\r{i} objects are processed...", end='', flush=True)
     except ValueError:
         pass
+    # except KeyError:
+    #     print(filename)
 # Problems:
 # 1) intend 0
-# 2) example9.docx - error in numbering parse, \n in some paragraphs ???, bold='false'
+# 2) example9.docx - error in numbering parse, \n in some paragraphs - table, bold='false'
 # 3) example9.docx АИС «УЗЕЛ ИНФРАСТРУКТУРЫ ПРОСТРАНСТВЕННЫХ ДАННЫХ РОССИЙСКОЙ ФЕДЕРАЦИИ» italic???
 # 4) rStyle
+# 5) docx/docx/doc_002400.docx
