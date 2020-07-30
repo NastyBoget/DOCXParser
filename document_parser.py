@@ -42,7 +42,7 @@ class DOCXParser:
         # 6) direct formatting (document.xml)
         for paragraph in body:
 
-            # properties in styles
+            # paragraph styles
             if paragraph.pStyle:
                 p_info = self.styles_extractor.parse(paragraph.pStyle['w:val'], "paragraph")
             else:
@@ -105,8 +105,20 @@ class DOCXParser:
                     item['text'] = raw.t.text
                 else:
                     item['text'] += raw.t.text
-
                 r_info = p_info.copy()
+
+                if raw.rStyle:
+                    # TODO r_style before pPr
+                    r_style = self.styles_extractor.parse(raw.rStyle['w:val'], "character")
+                    if r_style['size'] != 0:
+                        r_info['size'] = r_style['size']
+                    if r_style['underlined'] != 'none':
+                        r_info['underlined'] = r_style['underlined']
+                    if r_style['bold'] != '0':
+                        r_info['bold'] = r_style['bold']
+                    if r_style['italic'] != '0':
+                        r_info['italic'] = r_style['italic']
+
                 if raw.rPr:
                     pe = PropertiesExtractor(raw.rPr)
                     pe.get_properties(r_info)

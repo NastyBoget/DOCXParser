@@ -38,6 +38,8 @@ class PropertiesExtractor:
                 old_properties['bold'] = self.tree.b['w:val']
             except KeyError:
                 old_properties['bold'] = '1'
+        else:
+            old_properties['bold'] = '0'
 
         # italic
         if self.tree.i:
@@ -45,6 +47,8 @@ class PropertiesExtractor:
                 old_properties['italic'] = self.tree.i['w:val']
             except KeyError:
                 old_properties['italic'] = '1'
+        else:
+            old_properties['italic'] = '0'
 
         # underlined
         if self.tree.u:
@@ -52,6 +56,8 @@ class PropertiesExtractor:
                 old_properties['underlined'] = self.tree.u['w:val']
             except KeyError:
                 pass
+        else:
+            old_properties['underlined'] = 'none'
 
 
 if __name__ == "__main__":
