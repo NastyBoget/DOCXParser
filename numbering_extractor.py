@@ -104,6 +104,7 @@ class AbstractNum:
                 self.levels[ilvl]['start'] = int(lvl.start['w:val'])
             else:
                 self.levels[ilvl]['start'] = 1
+
             if lvl.lvlRestart:
                 self.levels[ilvl]['lvlRestart'] = bool(int(lvl.lvlRestart['w:val']))
             else:
@@ -159,7 +160,14 @@ class Num(AbstractNum):
 
         # override some of abstractNum properties
         if num_tree.lvlOverride:
-            self.parse(num_tree.lvlOverride.find_all('w:lvl'))
+            lvl_list = num_tree.lvlOverride.find_all('w:lvl')
+            self.parse(lvl_list)
+            # w:startOverride
+            if num_tree.lvlOverride.startOverride:
+                for lvl in lvl_list:
+                    if lvl.startOverride:
+                        self.levels[lvl['w:ilvl']]['lvlRestart'] = True
+                        self.levels[lvl['w:ilvl']]['start'] = int(lvl.startOverride['w:val'])
 
     def get_level_info(self, level_num):
         return self.levels[level_num].copy()
@@ -206,8 +214,12 @@ class NumberingExtractor:
         # there is the information about this list
         if abstract_num_id in self.prev_ilvl:
             prev_ilvl = self.prev_ilvl[abstract_num_id]
+            # TODO for startOverride:
+            if prev_ilvl == ilvl and self.prev_num_id != num_id and \
+                    lvl_info['lvlRestart'] and self.num_list[num_id].properties['restart']:
+                self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
             # it's a new level
-            if prev_ilvl < ilvl and lvl_info['lvlRestart'] or (abstract_num_id, ilvl) not in self.numerations:
+            elif prev_ilvl < ilvl and lvl_info['lvlRestart'] or (abstract_num_id, ilvl) not in self.numerations:
                 self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
             # it's a continue of the old level
             else:
@@ -215,12 +227,14 @@ class NumberingExtractor:
         # there isn't the information about this list
         else:
             self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
+        print("numId = {}, prevNumId = {}, lvl = {}".format(num_id, self.prev_num_id, ilvl))
         self.prev_ilvl[abstract_num_id] = ilvl
         self.prev_abstract_num_id = abstract_num_id
         self.prev_num_id = num_id
 
         text = lvl_info['lvlText']
         levels = re.findall(r'%\d+', text)
+        print("lvl_info = {}, numerations = {}".format(lvl_info, self.numerations))
         for level in levels:
             # level = '%level'
             level = level[1:]
@@ -233,18 +247,20 @@ class NumberingExtractor:
         # level = ilvl + 1
         ilvl = str(int(level) - 1)
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
-
         try:
             shift = self.numerations[(abstract_num_id, ilvl)] - 1
-        except KeyError:
+        except KeyError as err:
             # TODO handle very strange list behaviour
             # print('=================')
             # print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
             # print('=================')
             # if we haven't found given abstractNumId we use previous
-            shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
+            try:
+                shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
+            except KeyError:
+                self.numerations[(abstract_num_id, ilvl)] = 1
+                shift = 0
             # return ""
-
         if lvl_info['numFmt'] == "bullet":
             num_fmt = lvl_info['lvlText']
         else:
@@ -262,15 +278,21 @@ class NumberingExtractor:
         # {'size': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'} for text }
         if not xml:
             return None
+        # TODO
         ilvl, num_id = xml.ilvl, xml.numId
-        if not ilvl:
-            ilvl = '0'
-        else:
-            ilvl = ilvl['w:val']
         if not num_id:
             return None
         else:
             num_id = num_id['w:val']
+
+        if not ilvl:
+            abstract_num_id = self.num_list[num_id].abstract_num_id
+            if abstract_num_id in self.prev_ilvl:
+                ilvl = self.prev_ilvl[abstract_num_id]
+            else:
+                ilvl = "0"
+        else:
+            ilvl = ilvl['w:val']
         # try:
         #     ilvl, num_id = ilvl['w:val'], num_id['w:val']
         #     lvl_info = self.num_list[num_id].get_level_info(ilvl)

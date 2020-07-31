@@ -53,22 +53,34 @@ class DOCXParser:
                 p_info = self.empty_p_info
 
             num_pr = None
-            if 'numPr' in p_info:
-                try:
-                    num_pr = self.numbering_extractor.parse(p_info['numPr'])
-                except KeyError:
-                    if paragraph.numPr:
-                        num_pr = self.numbering_extractor.parse(paragraph.numPr)
-                del p_info['numPr']
+
             if 'qFormat' in p_info:
                 style_not_important = not p_info['qFormat']
                 del p_info['qFormat']
             else:
                 style_not_important = True
 
-            # numbering properties
-            if not num_pr and paragraph.numPr:
-                num_pr = self.numbering_extractor.parse(paragraph.numPr)
+            # TODO numbering properties
+            if paragraph.numPr:
+                try:
+                    num_pr = self.numbering_extractor.parse(paragraph.numPr)
+                except KeyError:
+                    if 'numPr' in p_info:
+                        try:
+                            num_pr = self.numbering_extractor.parse(p_info['numPr'])
+                        except KeyError as error:
+                            # print(error.args)
+                            pass
+                        del p_info['numPr']
+            else:
+                if 'numPr' in p_info:
+                    try:
+                        num_pr = self.numbering_extractor.parse(p_info['numPr'])
+                    except KeyError as error:
+                        # print(error.args)
+                        pass
+                    del p_info['numPr']
+
             # num_pr = {"text": text of list element,
             # "pPr": {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
             # 'bold': '0', 'italic': '0', 'underlined': 'none'}, "rPr": None or
@@ -168,12 +180,14 @@ if __name__ == "__main__":
                 print(f"\r{i} objects are processed...", end='', flush=True)
         except ValueError:
             pass
-        # except KeyError:
+        except KeyError as err:
+            print(err)
+            raise KeyError(err.args)
         #     print(filename)
 # Problems:
 # 1) example9.docx - error in numbering parse, bold='false' Список ИСПОЛЬЗУЕМЫХ ТЕРМИНОВ И СОКРАЩЕНИЙ
 # 2) example9.docx АИС «УЗЕЛ ИНФРАСТРУКТУРЫ ПРОСТРАНСТВЕННЫХ ДАННЫХ РОССИЙСКОЙ ФЕДЕРАЦИИ» italic???
-# 3) docx/docx/doc_000578.docx
+# 3) TODO docx/docx/doc_000578.docx !!!!
 
 # doc_002050.docx конверт № ... слетает нумерация (первый элемент пронумерован текстом, второй - автоматически)
 # doc_001555.docx вроде норм, извлекаем свойства списков с помощью стилей
