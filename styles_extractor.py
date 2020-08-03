@@ -40,11 +40,11 @@ class StylesExtractor:
         # else returns default properties or the following dictionary:
         # {'size': 0, 'indent': {}, 'bold': '0', 'italic': '0', 'underlined': 'none'}
         # indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0,
-        # 'numPr': style.numPr (optional), 'qFormat': False}
+        # 'numPr': style.numPr (optional)}
         # TODO firstLineChars etc.
 
         info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                'bold': '0', 'italic': '0', 'underlined': 'none', 'qFormat': False}
+                'bold': '0', 'italic': '0', 'underlined': 'none'}
 
         default_style = self.styles.find_all('w:style', attrs={'w:default': "1", 'w:type': style_type})
         if default_style:
@@ -65,10 +65,10 @@ class StylesExtractor:
             return info
 
         # TODO information in numPr for styles
+        # TODO link
+        # TODO suppressLineNumbers
         if style.numPr:
-            info['numPr'] = style.numPr
-        if style.qFormat:
-            info['qFormat'] = True
+            info['numPr'] = style
 
         # basedOn + hierarchy of styles
         current_style = style

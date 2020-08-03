@@ -9,8 +9,7 @@ bad_file_num = 0
 # pages 691 - 733 in the documentation
 
 # page 1424
-numFmtList = {"bullet": "●",  # value in lvlText
-              "decimal": "1",  # 1, 2, 3, ..., 10, 11, 12, ...
+numFmtList = {"decimal": "1",  # 1, 2, 3, ..., 10, 11, 12, ...
               "lowerLetter": "a",  # a, b, c, ..., y, z, aa, bb, cc, ..., yy, zz, aaa, bbb, ccc, ...
               "lowerRoman": "i",  # i, ii, iii, iv, ..., xviii, xix, xx, xxi, ...
               "none": "",
@@ -70,7 +69,7 @@ class AbstractNum:
             if tree['w15:restartNumberingAfterBreak']:
                 self.properties['restart'] = bool(int(tree['w15:restartNumberingAfterBreak']))
         except KeyError:
-            self.properties['restart'] = False
+            self.properties['restart'] = True
         # properties for each list level {level number: properties}
         self.levels = {}
 
@@ -83,47 +82,50 @@ class AbstractNum:
         # rPr -> sz, bold, italic, underlined
         # start (w:val="1")
         # suff (w:val="nothing", "tab" - default, "space")
-        # lvlJc (Justification, val="start", "end")
         # lvlRestart (w:val="0")
+        # restart = restartNumberingAfterBreak for each level
         for lvl in lvl_list:
             ilvl = lvl['w:ilvl']
             if ilvl not in self.levels:
                 self.levels[ilvl] = {}
             if lvl.lvlText:
                 self.levels[ilvl]['lvlText'] = lvl.lvlText['w:val']
+            elif 'lvlText' not in self.levels[ilvl]:
+                self.levels[ilvl]['lvlText'] = ""
 
             if lvl.isLgl:
                 self.levels[ilvl]['numFmt'] = 'decimal'
             else:
                 if lvl.numFmt:
                     self.levels[ilvl]['numFmt'] = lvl.numFmt['w:val']
-                else:
+                elif 'numFmt' not in self.levels[ilvl]:
                     self.levels[ilvl]['numFmt'] = 'none'
 
             if lvl.start:
                 self.levels[ilvl]['start'] = int(lvl.start['w:val'])
-            else:
+            elif 'start' not in self.levels[ilvl]:
                 self.levels[ilvl]['start'] = 1
 
             if lvl.lvlRestart:
                 self.levels[ilvl]['lvlRestart'] = bool(int(lvl.lvlRestart['w:val']))
-            else:
+            elif 'lvlRestart' not in self.levels[ilvl]:
                 self.levels[ilvl]['lvlRestart'] = True
+            if 'restart' not in self.levels[ilvl]:
+                self.levels[ilvl]['restart'] = self.properties['restart']
+
             if lvl.suff:
                 self.levels[ilvl]['suff'] = getSuffix[lvl.suff['w:val']]
-            else:
+            elif 'suff' not in self.levels[ilvl]:
                 self.levels[ilvl]['suff'] = getSuffix["tab"]
 
+            # TODO check override case
             # extract information from paragraphs and raws properties
             if lvl.pStyle:
-                properties = self.styles_extractor.parse(lvl.pStyle['w:val'], "numbering")
-                if properties == {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                                  'bold': '0', 'italic': '0', 'underlined': 'none', 'qFormat': False}:
-                    properties = self.styles_extractor.parse(lvl.pStyle['w:val'], "paragraph")
+                self.levels[ilvl]['styleId'] = lvl.pStyle['w:val']
+                properties = self.styles_extractor.parse(lvl.pStyle['w:val'], "paragraph")
             else:
                 properties = self.styles_extractor.parse(None)
-            style_not_important = not properties['qFormat']
-            del properties['qFormat']
+
             if 'numPr' in properties:
                 del properties['numPr']
             # paragraph -> raw
@@ -160,14 +162,13 @@ class Num(AbstractNum):
 
         # override some of abstractNum properties
         if num_tree.lvlOverride:
-            lvl_list = num_tree.lvlOverride.find_all('w:lvl')
+            lvl_list = num_tree.find_all('w:lvlOverride')
             self.parse(lvl_list)
             # w:startOverride
-            if num_tree.lvlOverride.startOverride:
-                for lvl in lvl_list:
-                    if lvl.startOverride:
-                        self.levels[lvl['w:ilvl']]['lvlRestart'] = True
-                        self.levels[lvl['w:ilvl']]['start'] = int(lvl.startOverride['w:val'])
+            for lvl in lvl_list:
+                if lvl.startOverride:
+                    self.levels[lvl['w:ilvl']]['restart'] = True
+                    self.levels[lvl['w:ilvl']]['start'] = int(lvl.startOverride['w:val'])
 
     def get_level_info(self, level_num):
         return self.levels[level_num].copy()
@@ -194,6 +195,7 @@ class NumberingExtractor:
         self.prev_num_id = None
         self.prev_abstract_num_id = None
         self.prev_ilvl = {}  # {abstractNumId: ilvl} previous ilvl for list element with given numId
+        self.prev_numId = {}  # {abstractNumId: numId} previous numId for list element with given numId
 
         abstract_num_list = {abstract_num['w:abstractNumId']: abstract_num
                              for abstract_num in xml.find_all('w:abstractNum')}
@@ -208,15 +210,18 @@ class NumberingExtractor:
         abstract_num_id = self.num_list[num_id].abstract_num_id
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
         # there is the other list
-        if self.prev_abstract_num_id and self.prev_num_id and self.prev_abstract_num_id != abstract_num_id and \
-                self.num_list[self.prev_num_id].properties['restart']:
+        if self.prev_abstract_num_id and self.prev_num_id and self.prev_abstract_num_id != abstract_num_id \
+                and self.num_list[self.prev_num_id].properties['restart']:
             del self.prev_ilvl[self.prev_abstract_num_id]
         # there is the information about this list
         if abstract_num_id in self.prev_ilvl:
             prev_ilvl = self.prev_ilvl[abstract_num_id]
-            # TODO for startOverride:
-            if prev_ilvl == ilvl and self.prev_num_id != num_id and \
-                    lvl_info['lvlRestart'] and self.num_list[num_id].properties['restart']:
+            # startOverride:
+            if abstract_num_id in self.prev_numId:
+                prev_num_id = self.prev_numId[abstract_num_id]
+            else:
+                prev_num_id = None
+            if prev_num_id and prev_num_id != num_id and lvl_info['restart']:
                 self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
             # it's a new level
             elif prev_ilvl < ilvl and lvl_info['lvlRestart'] or (abstract_num_id, ilvl) not in self.numerations:
@@ -227,8 +232,11 @@ class NumberingExtractor:
         # there isn't the information about this list
         else:
             self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
-        print("numId = {}, prevNumId = {}, lvl = {}".format(num_id, self.prev_num_id, ilvl))
+        print("numId = {}, prevNumId = {}, abstractNumId = {}, prevAbstractNumId = {},"
+              " lvl = {}".format(num_id, self.prev_num_id, abstract_num_id,
+                                 self.prev_abstract_num_id, ilvl))
         self.prev_ilvl[abstract_num_id] = ilvl
+        self.prev_numId[abstract_num_id] = num_id
         self.prev_abstract_num_id = abstract_num_id
         self.prev_num_id = num_id
 
@@ -247,24 +255,23 @@ class NumberingExtractor:
         # level = ilvl + 1
         ilvl = str(int(level) - 1)
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
+        if lvl_info['numFmt'] == "bullet":
+            return lvl_info['lvlText']
+
         try:
             shift = self.numerations[(abstract_num_id, ilvl)] - 1
         except KeyError as err:
             # TODO handle very strange list behaviour
-            # print('=================')
-            # print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
-            # print('=================')
+            print('=================')
+            print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
+            print('=================')
             # if we haven't found given abstractNumId we use previous
             try:
                 shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
             except KeyError:
                 self.numerations[(abstract_num_id, ilvl)] = 1
                 shift = 0
-            # return ""
-        if lvl_info['numFmt'] == "bullet":
-            num_fmt = lvl_info['lvlText']
-        else:
-            num_fmt = get_next_item(lvl_info['numFmt'], shift)
+        num_fmt = get_next_item(lvl_info['numFmt'], shift)
         return num_fmt
 
     def parse(self, xml):
@@ -278,29 +285,27 @@ class NumberingExtractor:
         # {'size': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'} for text }
         if not xml:
             return None
-        # TODO
         ilvl, num_id = xml.ilvl, xml.numId
-        if not num_id:
+        if not num_id or num_id['w:val'] not in self.num_list:
             return None
         else:
             num_id = num_id['w:val']
 
         if not ilvl:
-            abstract_num_id = self.num_list[num_id].abstract_num_id
-            if abstract_num_id in self.prev_ilvl:
-                ilvl = self.prev_ilvl[abstract_num_id]
-            else:
-                ilvl = "0"
+            try:
+                style_id = xml['w:styleId']
+                num = self.num_list[num_id]
+                for level_num, level in num.levels.items():
+                    if 'styleId' in level and level['styleId'] == style_id:
+                        ilvl = level_num
+            except KeyError:
+                print('=================')
+                print("error in numbering style")
+                print('=================')
+                return None
         else:
             ilvl = ilvl['w:val']
-        # try:
-        #     ilvl, num_id = ilvl['w:val'], num_id['w:val']
-        #     lvl_info = self.num_list[num_id].get_level_info(ilvl)
-        #     text = self.get_list_text(ilvl, num_id)
-        #     return {"text": text, "lvl": ilvl, "pPr": lvl_info['pPr'], "rPr": lvl_info['rPr']}
-        # except KeyError:
-        #     print('error in numbering parse')
-        #     return None
+
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
         text = self.get_list_text(ilvl, num_id)
         return {"text": text, "lvl": ilvl, "pPr": lvl_info['pPr'], "rPr": lvl_info['rPr']}
@@ -362,6 +367,3 @@ if __name__ == "__main__":
         print('total: {}, bad files: {}, without lists: {}'.format(total, bad_file_num, file_without_lists))
         print('bad zip: ', bad_zip_files)
         print('wrong_files: ', wrong_files)
-    # wrong_files:  ['doc_002400.docx', 'doc_002050.docx', 'doc_000201.docx', 'doc_001410.docx', 'doc_001555.docx',
-    # 'doc_000485.docx', 'doc_000606.docx', 'doc_000885.docx', 'doc_000186.docx', 'doc_002504.docx', 'doc_002857.docx',
-    # 'doc_001902.docx', 'doc_000581.docx', 'doc_001406.docx', 'doc_003084.docx', 'doc_001754.docx', 'doc_001216.docx']

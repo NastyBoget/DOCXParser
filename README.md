@@ -90,6 +90,8 @@ rPr - свойства элемента
 * pStyle - стиль параграфа (ST_String)
 
   * val (default, heading) - значение связано со styleId
+  
+  * внутри стиля может быть numPr, тогда к параграфу применятеся нумерация, но стиль параграфа будет стилем AbstractNum, без конкретного уровня списка
 
 * shd (shading) - фоновый цвет параграфа
 
@@ -104,7 +106,8 @@ rPr - свойства элемента
   * beforeLines (аналогично afterLines)
   
   * line - число вертикальных пробелов между строками в параграфе, это число может быть в разных единицах измерения в зависимости от значания атрибута lineRule
-  
+ 
+* suppressLineNumbers - не нумеровать данный параграф и не учитывать его при вычислении номера номеров других параграфов
 
 если указаны разные значения в настройках соседних параграфов, выбирается наибольшее
 
@@ -156,7 +159,11 @@ rPr - свойства элемента
 
 * u (underline) - подчеркивание
 
+* vanish - не показывать содержимое элемента
+
 * w - сжатие / расширение текста
+
+* tab, br, cr, sym - специальные символы, которые могут встретиться в тексте элемента
 
 ### Сводка по bold
 
@@ -182,16 +189,16 @@ rPr - свойства элемента
     * numStyleLink - ссылка на другой abstractNum (чьи свойства используются), в w:val прописано значение, написанное в w:val для styleLink нужного нам abstractNum
     
     * restartNumberingAfterBreak
-
+    
 * abstractNumId (val="...") - уникальный идентификатор типа списка
 
 * ilvl (val="...") - уровень вложенности
 
 * lvl - описывает свойства списка определенного уровня внутри lvlOverride или внутри abstractNum
-
-    * isLgl - если указан этот тег, то независимо от других настроек список будет пронумерован арабскими цифрами
-    
-    * lvlText (val="some text %num some text") - текстовое представление для нумерации (вместо %num подставляется нумерация конкретного стиля, num - номер уровня (<= текущего, больший игнорируется)) № уровня больше на 1, чем ilvl
+      
+   * isLgl - если указан этот тег, то независимо от других настроек список (все уровни в тексте данного уровня) будет пронумерован арабскими цифрами  
+  
+   * lvlText (val="some text %num some text") - текстовое представление для нумерации (вместо %num подставляется нумерация конкретного стиля, num - номер уровня (<= текущего, больший игнорируется)) № уровня больше на 1, чем ilvl
     
     * numFmt - стиль ("upperLetter", "lowerRoman" ... с. 1415), если опущен, то это просто десятичные числа
     
@@ -223,9 +230,11 @@ rPr - свойства элемента
 
 **Иерархия стилей:** 
 
-documentDefault -> таблицы -> параграфы -> нумерация -> символы -> прямое форматирование (document.xml)
+![alt text](./examples/inheritance.png)
 
-* toggle properties: bold, italic
+documentDefault -> таблицы -> параграфы -> нумерация -> символы -> прямое форматирование, то есть все, что не в стилях (document.xml)
+
+* toggle properties: bold, italic - если их значения различаются в иерархии стилей, берется первое в иерархии значение (TODO более подробно расписать этот пункт)
 
 * w:styles -> w:style; атрибуты:
 
@@ -237,11 +246,11 @@ documentDefault -> таблицы -> параграфы -> нумерация ->
     
 * aliases - другие имена стилей
 
-* basedOn - наследование стилей
+* basedOn - наследование стилей (параграфы и символы наследуют свойства параграфов и символов соответственно, нумерация не наследуется)
 
 * name - имя стиля
 
-* next - имя стиля для следующего параграфа
+* next - имя стиля для следующего создаваемого параграфа
 
 * qFormat - если есть, то стиль - первичный для данного документа
 
@@ -255,13 +264,13 @@ documentDefault -> таблицы -> параграфы -> нумерация ->
     
     * rPr, rPrDefault 
     
-* Numbering Styles (type="numbering")
+* Numbering Styles (type="numbering") в pPr указывается только numPr
 
 * Paragraph Styles (type="paragraph")
 
     * w:pStyle w:val="..."
     
-    * numbering in paragraph style - numPr внутри стиля, ссылается на abstractNum, перекрывает стиль в abstractNum
+    * numbering in paragraph style - numPr внутри стиля, не используется уровень списка. В numbering.xml для данного numId есть AbstractNum, внутри которого какой-то уровень ссылается на данный стиль. Этот уровень и выбирается, и применяются его стили
     
     * pPr - свойства параграфа
     
@@ -303,7 +312,9 @@ outlineLvl - This element specifies the outline level which shall be associated 
 The outline level of text in the document (specified using the val attribute) can be from 0 to 9, where 9 specifically indicates that there is no outline level specifically applied to this paragraph. If this element is omitted, then the outline level of the content is assumed to be 9 (no level).
 
 suppressLineNumbers - This element specifies whether line numbers shall be calculated for lines in this paragraph by the consumer when line numbering is requested using the lnNumType element (§17.6.8) in the paragraph's parent section settings. This element specifies whether the current paragraph's lines should be exempted from line numbering which is applied by the consumer on this document, not just suppressing the display of the numbering, but removing these lines from the line numbering calculation.
-If this element is omitted on a given paragraph, its value is determined by the setting previously set at any level of the style hierarchy (i.e. that previous setting remains unchanged). If this setting is never specified in the style hierarchy, then the default line number settings for the section, as specified in the lnNumType element shall apply to each line of this paragraph.
+If this element is omitted on a given paragraph, its value is determined by the setting previously
+set at any level of the style hierarchy (i.e. that previous setting remains unchanged). If this setting is never specified in the style hierarchy, then the default line number settings for the section, as specified in the lnNumType element shall apply to each line of this paragraph.
+
 [Example: Consider a document with three paragraphs, each of which are displayed on five lines , all contained in a section which has the lnNumType element specified. If the second paragraph should be exempted from that line numbering, this requirement would be specified using the following WordprocessingML:
   <w:pPr>
     <w:suppressLineNumbers />
@@ -313,6 +324,7 @@ The paragraph would then be exempted from line by a consumer at display time, wh
 vanish - This element specifies whether the contents of this run shall be hidden from display at display time in a document. [Note: The setting should affect the normal display of text, but an application can have settings to force hidden text to be displayed. end note]
 This formatting property is a toggle property (§17.7.3).
 If this element is not present, the default value is to leave the formatting applied at previous level in the style hierarchy .If this element is never applied in the style hierarchy, then this text shall not be hidden when displayed in a document.
+
 [Example: Consider a run of text which must have the hidden text property turned on for the contents of the run. This constraint is specified using the following WordprocessingML:
   <w:rPr>
     <w:vanish />
@@ -321,6 +333,7 @@ This run declares that the vanish property is set for the contents of this run, 
 
 br - This element specifies that a break shall be placed at the current location in the run content. A break is a special character which is used to override the normal line breaking that would be performed based on the normal layout of the document’s contents. [Example: Normal breaking for English would occur only after a breaking space or optional hyphen character. end example]
 The behavior of this break character (the location where text shall be restarted after this break) shall be determined by its type and clear attribute values, described below.
+
 [Example: Consider the following sentence in a WordprocessingML document: This is a simple sentence.
 Normally, just as shown above, this sentence would be displayed on a single line as it is not long enough to require line breaking (given the width of the current page). However, if a text wrapping break character (a typical line break) were inserted after the word is, as follows:
 <w:r>
@@ -339,3 +352,7 @@ cr - This element specifies that a carriage return shall be placed at the curren
 The behavior of a carriage return in run content shall be identical to a break character with null type and clear attributes, which shall end the current line and find the next available line on which to continue.
 
 sym - This element specifies the presence of a symbol character at the current location in the run’s content. A symbol character is a special character within a run’s content which does not use any of the run fonts specified in the rFonts element (§17.3.2.26) (or by the style hierarchy).
+
+lvlRestart - This element specifies a one-based index which determines when a numbering level should restart to its start value (§17.9.25). A numbering level restarts when an instance of the specified numbering level, which shall be higher (earlier than this level) or any earlier level is used in the given document's contents.
+
+[Example: If this value is 2, then both level two and level one reset this value. end example]

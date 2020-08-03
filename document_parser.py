@@ -54,12 +54,6 @@ class DOCXParser:
 
             num_pr = None
 
-            if 'qFormat' in p_info:
-                style_not_important = not p_info['qFormat']
-                del p_info['qFormat']
-            else:
-                style_not_important = True
-
             # TODO numbering properties
             if paragraph.numPr:
                 try:
