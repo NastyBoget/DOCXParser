@@ -69,7 +69,7 @@ class AbstractNum:
             if tree['w15:restartNumberingAfterBreak']:
                 self.properties['restart'] = bool(int(tree['w15:restartNumberingAfterBreak']))
         except KeyError:
-            self.properties['restart'] = True
+            self.properties['restart'] = False
         # properties for each list level {level number: properties}
         self.levels = {}
 
@@ -132,7 +132,8 @@ class AbstractNum:
             if lvl.pPr:
                 pe = PropertiesExtractor(lvl.pPr)
                 pe.get_properties(properties)
-                self.levels[ilvl]['pPr'] = properties.copy()
+            self.levels[ilvl]['pPr'] = properties.copy()
+
             if lvl.rPr:
                 pe = PropertiesExtractor(lvl.rPr)
                 pe.get_properties(properties)
@@ -262,9 +263,9 @@ class NumberingExtractor:
             shift = self.numerations[(abstract_num_id, ilvl)] - 1
         except KeyError as err:
             # TODO handle very strange list behaviour
-            print('=================')
-            print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
-            print('=================')
+            # print('=================')
+            # print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
+            # print('=================')
             # if we haven't found given abstractNumId we use previous
             try:
                 shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
@@ -324,7 +325,6 @@ if __name__ == "__main__":
     total = len(filenames)
     for filename in filenames:
         i += 1
-        # document = zipfile.ZipFile('examples/' + filename)
         try:
             if choice == "test":
                 document = zipfile.ZipFile('examples/docx/docx/' + filename)

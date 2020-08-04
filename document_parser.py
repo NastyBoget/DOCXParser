@@ -114,6 +114,13 @@ class DOCXParser:
                         text += tag.text
                     elif tag.name == 'tab':
                         text += '\t'
+                    elif tag.name == 'br':
+                        text += '\n'
+                    elif tag.name == 'cr':
+                        text += '\r'
+                    elif tag.name == 'sym':
+                        pass  # TODO
+
                 if not text:
                     continue
 
@@ -178,10 +185,8 @@ if __name__ == "__main__":
             print(err)
             raise KeyError(err.args)
         #     print(filename)
-# Problems:
-# 1) example9.docx - error in numbering parse, bold='false' Список ИСПОЛЬЗУЕМЫХ ТЕРМИНОВ И СОКРАЩЕНИЙ
-# 2) example9.docx АИС «УЗЕЛ ИНФРАСТРУКТУРЫ ПРОСТРАНСТВЕННЫХ ДАННЫХ РОССИЙСКОЙ ФЕДЕРАЦИИ» italic???
-# 3) TODO docx/docx/doc_000578.docx !!!!
 
-# doc_002050.docx конверт № ... слетает нумерация (первый элемент пронумерован текстом, второй - автоматически)
-# doc_001555.docx вроде норм, извлекаем свойства списков с помощью стилей
+# Problems:
+# 1) example9.docx
+# 2) docs/prioritet.docx
+# 3) docx/docx/doc_000578.docx
