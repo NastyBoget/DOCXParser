@@ -1,7 +1,8 @@
 import zipfile
 from bs4 import BeautifulSoup
 from styles_extractor import StylesExtractor
-from properties_extractor import PropertiesExtractor
+from properties_extractor import change_properties
+from data_structures import BaseProperties, Paragraph, Raw
 import re
 import os
 
@@ -20,7 +21,14 @@ numFmtList = {"decimal": "1",  # 1, 2, 3, ..., 10, 11, 12, ...
               }
 
 
-def get_next_item(num_fmt, shift):
+def get_next_item(num_fmt: str,
+                  shift: int):
+    """
+    computes the next item of the list sequence
+    :param num_fmt: some value from numFmtList
+    :param shift: shift from the beginning of list numbering
+    :return: string representation of the next numbering item
+    """
     if num_fmt == "none":
         return numFmtList[num_fmt]
     if num_fmt == "decimal":
@@ -52,12 +60,16 @@ getSuffix = {"nothing": "",
 
 class AbstractNum:
 
-    def __init__(self, tree, styles_extractor):
-        # tree - BeautifulSoup tree with abstractNum content
-        # styles - StylesExtractor
+    def __init__(self,
+                 tree: BeautifulSoup,
+                 styles_extractor: StylesExtractor):
+        """
+        :param tree: BeautifulSoup tree with abstractNum content
+        :param styles_extractor: StylesExtractor
+        """
         self.styles_extractor = styles_extractor
         self.abstract_num_id = tree['w:abstractNumId']
-        self.properties = {}  # properties for all levels
+        self.properties = {}  # properties for all levels {"styleLink", "restart"}
 
         if tree.numStyleLink:
             # styleLink-> abstractNumId of the other numbering
@@ -69,11 +81,17 @@ class AbstractNum:
             if tree['w15:restartNumberingAfterBreak']:
                 self.properties['restart'] = bool(int(tree['w15:restartNumberingAfterBreak']))
         except KeyError:
-            self.properties['restart'] = False
+            self.properties['restart'] = False  # TODO check this behaviour
         # properties for each list level {level number: properties}
+        # properties = {"lvlText", "numFmt", "start", "lvlRestart", "restart", "suff", "styleId", "pPr", "rPr"}
         self.levels = {}
 
-    def parse(self, lvl_list):
+    def parse(self,
+              lvl_list: list):
+        """
+        save information about levels in self.levels
+        :param lvl_list: list with BeautifulSoup trees which contain information about levels
+        """
         # isLgl (only mention)
         # lvlText (val="some text %num some text")
         # numFmt (val="bullet", "decimal")
@@ -83,7 +101,7 @@ class AbstractNum:
         # start (w:val="1")
         # suff (w:val="nothing", "tab" - default, "space")
         # lvlRestart (w:val="0")
-        # restart = restartNumberingAfterBreak for each level
+        # restart - startOverride for each level
         for lvl in lvl_list:
             ilvl = lvl['w:ilvl']
             if ilvl not in self.levels:
@@ -122,32 +140,34 @@ class AbstractNum:
             # extract information from paragraphs and raws properties
             if lvl.pStyle:
                 self.levels[ilvl]['styleId'] = lvl.pStyle['w:val']
-                properties = self.styles_extractor.parse(lvl.pStyle['w:val'], "paragraph")
-            else:
-                properties = self.styles_extractor.parse(None)
+            elif 'styleId' not in self.levels[ilvl]:
+                self.levels[ilvl]['styleId'] = None
 
-            if 'numPr' in properties:
-                del properties['numPr']
             # paragraph -> raw
             if lvl.pPr:
-                pe = PropertiesExtractor(lvl.pPr)
-                pe.get_properties(properties)
-            self.levels[ilvl]['pPr'] = properties.copy()
+                self.levels[ilvl]['pPr'] = lvl.pPr
+            elif 'pPr' not in self.levels[ilvl]:
+                self.levels[ilvl]['pPr'] = None
 
             if lvl.rPr:
-                pe = PropertiesExtractor(lvl.rPr)
-                pe.get_properties(properties)
-                del properties['indent']
-                self.levels[ilvl]['rPr'] = properties.copy()
-            else:
+                self.levels[ilvl]['rPr'] = lvl.rPr
+            elif 'rPr' not in self.levels[ilvl]:
                 self.levels[ilvl]['rPr'] = None
 
 
 class Num(AbstractNum):
 
-    def __init__(self, num_id, abstract_num_list, num_list, styles_extractor):
-        # abstract_num_list - dictionary with abstractNum BeautifulSoup trees
-        # num_list - dictionary with num BeautifulSoup trees
+    def __init__(self,
+                 num_id: str,
+                 abstract_num_list: dict,
+                 num_list: dict,
+                 styles_extractor: StylesExtractor):
+        """
+        :param num_id: numId for num element
+        :param abstract_num_list: dictionary with abstractNum BeautifulSoup trees
+        :param num_list: dictionary with num BeautifulSoup trees
+        :param styles_extractor: StylesExtractor
+        """
         self.num_id = num_id
         num_tree = num_list[num_id]
         abstract_num_tree = abstract_num_list[num_tree.abstractNumId['w:val']]
@@ -171,15 +191,20 @@ class Num(AbstractNum):
                     self.levels[lvl['w:ilvl']]['restart'] = True
                     self.levels[lvl['w:ilvl']]['start'] = int(lvl.startOverride['w:val'])
 
-    def get_level_info(self, level_num):
+    def get_level_info(self,
+                       level_num: str):
         return self.levels[level_num].copy()
 
 
 class NumberingExtractor:
 
-    def __init__(self, xml, styles_extractor):
-
-        # xml - BeautifulSoup tree with numberings
+    def __init__(self,
+                 xml: BeautifulSoup,
+                 styles_extractor: StylesExtractor):
+        """
+        :param xml: BeautifulSoup tree with numberings
+        :param styles_extractor: StylesExtractor
+        """
         if xml:
             self.numbering = xml.numbering
             if not self.numbering:
@@ -233,9 +258,9 @@ class NumberingExtractor:
         # there isn't the information about this list
         else:
             self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
-        print("numId = {}, prevNumId = {}, abstractNumId = {}, prevAbstractNumId = {},"
-              " lvl = {}".format(num_id, self.prev_num_id, abstract_num_id,
-                                 self.prev_abstract_num_id, ilvl))
+        # print("numId = {}, prevNumId = {}, abstractNumId = {}, prevAbstractNumId = {},"
+        #       " lvl = {}".format(num_id, self.prev_num_id, abstract_num_id,
+        #                          self.prev_abstract_num_id, ilvl))
         self.prev_ilvl[abstract_num_id] = ilvl
         self.prev_numId[abstract_num_id] = num_id
         self.prev_abstract_num_id = abstract_num_id
@@ -243,7 +268,7 @@ class NumberingExtractor:
 
         text = lvl_info['lvlText']
         levels = re.findall(r'%\d+', text)
-        print("lvl_info = {}, numerations = {}".format(lvl_info, self.numerations))
+        # print("lvl_info = {}, numerations = {}".format(lvl_info, self.numerations))
         for level in levels:
             # level = '%level'
             level = level[1:]
@@ -275,15 +300,18 @@ class NumberingExtractor:
         num_fmt = get_next_item(lvl_info['numFmt'], shift)
         return num_fmt
 
-    def parse(self, xml):
-        # xml - BeautifulSoup tree with numPr from document.xml
-        # in the paragraph properties of the list
-        # the method the text and properties of the list element
-        # returns dict:
-        # {"text": text of list element,
-        # "pPr": {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-        # 'bold': '0', 'italic': '0', 'underlined': 'none'}, "rPr": None or
-        # {'size': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'} for text }
+    def parse(self,
+              xml: BeautifulSoup,
+              paragraph_properties: BaseProperties,
+              raw_properties: BaseProperties):
+        """
+        parses numPr content and extracts properties for paragraph for given numId and list level
+        changes old_paragraph properties according to list properties
+        changes raw_properties adding text of numeration and it's properties
+        :param xml: BeautifulSoup tree with numPr from document.xml or styles.xml (style content)
+        :param paragraph_properties: Paragraph for changing
+        :param raw_properties: Raw for changing
+        """
         if not xml:
             return None
         ilvl, num_id = xml.ilvl, xml.numId
@@ -296,20 +324,27 @@ class NumberingExtractor:
             try:
                 style_id = xml['w:styleId']
                 num = self.num_list[num_id]
+                # find link on this styleId in the levels list
                 for level_num, level in num.levels.items():
                     if 'styleId' in level and level['styleId'] == style_id:
                         ilvl = level_num
             except KeyError:
-                print('=================')
-                print("error in numbering style")
-                print('=================')
+                # print('=================')
+                # print("error in numbering style")
+                # print('=================')
                 return None
         else:
             ilvl = ilvl['w:val']
 
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
         text = self.get_list_text(ilvl, num_id)
-        return {"text": text, "lvl": ilvl, "pPr": lvl_info['pPr'], "rPr": lvl_info['rPr']}
+        if lvl_info['styleId']:
+            self.styles_extractor.parse(lvl_info['styleId'], paragraph_properties, "numbering")
+        if lvl_info['pPr']:
+            change_properties(paragraph_properties, lvl_info['pPr'])
+        if lvl_info['rPr']:
+            change_properties(raw_properties, lvl_info['rPr'])
+        raw_properties.text = text
 
 
 if __name__ == "__main__":
@@ -323,47 +358,52 @@ if __name__ == "__main__":
     else:
         filenames = [choice]
     total = len(filenames)
-    for filename in filenames:
-        i += 1
-        try:
-            if choice == "test":
-                document = zipfile.ZipFile('examples/docx/docx/' + filename)
-            else:
-                document = zipfile.ZipFile('examples/' + filename)
+    try:
+        for filename in filenames:
+            i += 1
             try:
-                numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
+                if choice == "test":
+                    document = zipfile.ZipFile('examples/docx/docx/' + filename)
+                else:
+                    document = zipfile.ZipFile('examples/' + filename)
+                try:
+                    numbering_bs = BeautifulSoup(document.read('word/numbering.xml'), 'xml')
+                except KeyError:
+                    file_without_lists += 1
+                else:
+                    document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
+                    styles_bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
+                    se = StylesExtractor(styles_bs)
+                    ne = NumberingExtractor(numbering_bs, se)
+                    se.numbering_extractor = ne
+                    for paragraph in document_bs.body:
+                        if choice != 'test':
+                            paragraph_text = map(lambda x: x.text, paragraph.find_all('w:t'))
+                            res = ""
+                            for item in paragraph_text:
+                                res += item
+                        else:
+                            res = ""
+                        if paragraph.numPr:
+                            p = Paragraph(paragraph, se, ne)
+                            r = Raw(None, se)
+                            ne.parse(paragraph.numPr, p, r)
+                            if choice != 'test':
+                                print(p)
+                                print(res)
+                        else:
+                            if choice != 'test':
+                                print(res)
+                if choice == 'test':
+                    print(f"\r{i} objects are processed...", end='', flush=True)
+            except zipfile.BadZipFile:
+                bad_zip_files.append(filename)
             except KeyError:
-                file_without_lists += 1
-            else:
-                document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
-                styles_bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
-                se = StylesExtractor(styles_bs)
-                ne = NumberingExtractor(numbering_bs, se)
-                for paragraph in document_bs.body:
-                    if choice != 'test':
-                        paragraph_text = map(lambda x: x.text, paragraph.find_all('w:t'))
-                        res = ""
-                        for item in paragraph_text:
-                            res += item
-                    else:
-                        res = ""
-                    if paragraph.numPr:
-                        p_properties = ne.parse(paragraph.numPr)
-                        if choice != 'test':
-                            print(p_properties)
-                            print(res)
-                    else:
-                        if choice != 'test':
-                            print(res)
-            if choice == 'test':
-                print(f"\r{i} objects are processed...", end='', flush=True)
-        except zipfile.BadZipFile:
-            bad_zip_files.append(filename)
-        except KeyError:
-            bad_file_num += 1
-            wrong_files.append(filename)
-    # total: 2193, bad files: 371, without lists: 289
-    if choice == 'test':
-        print('total: {}, bad files: {}, without lists: {}'.format(total, bad_file_num, file_without_lists))
-        print('bad zip: ', bad_zip_files)
-        print('wrong_files: ', wrong_files)
+                bad_file_num += 1
+                wrong_files.append(filename)
+    except Exception:
+        # total: 2193, bad files: 371, without lists: 289
+        if choice == 'test':
+            print('total: {}, bad files: {}, without lists: {}'.format(total, bad_file_num, file_without_lists))
+            print('bad zip: ', bad_zip_files)
+            print('wrong_files: ', wrong_files)

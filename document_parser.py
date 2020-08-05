@@ -3,158 +3,73 @@ from bs4 import BeautifulSoup
 import os
 from styles_extractor import StylesExtractor
 from numbering_extractor import NumberingExtractor
-from properties_extractor import PropertiesExtractor
+from data_structures import Paragraph
 
 
 class DOCXParser:
 
-    def __init__(self, file):
-        # file - name of the docx file
+    def __init__(self,
+                 file: str):
+        """
+        parses the .docx document
+        holds the text and metadata for each paragraph and raw in the document
+        :param file: name of the .docx file
+        """
         if not file.endswith('.docx'):
-            raise ValueError("it is not .docx file")
+            raise ValueError('it is not .docx file')
         document = zipfile.ZipFile(file)
         self.document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
         self.styles_extractor = StylesExtractor(BeautifulSoup(document.read('word/styles.xml'), 'xml'))
         try:
             self.numbering_extractor = NumberingExtractor(BeautifulSoup(document.read('word/numbering.xml'), 'xml'),
                                                           self.styles_extractor)
+            self.styles_extractor.numbering_extractor = self.numbering_extractor
         except KeyError:
             self.numbering_extractor = None
-        self.data = []  # the list of properties for all paragraphs
-        self.empty_p_info = self.styles_extractor.parse(None)
+        # the list of paragraph with their properties
+        self.paragraph_list = []
+        self.parse()
 
     def parse(self):
-        # returns the list of dictionaries for each paragraph
-        # [{"text": "", "properties": [[start, end, {indent, size, bold, italic, underlined}], ...] }, ...]
-        # start, end - character's positions begin with 0, end isn't included
-        # indent = {firstLine, hanging, start, left}
+        """
+        parses document into paragraphs and raws, extracts text for each raw and paragraph and it's metadata
+        """
 
         body = self.document_bs.body
         if not body:
-            return self.data
+            return
 
-        # hierarchy: properties in styles (+ numbering) -> direct properties (paragraph, character)
-        # 1) documentDefault (styles.xml)
-        # 2) tables (styles.xml)
-        # 3) paragraphs styles (styles.xml)
-        # 4) numbering styles (styles.xml, numbering.xml)
-        # 5) characters styles (styles.xml)
-        # 6) direct formatting (document.xml)
         paragraphs = body.find_all('w:p')
         for paragraph in paragraphs:
+            # TODO text may be without w:t
             if not paragraph.t:
                 continue
-            # paragraph styles
-            if paragraph.pStyle:
-                p_info = self.styles_extractor.parse(paragraph.pStyle['w:val'], "paragraph")
-            else:
-                # cur_p_info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                # 'bold': '0', 'italic': '0', 'underlined': 'none', 'numPr': (ilvl, numId)}
-                p_info = self.empty_p_info
 
-            num_pr = None
+            self.paragraph_list.append(Paragraph(paragraph, self.styles_extractor, self.numbering_extractor))
 
-            # TODO numbering properties
-            if paragraph.numPr:
-                try:
-                    num_pr = self.numbering_extractor.parse(paragraph.numPr)
-                except KeyError:
-                    if 'numPr' in p_info:
-                        try:
-                            num_pr = self.numbering_extractor.parse(p_info['numPr'])
-                        except KeyError as error:
-                            # print(error.args)
-                            pass
-                        del p_info['numPr']
-            else:
-                if 'numPr' in p_info:
-                    try:
-                        num_pr = self.numbering_extractor.parse(p_info['numPr'])
-                    except KeyError as error:
-                        # print(error.args)
-                        pass
-                    del p_info['numPr']
+    def get_lines(self):
+        """
+        :return: list of document's lines
+        """
+        lines = []
+        for paragraph in self.paragraph_list:
+            line_text = ""
+            for raw in paragraph.raws:
+                line_text += raw.text
+            lines.append(line_text)
+        return lines
 
-            # num_pr = {"text": text of list element,
-            # "pPr": {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-            # 'bold': '0', 'italic': '0', 'underlined': 'none'}, "rPr": None or
-            # {'size': 0, 'bold': '0', 'italic': '0', 'underlined': 'none'}} for text in num_pr
-            # TODO check this behavior
-            if num_pr:
-                for indent_type, value in num_pr["pPr"]['indent'].items():
-                    if value != 0:
-                        p_info['indent'][indent_type] = value
-
-            # paragraph direct formatting
-            # TODO more accurate with previous paragraphs
-            if paragraph.pPr:
-                pe = PropertiesExtractor(paragraph.pPr)
-                pe.get_properties(p_info)
-
-            item = {"text": "", "properties": []}
-            prev_r_info = p_info.copy()
-            # TODO check this behavior
-            if num_pr:
-                item["text"] += num_pr["text"]
-                start, end = 0, len(item["text"])
-                num_info = p_info.copy()
-                if num_pr["rPr"]:
-                    for r_property, value in num_pr["rPr"].items():
-                        if r_property != 'size' or value:  # size value should not be 0
-                            num_info[r_property] = value
-
-                item["properties"].append([start, end, num_info.copy()])
-                prev_r_info = num_info
-            # character direct formatting
-            raw_list = paragraph.find_all('w:r')
-            for raw in raw_list:
-                text = ""
-                for tag in raw:
-                    if tag.name == 't' and tag.text:
-                        text += tag.text
-                    elif tag.name == 'tab':
-                        text += '\t'
-                    elif tag.name == 'br':
-                        text += '\n'
-                    elif tag.name == 'cr':
-                        text += '\r'
-                    elif tag.name == 'sym':
-                        pass  # TODO
-
-                if not text:
-                    continue
-
-                start, end = len(item['text']), len(item['text']) + len(text)
-                if not item['text']:
-                    item['text'] = text
-                else:
-                    item['text'] += text
-                r_info = p_info.copy()
-
-                if raw.rStyle:
-                    # TODO r_style before pPr
-                    r_style = self.styles_extractor.parse(raw.rStyle['w:val'], "character")
-                    if r_style['size'] != 0:
-                        r_info['size'] = r_style['size']
-                    if r_style['underlined'] != 'none':
-                        r_info['underlined'] = r_style['underlined']
-                    if r_style['bold'] != '0':
-                        r_info['bold'] = r_style['bold']
-                    if r_style['italic'] != '0':
-                        r_info['italic'] = r_style['italic']
-
-                if raw.rPr:
-                    pe = PropertiesExtractor(raw.rPr)
-                    pe.get_properties(r_info)  # in different documents different behavior
-
-                if prev_r_info == r_info and item['properties']:
-                    item['properties'][-1][1] = end  # change the end of such properties
-                else:
-                    item['properties'].append([start, end, r_info.copy()])
-                    prev_r_info = r_info
-            print(item['text'])
-            self.data.append(item.copy())
-        return self.data
+    def get_lines_with_meta(self):
+        """
+        :return: list of dictionaries for each paragraph
+        [{"text": "", "properties": [[start, end, {"indent", "size", "bold", "italic", "underlined"}], ...] }, ...]
+        start, end - character's positions begin with 0, end isn't included
+        indent = {"firstLine", "hanging", "start", "left"}
+        """
+        lines_with_meta = []
+        for paragraph in self.paragraph_list:
+            lines_with_meta.append(paragraph.get_info())
+        return lines_with_meta
 
 
 if __name__ == "__main__":
@@ -171,7 +86,7 @@ if __name__ == "__main__":
                 parser = DOCXParser('examples/docx/docx/' + filename)
             else:
                 parser = DOCXParser('examples/' + choice)
-            lines_info = parser.parse()
+            lines_info = parser.get_lines_with_meta()
             if choice != "test":
                 for line in lines_info:
                     print(line['text'])
@@ -183,10 +98,6 @@ if __name__ == "__main__":
             pass
         except KeyError as err:
             print(err)
-            raise KeyError(err.args)
-        #     print(filename)
-
-# Problems:
-# 1) example9.docx
-# 2) docs/prioritet.docx
-# 3) docx/docx/doc_000578.docx
+            print(filename)
+        except zipfile.BadZipFile:
+            pass

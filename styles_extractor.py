@@ -1,26 +1,43 @@
-import zipfile
 from bs4 import BeautifulSoup
-from properties_extractor import PropertiesExtractor
-
+from properties_extractor import change_properties
+from data_structures import BaseProperties, Raw
 
 # page 665 in documentation
 
+
 class StylesExtractor:
 
-    def __init__(self, xml):
-        # xml - BeautifulSoup tree with styles
+    def __init__(self,
+                 xml: BeautifulSoup):
+        """
+        :param xml: BeautifulSoup tree with styles
+        """
         if xml:
             self.styles = xml.styles
             if not self.styles:
                 raise Exception("there are no styles")
         else:
             raise Exception("xml must not be empty")
+        self.numbering_extractor = None
+        # extract information from docDefaults
+        # docDefaults: rPrDefault + pPrDefault
+        self.default_style = self.styles.find_all('w:style', attrs={'w:default': "1", 'w:type': "paragraph"})
+        if self.default_style:
+            self.default_style = self.default_style[0]
+        elif self.styles.docDefaults:
+            self.default_style = self.styles.docDefaults
+        else:
+            self.default_style = None
 
-    def find_style(self, style_id, style_type='paragraph'):
-        # style_type may be paragraph, numbering or character
-        # finds style tree with given style_id and type
-        # if there isn't such style, returns None
-        # style type may be "paragraph", "numbering", "character", or None for custom styles
+    def find_style(self,
+                   style_id: str,
+                   style_type: str):
+        """
+        finds style tree with given style_id and style_type
+        :param style_id: styleId for given style
+        :param style_type: "paragraph" or "character"
+        :return: None if there isn't such style else BeautifulSoup tree with style
+        """
         styles = self.styles.find_all('w:style', attrs={'w:styleId': style_id})
         result_style = None
         for style in styles:
@@ -31,44 +48,45 @@ class StylesExtractor:
                 result_style = style
         return result_style
 
-    def parse(self, style_id, style_type='paragraph'):
+    def parse(self,
+              style_id: str or None,
+              old_properties: BaseProperties,
+              style_type: str):
+        """
+        if style_id is None finds default style
+        else finds style with given style_id and changes
+        old_properties according to style's properties
+        :param style_id: styleId for style
+        :param old_properties: properties for saving style properties
+        :param style_type: "paragraph" or "character" or "numbering" (auxiliary, it will be changed as "paragraph")
+        """
         # if tag b, i presents, but there isn't its value, then w:val = '1'
         # for tag u value = 'none'
         # for indent and size value = 0
-        # if style_id is None finds default style
-        # returns dictionary with properties if the style was found
-        # else returns default properties or the following dictionary:
-        # {'size': 0, 'indent': {}, 'bold': '0', 'italic': '0', 'underlined': 'none'}
-        # indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0,
-        # 'numPr': style.numPr (optional)}
+
         # TODO firstLineChars etc.
+        # TODO link
+        # TODO suppressLineNumbers
 
-        info = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-                'bold': '0', 'italic': '0', 'underlined': 'none'}
-
-        default_style = self.styles.find_all('w:style', attrs={'w:default': "1", 'w:type': style_type})
-        if default_style:
-            default_style = default_style[0]
-        elif self.styles.docDefaults:
-            default_style = self.styles.docDefaults
-
+        # if styleId == None set default style
+        # TODO numPr in default style
         if not style_id:
-            if default_style:
-                pe = PropertiesExtractor(default_style)
-                pe.get_properties(info)
-            return info
+            if self.default_style:
+                change_properties(old_properties, self.default_style)
+            return
 
-        # TODO hierarchy of styles: defaults -> paragraph -> numbering -> character
+        # TODO solve this more correctly
+        # it is used for prevent recursion because of style and numbering linking
+        if style_type == "numbering":
+            ignore_num = True
+            style_type = "paragraph"
+        else:
+            ignore_num = False
+
         styles = []
         style = self.find_style(style_id, style_type)
         if not style:
-            return info
-
-        # TODO information in numPr for styles
-        # TODO link
-        # TODO suppressLineNumbers
-        if style.numPr:
-            info['numPr'] = style
+            return
 
         # basedOn + hierarchy of styles
         current_style = style
@@ -82,32 +100,23 @@ class StylesExtractor:
                 pass
 
         styles = styles[::-1] + [style]
-        if default_style:
-            styles = [default_style] + styles
+        if self.default_style:
+            styles = [self.default_style] + styles
 
-        # TODO rPr and pPr in styles
-        for style in styles:  # apply styles in reverse order
-            pe = PropertiesExtractor(style)
-            pe.get_properties(info)
+        # hierarchy of styles: defaults -> paragraph -> numbering -> character
+        for current_style in styles:  # apply styles in reverse order
+            if current_style.pPr:
+                change_properties(old_properties, current_style.pPr)
+            if current_style.rPr:
+                change_properties(old_properties, current_style.rPr)
+                old_properties.r_pr = old_properties
 
-        return info
-
-
-if __name__ == "__main__":
-    filename = input()
-    document = zipfile.ZipFile('examples/' + filename)
-    bs = BeautifulSoup(document.read('word/styles.xml'), 'xml')
-    style_ids = []
-    for possible_style in bs.find_all('style'):
-        try:
-            style_ids.append(possible_style['w:styleId'])
-        except KeyError:
-            pass
-    print(style_ids)
-    s = StylesExtractor(bs)
-    default = {'size': 0, 'indent': {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0},
-               'bold': '0', 'italic': '0', 'underlined': 'none'}
-    for styleId in style_ids:
-        res = s.parse(styleId)
-        if res and res != default:
-            print(res)
+        # information in numPr for styles
+        if style.numPr and self.numbering_extractor and not old_properties.xml.numPr and not ignore_num:
+            try:
+                numbering_raw = Raw(old_properties, self)
+                self.numbering_extractor.parse(style, old_properties, numbering_raw)
+                if hasattr(old_properties, 'raws'):
+                    old_properties.raws.append(numbering_raw)
+            except KeyError as error:
+                print(error)
