@@ -53,10 +53,14 @@ class Paragraph(BaseProperties):
         # 6) paragraph direct formatting
         if self.xml.pPr:
             change_properties(self, self.xml.pPr)
+            if self.xml.pPr.rPr:
+                change_properties(self, self.xml.pPr.rPr)
         # 7) numbering direct formatting
         if self.xml.numPr and self.numbering_extractor:
             try:
-                numbering_raw = Raw(self, self.styles_extractor, self.r_pr)
+                numbering_raw = Raw(self, self.styles_extractor)
+                if self.r_pr:
+                    change_properties(numbering_raw, self.r_pr)
                 self.numbering_extractor.parse(self.xml.numPr, self, numbering_raw)
                 self.raws.append(numbering_raw)
             except KeyError as error:
@@ -65,7 +69,9 @@ class Paragraph(BaseProperties):
         # 8) character direct formatting
         raw_list = self.xml.find_all('w:r')
         for raw_tree in raw_list:
-            new_raw = Raw(raw_tree, self.styles_extractor, self.r_pr)
+            new_raw = Raw(raw_tree, self.styles_extractor)
+            if self.r_pr:
+                change_properties(new_raw, self.r_pr)
             if not new_raw.text:
                 continue
             if not new_raw.size:
@@ -108,19 +114,14 @@ class Raw(BaseProperties):
 
     def __init__(self,
                  xml: BeautifulSoup or BaseProperties,
-                 styles_extractor,
-                 style=None):
+                 styles_extractor):
 
         self.text = ""
-        self.style = style
         super().__init__(xml, styles_extractor)
         if isinstance(xml, BaseProperties):
             self.xml = None
-            self.size = xml.size
-            if style:
-                self.underlined = style.underlined
-                self.bold = style.bold
-                self.italic = style.italic
+            if xml.size:
+                self.size = xml.size
         else:
             self.parse()
 
@@ -137,12 +138,6 @@ class Raw(BaseProperties):
             elif tag.name == 'sym':
                 pass  # TODO
 
-        # TODO solve this more correctly
-        if self.style:
-            self.size = self.style.size
-            self.underlined = self.style.underlined
-            self.bold = self.style.bold
-            self.italic = self.style.italic
         if self.xml.rStyle:
             # TODO rStyle before pPr
             self.styles_extractor.parse(self.xml.rStyle['w:val'], self, "character")

@@ -292,6 +292,7 @@ class NumberingExtractor:
             # print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
             # print('=================')
             # if we haven't found given abstractNumId we use previous
+            # TODO check proposal lowering ilvl
             try:
                 shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
             except KeyError:
@@ -340,6 +341,8 @@ class NumberingExtractor:
         text = self.get_list_text(ilvl, num_id)
         if lvl_info['styleId']:
             self.styles_extractor.parse(lvl_info['styleId'], paragraph_properties, "numbering")
+            if hasattr(paragraph_properties, 'r_pr') and paragraph_properties.r_pr:
+                change_properties(raw_properties, paragraph_properties.r_pr)
         if lvl_info['pPr']:
             change_properties(paragraph_properties, lvl_info['pPr'])
         if lvl_info['rPr']:

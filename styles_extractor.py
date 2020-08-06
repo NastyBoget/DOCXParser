@@ -21,11 +21,10 @@ class StylesExtractor:
         self.numbering_extractor = None
         # extract information from docDefaults
         # docDefaults: rPrDefault + pPrDefault
+        self.doc_defaults = self.styles.docDefaults
         self.default_style = self.styles.find_all('w:style', attrs={'w:default': "1", 'w:type': "paragraph"})
         if self.default_style:
             self.default_style = self.default_style[0]
-        elif self.styles.docDefaults:
-            self.default_style = self.styles.docDefaults
         else:
             self.default_style = None
 
@@ -71,6 +70,8 @@ class StylesExtractor:
         # if styleId == None set default style
         # TODO numPr in default style
         if not style_id:
+            if self.doc_defaults:
+                change_properties(old_properties, self.doc_defaults)
             if self.default_style:
                 change_properties(old_properties, self.default_style)
             return
@@ -101,7 +102,7 @@ class StylesExtractor:
 
         styles = styles[::-1] + [style]
         if self.default_style:
-            styles = [self.default_style] + styles
+            styles = [self.doc_defaults, self.default_style] + styles
 
         # hierarchy of styles: defaults -> paragraph -> numbering -> character
         for current_style in styles:  # apply styles in reverse order
@@ -109,7 +110,7 @@ class StylesExtractor:
                 change_properties(old_properties, current_style.pPr)
             if current_style.rPr:
                 change_properties(old_properties, current_style.rPr)
-                old_properties.r_pr = old_properties
+                old_properties.r_pr = current_style.rPr
 
         # information in numPr for styles
         if style.numPr and self.numbering_extractor and not old_properties.xml.numPr and not ignore_num:

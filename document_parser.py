@@ -1,6 +1,7 @@
 import zipfile
 from bs4 import BeautifulSoup
 import os
+import sys
 from styles_extractor import StylesExtractor
 from numbering_extractor import NumberingExtractor
 from data_structures import Paragraph
@@ -75,29 +76,38 @@ class DOCXParser:
 if __name__ == "__main__":
     choice = input()
     if choice == "test":
-        filenames = os.listdir('examples/docx/docx')
+        filenames = os.listdir('examples/docx/docx')[:100]
     else:
         filenames = [choice]
     i = 0
-    for filename in filenames:
-        try:
-            i += 1
-            if choice == "test":
-                parser = DOCXParser('examples/docx/docx/' + filename)
-            else:
-                parser = DOCXParser('examples/' + choice)
-            lines_info = parser.get_lines_with_meta()
-            if choice != "test":
+    with open("results.txt", "w") as write_file:
+        for filename in filenames:
+            try:
+                i += 1
+                if choice == "test":
+                    parser = DOCXParser('examples/docx/docx/' + filename)
+                else:
+                    parser = DOCXParser('examples/' + choice)
+                lines_info = parser.get_lines_with_meta()
+                if choice != "test":
+                    file = sys.stdout
+                else:
+                    print("==================", file=write_file)
+                    print(filename, file=write_file)
+                    print("==================", file=write_file)
+                    file = write_file
                 for line in lines_info:
-                    print(line['text'])
+                    print(line['text'], file=file)
                     for raw_info in line['properties']:
-                        print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]))
-            if choice == 'test':
-                print(f"\r{i} objects are processed...", end='', flush=True)
-        except ValueError:
-            pass
-        except KeyError as err:
-            print(err)
-            print(filename)
-        except zipfile.BadZipFile:
-            pass
+                        print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]), file=file)
+                if choice == 'test':
+                    print(f"\r{i} objects are processed...", end='', flush=True)
+            except ValueError:
+                pass
+            except KeyError as err:
+                print(err)
+                print(filename)
+            except zipfile.BadZipFile:
+                pass
+
+# TODO docx/docx/doc_000651.docx слетает нумерация
