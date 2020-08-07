@@ -81,7 +81,7 @@ class AbstractNum:
             if tree['w15:restartNumberingAfterBreak']:
                 self.properties['restart'] = bool(int(tree['w15:restartNumberingAfterBreak']))
         except KeyError:
-            self.properties['restart'] = False  # TODO check this behaviour
+            self.properties['restart'] = False
         # properties for each list level {level number: properties}
         # properties = {"lvlText", "numFmt", "start", "lvlRestart", "restart", "suff", "styleId", "pPr", "rPr"}
         self.levels = {}
@@ -222,6 +222,7 @@ class NumberingExtractor:
         self.prev_abstract_num_id = None
         self.prev_ilvl = {}  # {abstractNumId: ilvl} previous ilvl for list element with given numId
         self.prev_numId = {}  # {abstractNumId: numId} previous numId for list element with given numId
+        self.shifts = {}  # {(abstractNumId, ilvl): shift for wrong numeration}
 
         abstract_num_list = {abstract_num['w:abstractNumId']: abstract_num
                              for abstract_num in xml.find_all('w:abstractNum')}
@@ -230,10 +231,41 @@ class NumberingExtractor:
         # dictionary with num properties
         self.num_list = {num_id: Num(num_id, abstract_num_list, num_list, styles_extractor) for num_id in num_list}
 
-    def get_list_text(self, ilvl, num_id):
+    def get_list_text(self,
+                      ilvl: str,
+                      num_id: str):
+        """
+        counts list item number and it's text
+        :param ilvl: string with list ilvl
+        :param num_id: string with list numId
+        :return: text of the list numeration
+        """
         if num_id not in self.num_list:
             return ""
         abstract_num_id = self.num_list[num_id].abstract_num_id
+
+        # checking the correctness of the list numeration
+        if (abstract_num_id, ilvl) in self.shifts:
+            ilvl = str(int(ilvl) - self.shifts[(abstract_num_id, ilvl)])
+        else:
+            correct_ilvl = int(ilvl)
+            correct = False
+            while correct_ilvl > 0 and not correct:
+                lvl_info = self.num_list[num_id].get_level_info(str(correct_ilvl))
+                # print("numId = {}, abstractNumId = {}, ilvl = {}, lvl_info = {}".format(num_id, abstract_num_id,
+                #                                                                         correct_ilvl, lvl_info))
+                levels = re.findall(r'%\d+', lvl_info['lvlText'])
+                try:
+                    for level in levels:
+                        if int(level[1:]) - 1 == correct_ilvl:
+                            continue
+                        self.get_next_number(num_id, level[1:])
+                except KeyError:
+                    correct_ilvl -= 1
+                correct = True
+            self.shifts[(abstract_num_id, ilvl)] = int(ilvl) - correct_ilvl
+            ilvl = str(correct_ilvl)
+
         lvl_info = self.num_list[num_id].get_level_info(ilvl)
         # there is the other list
         if self.prev_abstract_num_id and self.prev_num_id and self.prev_abstract_num_id != abstract_num_id \
@@ -272,11 +304,24 @@ class NumberingExtractor:
         for level in levels:
             # level = '%level'
             level = level[1:]
-            text = re.sub(r'%\d+', self.get_next_number(num_id, level), text, count=1)
+            try:
+                next_number = self.get_next_number(num_id, level)
+            except KeyError as err:
+                self.numerations[tuple(err.args[0])] = 1
+                next_number = self.get_next_number(num_id, level)
+            text = re.sub(r'%\d+', next_number, text, count=1)
         text += lvl_info['suff']
         return text
 
-    def get_next_number(self, num_id, level):
+    def get_next_number(self,
+                        num_id: str,
+                        level: str):
+        """
+        computes the shift from the first item for given list and text of next item according to the shift
+        :param num_id: string with list numId
+        :param level: list level = ilvl + 1
+        :return: text of the next item in numbering
+        """
         abstract_num_id = self.num_list[num_id].abstract_num_id
         # level = ilvl + 1
         ilvl = str(int(level) - 1)
@@ -284,20 +329,9 @@ class NumberingExtractor:
         if lvl_info['numFmt'] == "bullet":
             return lvl_info['lvlText']
 
-        try:
-            shift = self.numerations[(abstract_num_id, ilvl)] - 1
-        except KeyError as err:
-            # TODO handle very strange list behaviour
-            # print('=================')
-            # print("abstractNumId = {}, ilvl = {}".format(abstract_num_id, ilvl))
-            # print('=================')
-            # if we haven't found given abstractNumId we use previous
-            # TODO check proposal lowering ilvl
-            try:
-                shift = self.numerations[(self.prev_abstract_num_id, ilvl)] - 1
-            except KeyError:
-                self.numerations[(abstract_num_id, ilvl)] = 1
-                shift = 0
+        shift = self.numerations[(abstract_num_id, ilvl)] - 1
+        # TODO handle very strange list behaviour
+        # if we haven't found given abstractNumId we use previous
         num_fmt = get_next_item(lvl_info['numFmt'], shift)
         return num_fmt
 

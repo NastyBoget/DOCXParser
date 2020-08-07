@@ -62,16 +62,20 @@ class Paragraph(BaseProperties):
                 if self.r_pr:
                     change_properties(numbering_raw, self.r_pr)
                 self.numbering_extractor.parse(self.xml.numPr, self, numbering_raw)
-                self.raws.append(numbering_raw)
+                if len(numbering_raw.text) > 0:
+                    self.raws.append(numbering_raw)
             except KeyError as error:
                 print(error)
 
         # 8) character direct formatting
         raw_list = self.xml.find_all('w:r')
         for raw_tree in raw_list:
-            new_raw = Raw(raw_tree, self.styles_extractor)
             if self.r_pr:
-                change_properties(new_raw, self.r_pr)
+                new_raw = Raw(raw_tree, self.styles_extractor)
+                change_properties(new_raw, self.r_pr)  # raw properties from paragraph properties
+                change_properties(new_raw, raw_tree)
+            else:
+                new_raw = Raw(raw_tree, self.styles_extractor)
             if not new_raw.text:
                 continue
             if not new_raw.size:
@@ -80,7 +84,8 @@ class Paragraph(BaseProperties):
                 # it's is not completely correct because of incorrect information in raw
                 self.raws[-1].text += new_raw.text
             else:
-                self.raws.append(new_raw)
+                if len(new_raw.text) > 0:
+                    self.raws.append(new_raw)
 
     def get_info(self):
         """
@@ -92,6 +97,8 @@ class Paragraph(BaseProperties):
         line_metadata = {"text": "", "properties": []}
         for raw in self.raws:
             start, end = len(line_metadata['text']), len(line_metadata['text']) + len(raw.text)
+            if start == end:
+                continue
             if not line_metadata['text']:
                 line_metadata['text'] = raw.text
             else:

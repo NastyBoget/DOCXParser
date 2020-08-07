@@ -76,7 +76,7 @@ class DOCXParser:
 if __name__ == "__main__":
     choice = input()
     if choice == "test":
-        filenames = os.listdir('examples/docx/docx')[:100]
+        filenames = os.listdir('examples/docx/docx')[200:300]
     else:
         filenames = [choice]
     i = 0
@@ -102,12 +102,14 @@ if __name__ == "__main__":
                         print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]), file=file)
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
-            except ValueError:
-                pass
+            except ValueError as err:
+                print("ValueError: ", err)
+                print(filename)
             except KeyError as err:
-                print(err)
+                print("KeyError: ", err)
                 print(filename)
             except zipfile.BadZipFile:
                 pass
 
-# TODO docx/docx/doc_000651.docx слетает нумерация
+# TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
+# TODO Домен.docx начало списка считается жирным, но оно нежирное
