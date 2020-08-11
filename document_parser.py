@@ -6,7 +6,7 @@ import time
 from typing import List
 from styles_extractor import StylesExtractor
 from numbering_extractor import NumberingExtractor
-from data_structures import Paragraph
+from data_structures import Paragraph, ParagraphInfo
 
 
 class DOCXParser:
@@ -15,7 +15,7 @@ class DOCXParser:
                  file: str):
         """
         parses the .docx document
-        holds the text and metadata for each paragraph and raw in the document
+        holds the text and metadata for each paragraph and run in the document
         :param file: name of the .docx file
         """
         if not file.endswith('.docx'):
@@ -35,7 +35,7 @@ class DOCXParser:
 
     def parse(self):
         """
-        parses document into paragraphs and raws, extracts text for each raw and paragraph and it's metadata
+        parses document into paragraphs and runs, extracts text for each run and paragraph and it's metadata
         """
 
         body = self.document_bs.body
@@ -57,8 +57,8 @@ class DOCXParser:
         lines = []
         for paragraph in self.paragraph_list:
             line_text = ""
-            for raw in paragraph.raws:
-                line_text += raw.text
+            for run in paragraph.runs:
+                line_text += run.text
             lines.append(line_text)
         return lines
 
@@ -71,14 +71,15 @@ class DOCXParser:
         """
         lines_with_meta = []
         for paragraph in self.paragraph_list:
-            lines_with_meta.append(paragraph.get_info())
+            paragraph_properties = ParagraphInfo(paragraph)
+            lines_with_meta.append(paragraph_properties.get_info())
         return lines_with_meta
 
 
 if __name__ == "__main__":
     choice = input()
     if choice == "test":
-        filenames = os.listdir('examples/docx/docx')
+        filenames = os.listdir('examples/docx/docx')[:100]
     else:
         filenames = [choice]
     global_start = time.time()
@@ -102,8 +103,8 @@ if __name__ == "__main__":
                     file = write_file
                 for line in lines_info:
                     print(line['text'], file=file)
-                    for raw_info in line['properties']:
-                        print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]), file=file)
+                    for run_info in line['properties']:
+                        print('start={} end={} properties={}'.format(run_info[0], run_info[1], run_info[2]), file=file)
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
                 if i % 100 == 0:

@@ -319,6 +319,8 @@ If this element is not present, the default value is to leave the formatting app
 
 * hierarchy level - для параграфов и списков
 
+* js - justification
+
 * code style
 
 * minor bugs
