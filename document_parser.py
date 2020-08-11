@@ -2,6 +2,8 @@ import zipfile
 from bs4 import BeautifulSoup
 import os
 import sys
+import time
+from typing import List
 from styles_extractor import StylesExtractor
 from numbering_extractor import NumberingExtractor
 from data_structures import Paragraph
@@ -39,7 +41,7 @@ class DOCXParser:
         body = self.document_bs.body
         if not body:
             return
-
+        # TODO do not extract table contents
         paragraphs = body.find_all('w:p')
         for paragraph in paragraphs:
             # TODO text may be without w:t
@@ -48,7 +50,7 @@ class DOCXParser:
 
             self.paragraph_list.append(Paragraph(paragraph, self.styles_extractor, self.numbering_extractor))
 
-    def get_lines(self):
+    def get_lines(self) -> List[str]:
         """
         :return: list of document's lines
         """
@@ -60,7 +62,7 @@ class DOCXParser:
             lines.append(line_text)
         return lines
 
-    def get_lines_with_meta(self):
+    def get_lines_with_meta(self) -> List[dict]:
         """
         :return: list of dictionaries for each paragraph
         [{"text": "", "properties": [[start, end, {"indent", "size", "bold", "italic", "underlined"}], ...] }, ...]
@@ -76,9 +78,11 @@ class DOCXParser:
 if __name__ == "__main__":
     choice = input()
     if choice == "test":
-        filenames = os.listdir('examples/docx/docx')[200:300]
+        filenames = os.listdir('examples/docx/docx')
     else:
         filenames = [choice]
+    global_start = time.time()
+    start = time.time()
     i = 0
     with open("results.txt", "w") as write_file:
         for filename in filenames:
@@ -102,14 +106,19 @@ if __name__ == "__main__":
                         print('start={} end={} properties={}'.format(raw_info[0], raw_info[1], raw_info[2]), file=file)
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
+                if i % 100 == 0:
+                    end = time.time()
+                    print(end - start)
+                    start = end
             except ValueError as err:
-                print("ValueError: ", err)
-                print(filename)
+                pass
             except KeyError as err:
                 print("KeyError: ", err)
                 print(filename)
             except zipfile.BadZipFile:
                 pass
+    # end = time.time()
+    # print(end - global_start)
 
 # TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
 # TODO Домен.docx начало списка считается жирным, но оно нежирное

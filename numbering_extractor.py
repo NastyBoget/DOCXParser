@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from styles_extractor import StylesExtractor
 from properties_extractor import change_properties
 from data_structures import BaseProperties, Paragraph, Raw
+from typing import List, Dict, Union
 import re
 import os
 
@@ -87,7 +88,7 @@ class AbstractNum:
         self.levels = {}
 
     def parse(self,
-              lvl_list: list):
+              lvl_list: List[BeautifulSoup]):
         """
         save information about levels in self.levels
         :param lvl_list: list with BeautifulSoup trees which contain information about levels
@@ -159,8 +160,8 @@ class Num(AbstractNum):
 
     def __init__(self,
                  num_id: str,
-                 abstract_num_list: dict,
-                 num_list: dict,
+                 abstract_num_list: Dict[str, BeautifulSoup],
+                 num_list: Dict[str, BeautifulSoup],
                  styles_extractor: StylesExtractor):
         """
         :param num_id: numId for num element
@@ -192,7 +193,7 @@ class Num(AbstractNum):
                     self.levels[lvl['w:ilvl']]['start'] = int(lvl.startOverride['w:val'])
 
     def get_level_info(self,
-                       level_num: str):
+                       level_num: str) -> Dict[str, Union[str, bool, int]]:
         return self.levels[level_num].copy()
 
 
@@ -233,7 +234,7 @@ class NumberingExtractor:
 
     def get_list_text(self,
                       ilvl: str,
-                      num_id: str):
+                      num_id: str) -> str:
         """
         counts list item number and it's text
         :param ilvl: string with list ilvl
@@ -252,8 +253,6 @@ class NumberingExtractor:
             correct = False
             while correct_ilvl > 0 and not correct:
                 lvl_info = self.num_list[num_id].get_level_info(str(correct_ilvl))
-                # print("numId = {}, abstractNumId = {}, ilvl = {}, lvl_info = {}".format(num_id, abstract_num_id,
-                #                                                                         correct_ilvl, lvl_info))
                 levels = re.findall(r'%\d+', lvl_info['lvlText'])
                 try:
                     for level in levels:
@@ -290,9 +289,6 @@ class NumberingExtractor:
         # there isn't the information about this list
         else:
             self.numerations[(abstract_num_id, ilvl)] = lvl_info['start']
-        # print("numId = {}, prevNumId = {}, abstractNumId = {}, prevAbstractNumId = {},"
-        #       " lvl = {}".format(num_id, self.prev_num_id, abstract_num_id,
-        #                          self.prev_abstract_num_id, ilvl))
         self.prev_ilvl[abstract_num_id] = ilvl
         self.prev_numId[abstract_num_id] = num_id
         self.prev_abstract_num_id = abstract_num_id
@@ -364,9 +360,6 @@ class NumberingExtractor:
                     if 'styleId' in level and level['styleId'] == style_id:
                         ilvl = level_num
             except KeyError:
-                # print('=================')
-                # print("error in numbering style")
-                # print('=================')
                 return None
         else:
             ilvl = ilvl['w:val']

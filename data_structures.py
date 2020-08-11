@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from properties_extractor import change_properties
+from typing import Dict, List, Union
 
 
 class BaseProperties:
@@ -87,7 +88,7 @@ class Paragraph(BaseProperties):
                 if len(new_raw.text) > 0:
                     self.raws.append(new_raw)
 
-    def get_info(self):
+    def get_info(self) -> Dict[str, Union[str, List[List[Union[int, int, Dict[str, int]]]]]]:
         """
         :return: dictionary {"text": "",
         "properties": [[start, end, {"indent", "size", "bold", "italic", "underlined"}], ...] }
@@ -143,7 +144,10 @@ class Raw(BaseProperties):
             elif tag.name == 'cr':
                 self.text += '\r'
             elif tag.name == 'sym':
-                pass  # TODO
+                try:
+                    self.text += chr(int("0x" + tag['w:char'], 16))
+                except KeyError:
+                    pass
 
         if self.xml.rStyle:
             # TODO rStyle before pPr

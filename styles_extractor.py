@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from properties_extractor import change_properties
 from data_structures import BaseProperties, Raw
+from typing import Optional
 
 # page 665 in documentation
 
@@ -30,7 +31,7 @@ class StylesExtractor:
 
     def find_style(self,
                    style_id: str,
-                   style_type: str):
+                   style_type: str) -> Optional[BeautifulSoup]:
         """
         finds style tree with given style_id and style_type
         :param style_id: styleId for given style
@@ -48,7 +49,7 @@ class StylesExtractor:
         return result_style
 
     def parse(self,
-              style_id: str or None,
+              style_id: Optional[str],
               old_properties: BaseProperties,
               style_type: str):
         """
@@ -59,7 +60,7 @@ class StylesExtractor:
         :param old_properties: properties for saving style properties
         :param style_type: "paragraph" or "character" or "numbering" (auxiliary, it will be changed as "paragraph")
         """
-        # if tag b, i presents, but there isn't its value, then w:val = '1'
+        # if tag b, i presents, but there isn't its value, then w:val = True
         # for tag u value = 'none'
         # for indent and size value = 0
 
