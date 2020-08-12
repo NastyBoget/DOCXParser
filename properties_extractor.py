@@ -10,6 +10,7 @@ def change_paragraph_properties(old_properties,
     """
     change_indent(old_properties, tree)
     change_size(old_properties, tree)
+    change_jc(old_properties, tree)
 
 
 def change_run_properties(old_properties,
@@ -79,3 +80,33 @@ def change_size(old_properties,
             old_properties.size = int(tree.sz['w:val'])
         except KeyError:
             pass
+
+
+def change_jc(old_properties,
+              tree: BeautifulSoup):
+    """
+    changes old_properties: alignment if tag jc was found in tree
+    :param old_properties: Paragraph
+    :param tree: BeautifulSoup tree with properties
+    """
+    # alignment values: left, right, center, both
+    # left is default value
+    if not tree.jc:
+        return
+    if tree.bidi:
+        right_to_left = True
+    else:
+        right_to_left = False
+    try:
+        if tree.jc['w:val'] == 'both':
+            old_properties.jc = 'both'
+        elif tree.jc['w:val'] == 'center':
+            old_properties.jc = 'center'
+        elif tree.jc['w:val'] == 'right':
+            old_properties.jc = 'right'
+        elif tree.jc['w:val'] == 'end' and not right_to_left:
+            old_properties.jc = 'right'
+        elif tree.jc['w:val'] == 'start' and right_to_left:
+            old_properties.jc = 'right'
+    except KeyError:
+        pass

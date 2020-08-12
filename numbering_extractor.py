@@ -219,6 +219,8 @@ class NumberingExtractor:
         self.prev_numId = {}
         # {(abstractNumId, ilvl): shift for wrong numeration}
         self.shifts = {}
+        # the number of levels for current list
+        self.levels_count = 1
 
         abstract_num_list = {abstract_num['w:abstractNumId']: abstract_num
                              for abstract_num in xml.find_all('w:abstractNum')}
@@ -292,6 +294,7 @@ class NumberingExtractor:
 
         text = lvl_info['lvlText']
         levels = re.findall(r'%\d+', text)
+        self.levels_count = len(levels)
         for level in levels:
             # level = '%level'
             level = level[1:]
@@ -339,10 +342,10 @@ class NumberingExtractor:
         :param run_properties: Run for changing
         """
         if not xml:
-            return None
+            return
         ilvl, num_id = xml.ilvl, xml.numId
         if not num_id or num_id['w:val'] not in self.num_list:
-            return None
+            return
         else:
             num_id = num_id['w:val']
 
@@ -355,7 +358,7 @@ class NumberingExtractor:
                     if 'styleId' in level and level['styleId'] == style_id:
                         ilvl = level_num
             except KeyError:
-                return None
+                return
         else:
             ilvl = ilvl['w:val']
 
@@ -369,3 +372,5 @@ class NumberingExtractor:
             change_run_properties(run_properties, lvl_info['rPr'])
             change_run_properties(paragraph_properties, lvl_info['rPr'])
         run_properties.text = text
+        paragraph_properties.list_level = self.levels_count
+

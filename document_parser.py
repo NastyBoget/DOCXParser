@@ -41,9 +41,9 @@ class DOCXParser:
         body = self.document_bs.body
         if not body:
             return
-        # TODO do not extract table contents
-        paragraphs = body.find_all('w:p')
-        for paragraph in paragraphs:
+        for paragraph in body:
+            if paragraph.name == 'tbl':
+                continue
             # TODO text may be without w:t
             if not paragraph.t:
                 continue
@@ -65,7 +65,8 @@ class DOCXParser:
     def get_lines_with_meta(self) -> List[dict]:
         """
         :return: list of dictionaries for each paragraph
-        [{"text": "", "properties": [[start, end, {"indent", "size", "bold", "italic", "underlined"}], ...] }, ...]
+        [{"text": "", "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) (hierarchy_level),
+        "properties": [[start, end, {"indent", "size", "alignment", "bold", "italic", "underlined"}], ...] }, ...]
         start, end - character's positions begin with 0, end isn't included
         indent = {"firstLine", "hanging", "start", "left"}
         """
@@ -104,7 +105,11 @@ if __name__ == "__main__":
                 for line in lines_info:
                     print(line['text'], file=file)
                     for run_info in line['properties']:
-                        print('start={} end={} properties={}'.format(run_info[0], run_info[1], run_info[2]), file=file)
+                        print('start={} end={} type={} level={} properties={}'.format(run_info[0],
+                                                                                      run_info[1],
+                                                                                      line['type'],
+                                                                                      line['level'],
+                                                                                      run_info[2]), file=file)
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
                 if i % 100 == 0:
@@ -118,8 +123,7 @@ if __name__ == "__main__":
                 print(filename)
             except zipfile.BadZipFile:
                 pass
-    # end = time.time()
-    # print(end - global_start)
+    end = time.time()
+    print(end - global_start)
 
 # TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
-# TODO Домен.docx начало списка считается жирным, но оно нежирное

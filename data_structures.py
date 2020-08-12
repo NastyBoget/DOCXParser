@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
+import re
 from properties_extractor import change_paragraph_properties, change_run_properties
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Tuple, Optional
 
 
 class BaseProperties:
@@ -9,15 +10,17 @@ class BaseProperties:
                  styles_extractor,
                  properties=None):
         if properties:
-            self.size = properties.size
+            self.jc = properties.jc
             self.indent = properties.indent.copy()
+            self.size = properties.size
             self.bold = properties.bold
             self.italic = properties.italic
             self.underlined = properties.underlined
             properties.underlined = properties.underlined
         else:
-            self.size = 0
+            self.jc = 'left'
             self.indent = {'firstLine': 0, 'hanging': 0, 'start': 0, 'left': 0}
+            self.size = 0
             self.bold = False
             self.italic = False
             self.underlined = False
@@ -33,8 +36,8 @@ class Paragraph(BaseProperties):
 
         self.numbering_extractor = numbering_extractor
         self.runs = []
+        self.list_level = None
         self.xml = xml  # BeautifulSoup tree with paragraph properties
-        self.r_pr = None  # rPr from styles of numbering if it exists
         super().__init__(styles_extractor)
         self.parse()
 
@@ -103,6 +106,7 @@ class ParagraphInfo:
     def __init__(self,
                  paragraph: Paragraph):
         self.text = ""
+        self.list_level = paragraph.list_level
         self.properties = []
         for run in paragraph.runs:
             start, end = len(self.text), len(self.text) + len(run.text)
@@ -114,6 +118,7 @@ class ParagraphInfo:
                 self.text += run.text
             properties = dict()
             properties['indent'] = paragraph.indent.copy()
+            properties['alignment'] = paragraph.jc
             if run.size:
                 properties['size'] = run.size
             else:
@@ -123,14 +128,43 @@ class ParagraphInfo:
             properties['underlined'] = run.underlined
             self.properties.append([start, end, properties])
 
-    def get_info(self) -> Dict[str, Union[str, List[List[Union[int, int, Dict[str, int]]]]]]:
+    def _get_hierarchy_level(self) -> Optional[Tuple[int, int]]:
+
+        # 0 - Глава, Параграф
+        # 1 - Статья, Пункт
+        # 2 - list item
+        if self.list_level:
+            return 2, self.list_level
+        if re.match(r"^(Глава|Параграф)\s*(\d\\.)*(\d\\.?)?", self.text):
+            return 0, 0
+        if re.match(r"^(Статья|Пункт)\s*(\d\\.)*(\d\\.?)?", self.text):
+            return 1, 0
+        return None
+
+    def get_info(self) -> Dict[str, Union[str, Optional[Tuple[int, int]],
+                                          List[List[Union[int, int,
+                                                          Dict[str, Union[int, bool, str, Dict[str, int]]]]]]]]:
         """
         :return: dictionary {"text": "",
-        "properties": [[start, end, {"indent", "size", "bold", "italic", "underlined"}], ...] }
+        "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) or None (hierarchy_level),
+        "properties": [[start, end, {"indent", "size", "alignment", "bold", "italic", "underlined"}], ...] }
         start, end - character's positions begin with 0, end isn't included
         indent = {"firstLine", "hanging", "start", "left"}
         """
-        return {"text": self.text, "properties": self.properties}
+        hierarchy_level = self._get_hierarchy_level()
+        if not hierarchy_level:
+            return {"text": self.text, "type": "raw_text", "level": hierarchy_level, "properties": self.properties}
+        if hierarchy_level[0] == 0 or hierarchy_level[0] == 1:
+            paragraph_type = "paragraph"
+        elif hierarchy_level[0] == 2:
+            paragraph_type = "list_item"
+        else:
+            paragraph_type = "raw_text"
+        return {"text": self.text, "type": paragraph_type, "level": hierarchy_level, "properties": self.properties}
+
+    @property
+    def get_text(self):
+        return self.text
 
 
 class Run(BaseProperties):
