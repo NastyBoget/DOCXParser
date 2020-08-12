@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from styles_extractor import StylesExtractor
 from properties_extractor import change_paragraph_properties, change_run_properties
-from data_structures import BaseProperties, Paragraph, Run
+from data_structures import BaseProperties
 from typing import List, Dict, Union
 import re
 
@@ -185,6 +185,10 @@ class Num(AbstractNum):
 
     def get_level_info(self,
                        level_num: str) -> Dict[str, Union[str, bool, int]]:
+        """
+        :param level_num: ilvl for getting information for specific level
+        :return: properties for the level
+        """
         return self.levels[level_num].copy()
 
 

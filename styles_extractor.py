@@ -97,11 +97,11 @@ class StylesExtractor:
                 print(error)
 
     @staticmethod
-    def _apply_styles(old_properties,
+    def _apply_styles(old_properties: BaseProperties,
                       styles: List[BeautifulSoup]):
         """
         applies all styles to old_properties
-        :param old_properties:
+        :param old_properties: properties for changing
         :param styles: styles in order to apply
         """
         # hierarchy of styles: defaults -> paragraph -> numbering -> character

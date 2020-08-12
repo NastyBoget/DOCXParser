@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-def change_paragraph_properties(old_properties,
+def change_paragraph_properties(old_properties: "BaseProperties",
                                 tree: BeautifulSoup):
     """
     changes old properties indent, size if they were found in tree
@@ -13,7 +13,7 @@ def change_paragraph_properties(old_properties,
     change_jc(old_properties, tree)
 
 
-def change_run_properties(old_properties,
+def change_run_properties(old_properties: "BaseProperties",
                           tree: BeautifulSoup):
     """
     changes old properties: bold, italic, underlined, size if they were found in tree
@@ -52,7 +52,7 @@ def change_run_properties(old_properties,
             pass
 
 
-def change_indent(old_properties,
+def change_indent(old_properties: "BaseProperties",
                   tree: BeautifulSoup):
     """
     changes old properties: indent if it was found in tree
@@ -68,7 +68,7 @@ def change_indent(old_properties,
                 pass
 
 
-def change_size(old_properties,
+def change_size(old_properties: "BaseProperties",
                 tree: BeautifulSoup):
     """
     changes old properties: size if it was found in tree
@@ -82,7 +82,7 @@ def change_size(old_properties,
             pass
 
 
-def change_jc(old_properties,
+def change_jc(old_properties: "BaseProperties",
               tree: BeautifulSoup):
     """
     changes old_properties: alignment if tag jc was found in tree
