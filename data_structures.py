@@ -208,7 +208,7 @@ class ParagraphInfo:
     def _get_hierarchy_level(self) -> Optional[Tuple[int, int]]:
         """
         defines the type of paragraph and it's level according to it's type
-        :return: hierarchy level if the paragraph isn't raw text
+        :return: hierarchy level if the paragraph isn't raw text else returns None
         """
         # 0 - Глава, Параграф
         # 1 - Статья, Пункт

@@ -53,9 +53,6 @@ class StylesExtractor:
         :param old_properties: properties for saving style properties
         :param style_type: "paragraph" or "character" or "numbering" (auxiliary, it will be changed as "paragraph")
         """
-        # if tag b, i presents, but there isn't its value, then w:val = True
-        # for tag u value = 'none'
-        # for indent and size value = 0
 
         # TODO firstLineChars etc.
         # TODO link

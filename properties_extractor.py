@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 def change_paragraph_properties(old_properties: "BaseProperties",
                                 tree: BeautifulSoup):
     """
-    changes old properties indent, size if they were found in tree
+    changes old properties indent, size, jc if they were found in tree
     :param old_properties: Paragraph
     :param tree: BeautifulSoup tree with properties
     """
@@ -85,7 +85,7 @@ def change_size(old_properties: "BaseProperties",
 def change_jc(old_properties: "BaseProperties",
               tree: BeautifulSoup):
     """
-    changes old_properties: alignment if tag jc was found in tree
+    changes old_properties: ic (alignment) if tag jc was found in tree
     :param old_properties: Paragraph
     :param tree: BeautifulSoup tree with properties
     """
