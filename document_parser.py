@@ -68,10 +68,12 @@ class DOCXParser:
     def get_lines_with_meta(self) -> List[dict]:
         """
         :return: list of dictionaries for each paragraph
-        [{"text": "", "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) (hierarchy_level),
-        "properties": [[start, end, {"indent", "size", "alignment", "bold", "italic", "underlined"}], ...] }, ...]
+        [{"text": "",
+        "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) or None (hierarchy_level),
+        "indent": {"firstLine", "hanging", "start", "left"}, "alignment": "" ("left", "right", "center", "both"),
+        "annotations": [[start, end, size], [start, end, "bold"], [start, end, "italic"],
+        [start, end, "underlined"], ...] } ]
         start, end - character's positions begin with 0, end isn't included
-        indent = {"firstLine", "hanging", "start", "left"}
         """
         lines_with_meta = []
         for paragraph in self.paragraph_list:
@@ -107,12 +109,8 @@ if __name__ == "__main__":
                     file = write_file
                 for line in lines_info:
                     print(line['text'], file=file)
-                    for run_info in line['properties']:
-                        print('start={} end={} type={} level={} properties={}'.format(run_info[0],
-                                                                                      run_info[1],
-                                                                                      line['type'],
-                                                                                      line['level'],
-                                                                                      run_info[2]), file=file)
+                    print(line['annotations'], file=file)
+
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
                 if i % 100 == 0:
@@ -120,13 +118,12 @@ if __name__ == "__main__":
                     print(end - start)
                     start = end
             except ValueError as err:
-                pass
+                print("ValueError: ", err)
+                print(filename)
             except KeyError as err:
                 print("KeyError: ", err)
                 print(filename)
             except zipfile.BadZipFile:
                 pass
-    end = time.time()
-    print(end - global_start)
 
 # TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
