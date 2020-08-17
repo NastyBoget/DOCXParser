@@ -46,21 +46,21 @@ class TestDocxAnnotations(unittest.TestCase):
         # indent, alignment tests
         self.assertEqual([0, 13, {"indent": zero_indent, "size": 22, "alignment": "center",
                                   "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[8]['properties'][0])
+                         lines_with_meta[9]['properties'][0])
         self.assertEqual([0, 10, {"indent": zero_indent, "size": 22, "alignment": "right",
                                   "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[9]['properties'][0])
+                         lines_with_meta[10]['properties'][0])
         self.assertEqual([0, 28, {"indent": zero_indent, "size": 22, "alignment": "both",
                                   "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[10]['properties'][0])
+                         lines_with_meta[11]['properties'][0])
         self.assertEqual([0, 10, {"indent": {"firstLine": 0, "hanging": 0, "start": 0, "left": 720},
                                   "size": 22, "alignment": "both",
                                   "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[12]['properties'][0])
+                         lines_with_meta[13]['properties'][0])
         self.assertEqual([0, 11, {"indent": {"firstLine": 0, "hanging": 0, "start": 0, "left": 1440},
                                   "size": 22, "alignment": "both",
                                   "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[13]['properties'][0])
+                         lines_with_meta[14]['properties'][0])
 
     def test_example_2(self):
         docx_reader = DOCXParser('examples/example_2.docx')
@@ -98,9 +98,9 @@ class TestDocxAnnotations(unittest.TestCase):
                                   'italic': False, 'size': 28, 'underlined': False}],
                         [91, 111, {'alignment': 'left', 'bold': False, 'indent': zero_indent,
                                    'italic': False, 'size': 28, 'underlined': True}],
-                        [111, 153, {'alignment': 'left', 'bold': False,'indent': zero_indent,
+                        [111, 153, {'alignment': 'left', 'bold': False, 'indent': zero_indent,
                                     'italic': False, 'size': 28, 'underlined': False}],
-                        [153, 175, {'alignment': 'left', 'bold': False,'indent': zero_indent,
+                        [153, 175, {'alignment': 'left', 'bold': False, 'indent': zero_indent,
                                     'italic': False, 'size': 40, 'underlined': False}],
                         [175, 183, {'alignment': 'left', 'bold': False, 'indent': zero_indent,
                                     'italic': False, 'size': 28, 'underlined': False}],
@@ -108,24 +108,24 @@ class TestDocxAnnotations(unittest.TestCase):
                                     'italic': False, 'size': 22, 'underlined': False}],
                         [199, 244, {'alignment': 'left', 'bold': False, 'indent': zero_indent,
                                     'italic': False, 'size': 28, 'underlined': False}]]
-        self.assertEqual(right_answer, lines_with_meta[30]['properties'])
-        self.assertEqual([0, len(lines_with_meta[36]['text']),
+        self.assertEqual(right_answer, lines_with_meta[35]['properties'])
+        self.assertEqual([0, len(lines_with_meta[43]['text']),
                           {"indent": zero_indent, "size": 28, "alignment": "right",
                            "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[36]['properties'][0])
-        self.assertEqual([0, len(lines_with_meta[37]['text']),
+                         lines_with_meta[43]['properties'][0])
+        self.assertEqual([0, len(lines_with_meta[44]['text']),
                           {"indent": zero_indent, "size": 28, "alignment": "center",
                            "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[37]['properties'][0])
-        self.assertEqual([0, len(lines_with_meta[38]['text']),
+                         lines_with_meta[44]['properties'][0])
+        self.assertEqual([0, len(lines_with_meta[45]['text']),
                           {"indent": zero_indent, "size": 28, "alignment": "both",
                            "bold": False, "italic": False, "underlined": False}],
-                         lines_with_meta[38]['properties'][0])
-        self.assertEqual(True, lines_with_meta[39]['properties'][0][2]['bold'])
-        self.assertEqual(True, lines_with_meta[40]['properties'][0][2]['italic'])
-        self.assertEqual(True, lines_with_meta[41]['properties'][0][2]['underlined'])
-        self.assertEqual(True, lines_with_meta[42]['properties'][0][2]['bold'] and
-                         lines_with_meta[42]['properties'][0][2]['italic'])
-        self.assertEqual(True, lines_with_meta[43]['properties'][0][2]['bold'] and
-                         lines_with_meta[43]['properties'][0][2]['italic'] and
-                         lines_with_meta[43]['properties'][0][2]['underlined'])
+                         lines_with_meta[45]['properties'][0])
+        self.assertEqual(True, lines_with_meta[47]['properties'][0][2]['bold'])
+        self.assertEqual(True, lines_with_meta[48]['properties'][0][2]['italic'])
+        self.assertEqual(True, lines_with_meta[49]['properties'][0][2]['underlined'])
+        self.assertEqual(True, lines_with_meta[50]['properties'][0][2]['bold'] and
+                         lines_with_meta[50]['properties'][0][2]['italic'])
+        self.assertEqual(True, lines_with_meta[51]['properties'][0][2]['bold'] and
+                         lines_with_meta[51]['properties'][0][2]['italic'] and
+                         lines_with_meta[51]['properties'][0][2]['underlined'])

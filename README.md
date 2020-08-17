@@ -316,9 +316,3 @@ This formatting property is a toggle property (§17.7.3).
 If this element is not present, the default value is to leave the formatting applied at previous level in the style hierarchy .If this element is never applied in the style hierarchy, then this text shall not be hidden when displayed in a document.
 
 * footers, headers, endnotes, sections etc.
-
-* hierarchy level - для параграфов и списков
-
-* code style
-
-* minor bugs

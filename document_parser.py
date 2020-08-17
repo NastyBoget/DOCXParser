@@ -44,8 +44,11 @@ class DOCXParser:
         for paragraph in body:
             if paragraph.name == 'tbl':
                 continue
-            # TODO text may be without w:t
-            if not paragraph.t:
+            if paragraph.name != 'p':
+                child_paragraph_list = paragraph.find_all('w:p')
+                for child_paragraph in child_paragraph_list:
+                    self.paragraph_list.append(Paragraph(child_paragraph,
+                                                         self.styles_extractor, self.numbering_extractor))
                 continue
 
             self.paragraph_list.append(Paragraph(paragraph, self.styles_extractor, self.numbering_extractor))
