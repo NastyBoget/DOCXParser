@@ -8,13 +8,14 @@ class TestDocxAnnotations(unittest.TestCase):
         docx_reader = DOCXParser('examples/example_1.docx')
         lines_with_meta = docx_reader.get_lines_with_meta()
         # bold, italic, underlined
-        self.assertEqual([], lines_with_meta[0]['annotations'])
-        self.assertEqual([(0, 11, "italic")], lines_with_meta[1]['annotations'])
-        self.assertEqual([(0, 9, "bold")], lines_with_meta[2]['annotations'])
-        self.assertEqual([(0, 15, "underlined")], lines_with_meta[3]['annotations'])
-        self.assertEqual([(0, 6, "italic")], lines_with_meta[4]['annotations'])
-        self.assertEqual([(8, 12, "bold")], lines_with_meta[5]['annotations'])
-        self.assertEqual([(0, 19, "bold"), (5, 19, "underlined")], lines_with_meta[6]['annotations'])
+        self.assertEqual([(0, 10, 'style:Body A')], lines_with_meta[0]['annotations'])
+        self.assertEqual([(0, 11, "italic"), (0, 11, 'style:Body A')], lines_with_meta[1]['annotations'])
+        self.assertEqual([(0, 9, "bold"), (0, 9, 'style:Body A')], lines_with_meta[2]['annotations'])
+        self.assertEqual([(0, 15, "underlined"), (0, 15, 'style:Body A')], lines_with_meta[3]['annotations'])
+        self.assertEqual([(0, 6, "italic"), (0, 16, 'style:Body A')], lines_with_meta[4]['annotations'])
+        self.assertEqual([(8, 12, "bold"), (0, 12, 'style:Body A')], lines_with_meta[5]['annotations'])
+        self.assertEqual([(0, 19, "bold"), (5, 19, "underlined"), (0, 19, 'style:Body A')],
+                         lines_with_meta[6]['annotations'])
 
         # alignment
         self.assertEqual("left", lines_with_meta[8]['alignment'])
@@ -29,8 +30,10 @@ class TestDocxAnnotations(unittest.TestCase):
     def test_example_2(self):
         docx_reader = DOCXParser('examples/example_2.docx')
         lines_with_meta = docx_reader.get_lines_with_meta()
-        self.assertEqual([(0, len(lines_with_meta[3]['text']), "italic")], lines_with_meta[3]['annotations'])
-        self.assertEqual([(0, len(lines_with_meta[8]['text']), "italic")], lines_with_meta[8]['annotations'])
+        self.assertEqual([(0, len(lines_with_meta[3]['text']), "italic"),
+                          (0, len(lines_with_meta[3]['text']), 'style:heading 4')], lines_with_meta[3]['annotations'])
+        self.assertEqual([(0, len(lines_with_meta[8]['text']), "italic"),
+                          (0, len(lines_with_meta[8]['text']), 'style:heading 9')], lines_with_meta[8]['annotations'])
 
         self.assertEqual([(66, 73, "italic"), (75, 89, "bold"), (91, 111, 'underlined')],
                          lines_with_meta[35]['annotations'])
