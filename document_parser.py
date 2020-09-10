@@ -110,6 +110,7 @@ if __name__ == "__main__":
                 for line in lines_info:
                     print(line['text'], file=file)
                     print(line['annotations'], file=file)
+                    print(line['level'], file=file)
 
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
