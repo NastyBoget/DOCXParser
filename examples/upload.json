@@ -1,0 +1,361 @@
+{
+  "content": {
+    "structure": {
+      "node_id": "0",
+      "text": "",
+      "annotations": [],
+      "metadata": {
+        "paragraph_type": "root",
+        "page_id": 0,
+        "line_id": 0
+      },
+      "subparagraphs": [
+        {
+          "node_id": "0.0",
+          "text": "Пример документа",
+          "annotations": [
+            {
+              "start": 0,
+              "end": 16,
+              "value": "bold"
+            },
+            {
+              "start": 0,
+              "end": 16,
+              "value": "style:normal"
+            }
+          ],
+          "metadata": {
+            "paragraph_type": "raw_text",
+            "page_id": 0,
+            "line_id": 1
+          },
+          "subparagraphs": []
+        },
+        {
+          "node_id": "0.1",
+          "text": "Глава 1",
+          "annotations": [
+            {
+              "start": 0,
+              "end": 7,
+              "value": "bold"
+            },
+            {
+              "start": 0,
+              "end": 7,
+              "value": "style:normal"
+            }
+          ],
+          "metadata": {
+            "paragraph_type": "named_header",
+            "page_id": 0,
+            "line_id": 2
+          },
+          "subparagraphs": [
+            {
+              "node_id": "0.1.0",
+              "text": "Какие то определения",
+              "annotations": [
+                {
+                  "start": 0,
+                  "end": 20,
+                  "value": "style:normal"
+                }
+              ],
+              "metadata": {
+                "paragraph_type": "raw_text",
+                "page_id": 0,
+                "line_id": 3
+              },
+              "subparagraphs": []
+            },
+            {
+              "node_id": "0.1.1",
+              "text": "Статья 1",
+              "annotations": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "value": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "value": "style:normal"
+                }
+              ],
+              "metadata": {
+                "paragraph_type": "named_header",
+                "page_id": 0,
+                "line_id": 4
+              },
+              "subparagraphs": [
+                {
+                  "node_id": "0.1.1.0",
+                  "text": "Определим опрделения",
+                  "annotations": [
+                    {
+                      "start": 0,
+                      "end": 20,
+                      "value": "style:normal"
+                    }
+                  ],
+                  "metadata": {
+                    "paragraph_type": "raw_text",
+                    "page_id": 0,
+                    "line_id": 5
+                  },
+                  "subparagraphs": []
+                }
+              ]
+            },
+            {
+              "node_id": "0.1.2",
+              "text": "Статья 2",
+              "annotations": [
+                {
+                  "start": 0,
+                  "end": 8,
+                  "value": "bold"
+                },
+                {
+                  "start": 0,
+                  "end": 8,
+                  "value": "style:normal"
+                }
+              ],
+              "metadata": {
+                "paragraph_type": "named_header",
+                "page_id": 0,
+                "line_id": 6
+              },
+              "subparagraphs": [
+                {
+                  "node_id": "0.1.2.0",
+                  "text": "Дадим пояснения",
+                  "annotations": [
+                    {
+                      "start": 0,
+                      "end": 15,
+                      "value": "style:normal"
+                    }
+                  ],
+                  "metadata": {
+                    "paragraph_type": "raw_text",
+                    "page_id": 0,
+                    "line_id": 7
+                  },
+                  "subparagraphs": []
+                },
+                {
+                  "node_id": "0.1.2.1",
+                  "text": "",
+                  "annotations": [],
+                  "metadata": {
+                    "paragraph_type": "list",
+                    "page_id": 0,
+                    "line_id": 8
+                  },
+                  "subparagraphs": [
+                    {
+                      "node_id": "0.1.2.1.0",
+                      "text": "1.2.1. Поясним за непонятное",
+                      "annotations": [
+                        {
+                          "start": 0,
+                          "end": 28,
+                          "value": "style:normal"
+                        }
+                      ],
+                      "metadata": {
+                        "paragraph_type": "list_item",
+                        "page_id": 0,
+                        "line_id": 8
+                      },
+                      "subparagraphs": []
+                    },
+                    {
+                      "node_id": "0.1.2.1.1",
+                      "text": "1.2.2. Поясним за понятное",
+                      "annotations": [
+                        {
+                          "start": 0,
+                          "end": 26,
+                          "value": "style:normal"
+                        }
+                      ],
+                      "metadata": {
+                        "paragraph_type": "list_item",
+                        "page_id": 0,
+                        "line_id": 9
+                      },
+                      "subparagraphs": [
+                        {
+                          "node_id": "0.1.2.1.1.0",
+                          "text": "",
+                          "annotations": [],
+                          "metadata": {
+                            "paragraph_type": "list",
+                            "page_id": 0,
+                            "line_id": 10
+                          },
+                          "subparagraphs": [
+                            {
+                              "node_id": "0.1.2.1.1.0.0",
+                              "text": "\tа) это даже ежу понятно",
+                              "annotations": [
+                                {
+                                  "start": 0,
+                                  "end": 24,
+                                  "value": "style:normal"
+                                }
+                              ],
+                              "metadata": {
+                                "paragraph_type": "list_item",
+                                "page_id": 0,
+                                "line_id": 10
+                              },
+                              "subparagraphs": []
+                            },
+                            {
+                              "node_id": "0.1.2.1.1.0.1",
+                              "text": "\tб) это ежу не понятно",
+                              "annotations": [
+                                {
+                                  "start": 0,
+                                  "end": 22,
+                                  "value": "style:normal"
+                                }
+                              ],
+                              "metadata": {
+                                "paragraph_type": "list_item",
+                                "page_id": 0,
+                                "line_id": 11
+                              },
+                              "subparagraphs": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "node_id": "0.1.2.1.2",
+                      "text": "1.2.3.",
+                      "annotations": [
+                        {
+                          "start": 0,
+                          "end": 6,
+                          "value": "style:normal"
+                        }
+                      ],
+                      "metadata": {
+                        "paragraph_type": "list_item",
+                        "page_id": 0,
+                        "line_id": 12
+                      },
+                      "subparagraphs": [
+                        {
+                          "node_id": "0.1.2.1.2.0",
+                          "text": "\n\n\n",
+                          "annotations": [
+                            {
+                              "start": 0,
+                              "end": 0,
+                              "value": "style:normal"
+                            },
+                            {
+                              "start": 1,
+                              "end": 1,
+                              "value": "style:normal"
+                            },
+                            {
+                              "start": 2,
+                              "end": 2,
+                              "value": "style:normal"
+                            },
+                            {
+                              "start": 3,
+                              "end": 3,
+                              "value": "style:normal"
+                            }
+                          ],
+                          "metadata": {
+                            "paragraph_type": "raw_text",
+                            "page_id": 0,
+                            "line_id": 13
+                          },
+                          "subparagraphs": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tables": [
+      {
+        "cells": [
+          [
+            "N",
+            "Фамилия",
+            "Имя",
+            "Организация",
+            "Телефон",
+            "Примечания"
+          ],
+          [
+            "1",
+            "Иванов",
+            "Иван",
+            "ИСП",
+            "8-800",
+            ""
+          ]
+        ],
+        "metadata": {
+          "page_id": null
+        }
+      },
+      {
+        "cells": [
+          [
+            "Фамилия",
+            "Имя",
+            "Отчество"
+          ],
+          [
+            "Иванов",
+            "Иван",
+            "Иванович"
+          ],
+          [
+            "Петров",
+            "Пётр",
+            "Петрович"
+          ],
+          [
+            "Сидоров",
+            "Сидор",
+            "Сидорович"
+          ]
+        ],
+        "metadata": {
+          "page_id": null
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "file_name": "example.docx",
+    "size": 5226,
+    "modified_time": 1602160265,
+    "created_time": 1602160265,
+    "access_time": 1602160265,
+    "file_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  }
+}
