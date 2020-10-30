@@ -1,0 +1,33 @@
+<document>
+    <metadata file_name="example.docx" size="5526"/>
+    <div type="document">
+        <div type="header">
+            <pPr>
+                <pr type="ind" val="1200" start="0" end="16"/>
+                <pr type="js" val="center" start="0" end="16"/>
+                <pr type="bold" val="true" start="0" end="16"/>
+                <pr type="size" val="26" start="0" end="16"/>
+            </pPr>
+            <p>
+                Пример документа
+            </p>
+        </div>
+        <div type="chapter">
+            <pPr>
+                <pr type="ind" val="1200" start="0" end="171"/>
+                <pr type="js" val="left" start="0" end="171"/>
+                <pr type="size" val="26" start="0" end="128"/>
+<!--                bold, italic, underlined = false по умолчанию-->
+                <pr type="italic" val="true" start="67" end="75"/>
+                <pr type="bold" val="true" start="76" end="92"/>
+                <pr type="underlined" val="true" start="93" end="114"/>
+                <pr type="size" val="40" start="129" end="146"/>
+                <pr type="size" val="18" start="147" end="171"/>
+            </pPr>
+            <p>
+                Обычный параграф, внутри которого присутствует вcякая дичь в виде курсива, жирного шрифта,
+                подчёркнутого шрифта, а также шрифт большего размера и шрифт меньшего размера.
+            </p>
+        </div>
+    </div>
+</document>
