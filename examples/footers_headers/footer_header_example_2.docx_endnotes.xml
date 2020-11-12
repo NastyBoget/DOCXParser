@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:endnotes mc:Ignorable="w14 wp14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+ <w:endnote w:id="0" w:type="separator">
+  <w:p>
+   <w:r>
+    <w:separator/>
+   </w:r>
+  </w:p>
+ </w:endnote>
+ <w:endnote w:id="1" w:type="continuationSeparator">
+  <w:p>
+   <w:r>
+    <w:continuationSeparator/>
+   </w:r>
+  </w:p>
+ </w:endnote>
+ <w:endnote w:id="2">
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Endnote"/>
+    <w:bidi w:val="0"/>
+    <w:rPr/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rStyle w:val="EndnoteCharacters"/>
+    </w:rPr>
+    <w:endnoteRef/>
+   </w:r>
+   <w:r>
+    <w:rPr/>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr/>
+    <w:t>
+     this is the first endnote
+    </w:t>
+   </w:r>
+  </w:p>
+ </w:endnote>
+ <w:endnote w:id="3">
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Endnote"/>
+    <w:bidi w:val="0"/>
+    <w:ind w:firstLine="708"/>
+    <w:rPr/>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:rStyle w:val="EndnoteCharacters"/>
+    </w:rPr>
+    <w:endnoteRef/>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rFonts w:cs="Calibri" w:eastAsia="Calibri"/>
+     <w:sz w:val="20"/>
+     <w:szCs w:val="20"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rFonts w:cs="Calibri" w:eastAsia="Calibri"/>
+     <w:sz w:val="20"/>
+     <w:szCs w:val="20"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     this is
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rFonts w:cs="Calibri" w:eastAsia="Calibri"/>
+     <w:sz w:val="20"/>
+     <w:szCs w:val="20"/>
+     <w:u w:val="single"/>
+    </w:rPr>
+    <w:t>
+     the second
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rFonts w:cs="Calibri" w:eastAsia="Calibri"/>
+     <w:sz w:val="20"/>
+     <w:szCs w:val="20"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     endnote
+    </w:t>
+   </w:r>
+  </w:p>
+ </w:endnote>
+</w:endnotes>

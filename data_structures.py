@@ -234,7 +234,6 @@ class ParagraphInfo:
         returns paragraph properties in special format
         :return: dictionary {"text": "",
         "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) or None (hierarchy_level),
-        "indent": {"firstLine", "hanging", "start", "left"}, "alignment": "" ("left", "right", "center", "both"),
         "annotations": [[start, end, size], [start, end, "bold"], [start, end, "italic"],
         [start, end, "underlined"], ...] }
         start, end - character's positions begin with 0, end isn't included
@@ -244,11 +243,10 @@ class ParagraphInfo:
         result['text'] = self.text
         result['level'] = hierarchy_level
         if self.properties:
-            result['indent'] = self.properties[0][2]['indent']
-            result['alignment'] = self.properties[0][2]['alignment']
+            indent = self.properties[0][2]['indent']
+            alignment = self.properties[0][2]['alignment']
         else:
-            result['indent'] = {"firstLine": 0, "hanging": 0, "start": 0, "left": 0}
-            result['alignment'] = "left"
+            indent, alignment = None, None
 
         if not hierarchy_level:
             result['type'] = "raw_text"
@@ -260,17 +258,28 @@ class ParagraphInfo:
             result['type'] = "raw_text"
 
         result['annotations'] = []
-        # TODO add size
-        self.last_properties = {"bold": [], "italic": [], "underlined": []}
+        if indent and alignment:
+            result['annotations'].append((0, len(self.text), "indent:" + str(indent)))
+            result['annotations'].append((0, len(self.text), "alignment:" + str(alignment)))
+
+        self.last_properties = {"bold": [], "italic": [], "underlined": [], "size": []}
         for prop in self.properties:
             for annotation_name in ["bold", "italic", "underlined"]:
                 annotation = self.make_annotation(prop, annotation_name)
                 if annotation:
                     result['annotations'].append(annotation)
+            annotation = self.make_annotation(prop, "size")
+            if annotation:
+                annotation = (annotation[0], annotation[1], "size:" + str(prop[2]["size"]))
+                result['annotations'].append(annotation)
         for annotation_name, prop in self.last_properties.items():
             if prop:
-                annotation = (prop[0], prop[1], annotation_name)
-                result['annotations'].append(annotation)
+                if annotation_name != "size":
+                    annotation = (prop[0], prop[1], annotation_name)
+                    result['annotations'].append(annotation)
+                else:
+                    annotation = (prop[0], prop[1], "size:" + str(prop[2]))
+                    result['annotations'].append(annotation)
         if self.style_name:
             result['annotations'].append((0, len(self.text), "style:" + self.style_name))
         return result
@@ -286,6 +295,21 @@ class ParagraphInfo:
         """
         if type(prop[2]) != dict or annotation_name not in prop[2]:
             return None
+        if annotation_name == 'size':
+            if not self.last_properties[annotation_name]:
+                # start, end, value
+                self.last_properties[annotation_name] = [prop[0], prop[1], prop[2][annotation_name]]
+                return None
+            if prop[2][annotation_name] == self.last_properties[annotation_name][2] or \
+                    re.fullmatch(r" +", self.text[prop[0]:prop[1]]):
+                self.last_properties[annotation_name][1] = prop[1]
+                return None
+            annotation = (self.last_properties[annotation_name][0],
+                          self.last_properties[annotation_name][1],
+                          'size:' + str(self.last_properties[annotation_name][2]))
+            self.last_properties[annotation_name] = [prop[0], prop[1], prop[2][annotation_name]]
+            return annotation
+
         if prop[2][annotation_name] or \
                 self.last_properties[annotation_name] and re.fullmatch(r" +", self.text[prop[0]:prop[1]]):
             if self.last_properties[annotation_name]:

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:document mc:Ignorable="w14 wp14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+ <w:body>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Normal"/>
+    <w:rPr>
+     <w:i/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr/>
+    <w:commentReference w:id="0"/>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t>
+     This is example document for testing headers, footers, footnotes
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rStyle w:val="FootnoteAnchor"/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:footnoteReference w:id="2"/>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+     and endnotes
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rStyle w:val="EndnoteAnchor"/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:endnoteReference w:id="2"/>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t>
+     .
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Normal"/>
+    <w:rPr>
+     <w:i/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t>
+     This sentence is made for testing footnote
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rStyle w:val="FootnoteAnchor"/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:footnoteReference w:id="3"/>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t>
+     .
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Normal"/>
+    <w:rPr>
+     <w:i/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+   </w:pPr>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t>
+     This sentence is made for testing endnote
+    </w:t>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:rStyle w:val="EndnoteAnchor"/>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:endnoteReference w:id="3"/>
+   </w:r>
+   <w:r>
+    <w:rPr>
+     <w:i/>
+     <w:iCs/>
+    </w:rPr>
+    <w:t>
+     .
+    </w:t>
+   </w:r>
+  </w:p>
+  <w:p>
+   <w:pPr>
+    <w:pStyle w:val="Normal"/>
+    <w:spacing w:after="160" w:before="0"/>
+    <w:rPr/>
+   </w:pPr>
+   <w:r>
+    <w:rPr/>
+   </w:r>
+  </w:p>
+  <w:sectPr>
+   <w:headerReference r:id="rId2" w:type="default"/>
+   <w:footerReference r:id="rId3" w:type="default"/>
+   <w:footnotePr>
+    <w:numFmt w:val="decimal"/>
+   </w:footnotePr>
+   <w:endnotePr>
+    <w:numFmt w:val="lowerRoman"/>
+   </w:endnotePr>
+   <w:type w:val="nextPage"/>
+   <w:pgSz w:h="16838" w:w="11906"/>
+   <w:pgMar w:bottom="1440" w:footer="720" w:gutter="0" w:header="720" w:left="1440" w:right="1440" w:top="1440"/>
+   <w:pgNumType w:fmt="decimal"/>
+   <w:formProt w:val="false"/>
+   <w:textDirection w:val="lrTb"/>
+   <w:docGrid w:charSpace="4096" w:linePitch="360" w:type="default"/>
+  </w:sectPr>
+ </w:body>
+</w:document>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:footnotes xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml">
+ <w:footnote w:id="-1" w:type="separator">
+  <w:p w14:paraId="31FB6335" w14:textId="749BC0BC" w:rsidR="58E704A0" w:rsidRDefault="58E704A0">
+   <w:pPr>
+    <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+   </w:pPr>
+   <w:r>
+    <w:separator/>
+   </w:r>
+  </w:p>
+ </w:footnote>
+ <w:footnote w:id="0" w:type="continuationSeparator">
+  <w:p w14:paraId="5B0D8C50" w14:textId="34E5A17A" w:rsidR="58E704A0" w:rsidRDefault="58E704A0">
+   <w:pPr>
+    <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+   </w:pPr>
+   <w:r>
+    <w:continuationSeparator/>
+   </w:r>
+  </w:p>
+ </w:footnote>
+ <w:footnote w:id="3950">
+  <w:p w14:paraId="4A466AE9" w14:textId="76923B96" w:rsidP="58E704A0" w:rsidR="58E704A0" w:rsidRDefault="58E704A0">
+   <w:pPr>
+    <w:pStyle w:val="FootnoteText"/>
+    <w:bidi w:val="0"/>
+   </w:pPr>
+   <w:r w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rStyle w:val="FootnoteReference"/>
+    </w:rPr>
+    <w:footnoteRef/>
+   </w:r>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t>
+     this
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t>
+     is
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t>
+     the
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t>
+     first
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0">
+    <w:rPr/>
+    <w:t xml:space="preserve">
+     footnote
+    </w:t>
+   </w:r>
+  </w:p>
+ </w:footnote>
+ <w:footnote w:id="3310">
+  <w:p w14:paraId="02E753C9" w14:textId="3857CA0A" w:rsidP="58E704A0" w:rsidR="58E704A0" w:rsidRDefault="58E704A0">
+   <w:pPr>
+    <w:pStyle w:val="FootnoteText"/>
+    <w:bidi w:val="0"/>
+    <w:ind w:firstLine="0"/>
+    <w:rPr>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+    </w:rPr>
+   </w:pPr>
+   <w:r w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rStyle w:val="FootnoteReference"/>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:footnoteRef/>
+   </w:r>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t>
+     this
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t>
+     is
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t>
+     the
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+     <w:i w:val="1"/>
+     <w:iCs w:val="1"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t>
+     second
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t xml:space="preserve">
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellStart"/>
+   <w:r w:rsidR="58E704A0" w:rsidRPr="58E704A0">
+    <w:rPr>
+     <w:rFonts w:ascii="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/>
+     <w:b w:val="1"/>
+     <w:bCs w:val="1"/>
+     <w:sz w:val="52"/>
+     <w:szCs w:val="52"/>
+    </w:rPr>
+    <w:t>
+     footnote
+    </w:t>
+   </w:r>
+   <w:proofErr w:type="spellEnd"/>
+  </w:p>
+ </w:footnote>
+</w:footnotes>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:ftr mc:Ignorable="w14 wp14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+ <w:tbl>
+  <w:tblPr>
+   <w:tblStyle w:val="TableNormal"/>
+   <w:tblW w:type="dxa" w:w="9014"/>
+   <w:jc w:val="left"/>
+   <w:tblInd w:type="dxa" w:w="0"/>
+   <w:tblCellMar>
+    <w:top w:type="dxa" w:w="0"/>
+    <w:left w:type="dxa" w:w="108"/>
+    <w:bottom w:type="dxa" w:w="0"/>
+    <w:right w:type="dxa" w:w="108"/>
+   </w:tblCellMar>
+   <w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="1" w:noVBand="1" w:val="06a0"/>
+  </w:tblPr>
+  <w:tblGrid>
+   <w:gridCol w:w="3004"/>
+   <w:gridCol w:w="3005"/>
+   <w:gridCol w:w="3005"/>
+  </w:tblGrid>
+  <w:tr>
+   <w:trPr/>
+   <w:tc>
+    <w:tcPr>
+     <w:tcW w:type="dxa" w:w="3004"/>
+     <w:tcBorders/>
+     <w:shd w:fill="auto" w:val="clear"/>
+    </w:tcPr>
+    <w:p>
+     <w:pPr>
+      <w:pStyle w:val="Header"/>
+      <w:bidi w:val="0"/>
+      <w:ind w:hanging="0" w:left="-115"/>
+      <w:jc w:val="left"/>
+      <w:rPr/>
+     </w:pPr>
+     <w:r>
+      <w:rPr/>
+      <w:t>
+       This is footer for odd pages
+      </w:t>
+     </w:r>
+    </w:p>
+   </w:tc>
+   <w:tc>
+    <w:tcPr>
+     <w:tcW w:type="dxa" w:w="3005"/>
+     <w:tcBorders/>
+     <w:shd w:fill="auto" w:val="clear"/>
+    </w:tcPr>
+    <w:p>
+     <w:pPr>
+      <w:pStyle w:val="Header"/>
+      <w:bidi w:val="0"/>
+      <w:jc w:val="center"/>
+      <w:rPr/>
+     </w:pPr>
+     <w:r>
+      <w:rPr/>
+     </w:r>
+    </w:p>
+   </w:tc>
+   <w:tc>
+    <w:tcPr>
+     <w:tcW w:type="dxa" w:w="3005"/>
+     <w:tcBorders/>
+     <w:shd w:fill="auto" w:val="clear"/>
+    </w:tcPr>
+    <w:p>
+     <w:pPr>
+      <w:pStyle w:val="Header"/>
+      <w:bidi w:val="0"/>
+      <w:ind w:hanging="0" w:right="-115"/>
+      <w:jc w:val="right"/>
+      <w:rPr/>
+     </w:pPr>
+     <w:r>
+      <w:rPr/>
+     </w:r>
+    </w:p>
+   </w:tc>
+  </w:tr>
+ </w:tbl>
+ <w:p>
+  <w:pPr>
+   <w:pStyle w:val="Footer"/>
+   <w:bidi w:val="0"/>
+   <w:rPr/>
+  </w:pPr>
+  <w:r>
+   <w:rPr/>
+  </w:r>
+ </w:p>
+</w:ftr>

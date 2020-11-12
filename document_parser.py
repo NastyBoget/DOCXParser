@@ -21,7 +21,13 @@ class DOCXParser:
         if not file.endswith('.docx'):
             raise ValueError('it is not .docx file')
         document = zipfile.ZipFile(file)
-        self.document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
+        try:
+            self.document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
+        except KeyError:
+            try:
+                self.document_bs = BeautifulSoup(document.read('word/document2.xml'), 'xml')
+            except KeyError:
+                return
         self.styles_extractor = StylesExtractor(BeautifulSoup(document.read('word/styles.xml'), 'xml'))
         try:
             self.numbering_extractor = NumberingExtractor(BeautifulSoup(document.read('word/numbering.xml'), 'xml'),
@@ -29,6 +35,24 @@ class DOCXParser:
             self.styles_extractor.numbering_extractor = self.numbering_extractor
         except KeyError:
             self.numbering_extractor = None
+        self.footers, self.headers = [], []
+        for i in range(1, 4):
+            try:
+                self.footers.append(BeautifulSoup(document.read(f'word/footer{i}.xml'), 'xml'))
+            except KeyError:
+                pass
+            try:
+                self.headers.append(BeautifulSoup(document.read(f'word/header{i}.xml'), 'xml'))
+            except KeyError:
+                pass
+        try:
+            self.footnotes = BeautifulSoup(document.read(f'word/footnotes.xml'), 'xml')
+        except KeyError:
+            self.footnotes = None
+        try:
+            self.endnotes = BeautifulSoup(document.read(f'word/endnotes.xml'), 'xml')
+        except KeyError:
+            self.endnotes = None
         # the list of paragraph with their properties
         self.paragraph_list = []
         self.parse()
@@ -37,7 +61,13 @@ class DOCXParser:
         """
         parses document into paragraphs and runs, extracts text for each run and paragraph and it's metadata
         """
-
+        if not self.document_bs:
+            return None
+        for header in self.headers:
+            header_paragraphs = header.find_all('w:p')
+            for paragraph in header_paragraphs:
+                self.paragraph_list.append(Paragraph(paragraph,
+                                                     self.styles_extractor, None))
         body = self.document_bs.body
         if not body:
             return
@@ -52,6 +82,21 @@ class DOCXParser:
                 continue
 
             self.paragraph_list.append(Paragraph(paragraph, self.styles_extractor, self.numbering_extractor))
+        if self.footnotes:
+            footnotes_paragraphs = self.footnotes.find_all('w:p')
+            for paragraph in footnotes_paragraphs:
+                self.paragraph_list.append(Paragraph(paragraph,
+                                                     self.styles_extractor, None))
+        if self.endnotes:
+            endnotes_paragraphs = self.endnotes.find_all('w:p')
+            for paragraph in endnotes_paragraphs:
+                self.paragraph_list.append(Paragraph(paragraph,
+                                                     self.styles_extractor, None))
+        for footer in self.footers:
+            footer_paragraphs = footer.find_all('w:p')
+            for paragraph in footer_paragraphs:
+                self.paragraph_list.append(Paragraph(paragraph,
+                                                     self.styles_extractor, None))
 
     def get_lines(self) -> List[str]:
         """
@@ -78,7 +123,9 @@ class DOCXParser:
         lines_with_meta = []
         for paragraph in self.paragraph_list:
             paragraph_properties = ParagraphInfo(paragraph)
-            lines_with_meta.append(paragraph_properties.get_info())
+            line_with_meta = paragraph_properties.get_info()
+            if line_with_meta['text']:
+                lines_with_meta.append(line_with_meta)
         return lines_with_meta
 
 
@@ -128,3 +175,4 @@ if __name__ == "__main__":
                 pass
 
 # TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
+# footers_headers/footer_header_example_1.docx
