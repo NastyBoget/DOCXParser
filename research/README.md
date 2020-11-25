@@ -488,3 +488,23 @@ ODA-документ состоит из 6 частей:
 может быть установлена взаимосвязь логических блоков документа с геометрическими.
 Другой подход: документ можно разбить на физические блоки, каждому блоку можно назначить семантическую метку
 (таким образом получим логическую структуру). К такому подходу можно отнести задачу сегментации документа.
+
+#### Риторическая структура документа (Rhetorical structure theory - RST)
+
+Одна из первых статей на эту тему - [Rhetorical structure theory: Toward a functional theory of text organization (1988)](https://semanticsarchive.net/Archive/GMyNDBjO/RST%20towards%20a%20functional%20theory%20of%20text%20organization.pdf)
+
+Объекты RST:
+1) Отношение - какое-либо смысловое соотношение между двумя порциями текста;
+2) Схема - шаблон, в котором одна часть текста может анализироваться относительно других частей;
+3) Приложение схем - конкретный экземпляр схемы;
+4) Структура - композиция приложений схем.
+
+В отношении может быть два "участника": "ядро" (nucleus) и "спутник" (satellite). 
+Ядро в большей степени соответствует тому, что хочет сказать автор текста.
+Например, какое-либо утверждение - это "ядро", его доказательство - "спутник".
+Назвение отношения между частями - "доказательство" (evidence).
+Весь текст представляется как иерархия подобных отношений между частями текста.
+
+* [Cues and constraints for the relational discourse analysis of complex text types–the role of logical and generic document structure (2006)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.84.7524&rep=rep1&type=pdf#page=28)
+
+* [The role of logical and generic document structure in relational discourse analysis (2010)](https://www.researchgate.net/profile/Henning_Lobin/publication/215524607_The_role_of_logical_and_generic_document_structure_in_relational_discourse_analysis/links/00b7d519e28c0f09e0000000/The-role-of-logical-and-generic-document-structure-in-relational-discourse-analysis.pdf)
