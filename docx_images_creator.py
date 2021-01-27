@@ -42,7 +42,8 @@ class DocxImagesCreator:
                 # create docx file with bboxes of different colors
                 used_many_colors = self.__draw_bboxes(uids, paragraph_list, many_colors=True)
                 # document_bs was changed implicitly
-                text = re.sub("pbdr", "pBdr", str(document_bs))
+                text = re.sub("w:pbdr", "w:pBdr", str(document_bs))
+                text = re.sub("w:ppr", "w:pPr", text)
                 many_colors_pdf = self.__create_pdf_from_docx(tmp_dir, self.many_colors_file_name, namelist, text)
 
                 # clear document_bs from border tags
@@ -54,6 +55,7 @@ class DocxImagesCreator:
                 used_two_colors = self.__draw_bboxes(uids, paragraph_list, many_colors=False)
                 # document_bs was changed implicitly
                 text = re.sub("pbdr", "pBdr", str(document_bs))
+                text = re.sub("w:ppr", "w:pPr", text)
                 two_colors_pdf = self.__create_pdf_from_docx(tmp_dir, self.two_colors_file_name, namelist, text)
 
                 # create image with bbox
@@ -69,16 +71,23 @@ class DocxImagesCreator:
         current_page_number = 0
         diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages,
                                                         current_page_number)
+        remained_bboxes = diff_img.copy()
         for i, (base_color, changed_color) in enumerate(zip(used_two_colors, used_many_colors)):
             red, green, blue = ImageColor.getcolor('#' + DocxImagesCreator.__color_from_decimal(
                 changed_color - base_color), "RGB")
             red_column, green_column, blue_column = diff_img.T
             one_bbox_mask = (red_column == red) & (blue_column == blue) & (green_column == green)
             if not one_bbox_mask.any():
+                red_column, green_column, blue_column = remained_bboxes.T
+                bboxes_mask = (red_column != 0) | (blue_column != 0) & (green_column != 0)
+                # there are other bboxes on the page
+                if bboxes_mask.any():
+                    continue
                 try:
                     current_page_number += 1
                     diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages,
                                                                     current_page_number)
+                    remained_bboxes = diff_img.copy()
                     red_column, green_column, blue_column = diff_img.T
                     one_bbox_mask = (red_column == red) & (blue_column == blue) & (green_column == green)
                 except IndexError:
@@ -89,8 +98,8 @@ class DocxImagesCreator:
             red_column, green_column, blue_column = diff_img_copy.T
             other_bboxes_mask = (red_column != 0) | (blue_column != 0) | (green_column != 0)
             img_copy = img.copy()
-            # delete current bbox from the base image
-            img[one_bbox_mask.T] = (255, 255, 255)
+            # delete current bbox from the difference image
+            remained_bboxes[one_bbox_mask.T] = (0, 0, 0)
             # delete other bboxes from image
             img_copy[other_bboxes_mask.T] = ImageColor.getcolor('#ffffff', "RGB")
             # make current bbox red
@@ -149,6 +158,7 @@ class DocxImagesCreator:
         with zipfile.ZipFile(docx_path, mode='w') as new_d:
             for filename in namelist:
                 new_d.write('{}/{}'.format(tmp_dir, filename), arcname=filename)
+
         # create pdf file with bbox
         pdf_name = DocxImagesCreator.__docx2pdf(tmp_dir, docx_path)
         os.remove(docx_path)
@@ -192,10 +202,23 @@ class DocxImagesCreator:
                                   'lxml').body.contents[0]
         if bs_tree.pPr:
             bs_tree.pPr.insert(1, border_bs)
+        else:
+            border_bs = BeautifulSoup('<w:pPr><w:pBdr><w:top w:val="single" '
+                                      'w:color="{color}" w:sz="8" w:space="0" '
+                                      'w:shadow="0" w:frame="0"/><w:left w:val="single" '
+                                      'w:color="{color}" w:sz="8" w:space="0" '
+                                      'w:shadow="0" w:frame="0"/><w:bottom w:val="single" '
+                                      'w:color="{color}" w:sz="8" w:space="0" w:shadow="0" '
+                                      'w:frame="0"/><w:right w:val="single" w:color="{color}" '
+                                      'w:sz="8" w:space="0" w:shadow="0" w:frame="0"/>'
+                                      '</w:pBdr></w:pPr>'.format(color=color), 'lxml').body.contents[0]
+            bs_tree.insert(0, border_bs)
 
 
 if __name__ == "__main__":
     img_creator = DocxImagesCreator("examples/docx2images")
+    os.makedirs('examples/docx2images/jpg', exist_ok=True)
+    # 55 images should be
     for i, img in enumerate(img_creator.create_images("doc.docx")):
         if img:
             img.save(f'examples/docx2images/jpg/{i}.jpg', 'JPEG')
