@@ -59,44 +59,43 @@ class DocxImagesCreator:
                 two_colors_pdf = self.__create_pdf_from_docx(tmp_dir, self.two_colors_file_name, namelist, text)
 
                 # create image with bbox
-                many_colors_pages, two_colors_pages = convert_from_path(many_colors_pdf,
-                                                                        500), convert_from_path(two_colors_pdf, 500)
-                os.remove(many_colors_pdf)
-                os.remove(two_colors_pdf)
+                many_colors_pages, two_colors_pages = self._split_pdf2image(many_colors_pdf
+                                                                            ), self._split_pdf2image(two_colors_pdf)
 
                 yield from self.__get_image(many_colors_pages, two_colors_pages, used_many_colors, used_two_colors)
 
-    @staticmethod
-    def __get_image(many_colors_pages, two_colors_pages, used_many_colors, used_two_colors):
-        current_page_number = 0
-        diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages,
-                                                        current_page_number)
+    def __get_image(self,
+                    many_colors_pages: Iterator[np.ndarray],
+                    two_colors_pages: Iterator[np.ndarray],
+                    used_many_colors: List[int],
+                    used_two_colors: List[int]):
+        diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages)
         remained_bboxes = diff_img.copy()
+        total_img_num = len(used_many_colors)
         for i, (base_color, changed_color) in enumerate(zip(used_two_colors, used_many_colors)):
-            red, green, blue = ImageColor.getcolor('#' + DocxImagesCreator.__color_from_decimal(
+            colors = ImageColor.getcolor('#' + DocxImagesCreator.__color_from_decimal(
                 changed_color - base_color), "RGB")
-            red_column, green_column, blue_column = diff_img.T
-            one_bbox_mask = (red_column == red) & (blue_column == blue) & (green_column == green)
+            one_bbox_mask = self.__get_mask(diff_img, colors)
             if not one_bbox_mask.any():
-                red_column, green_column, blue_column = remained_bboxes.T
-                bboxes_mask = (red_column != 0) | (blue_column != 0) & (green_column != 0)
+                bboxes_mask = self.__get_mask(remained_bboxes, (0, 0, 0), equal=False)
                 # there are other bboxes on the page
                 if bboxes_mask.any():
+                    remained_bboxes[bboxes_mask.T] = (0, 0, 0)
+                    yield None
                     continue
                 try:
-                    current_page_number += 1
-                    diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages,
-                                                                    current_page_number)
+                    diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages)
                     remained_bboxes = diff_img.copy()
-                    red_column, green_column, blue_column = diff_img.T
-                    one_bbox_mask = (red_column == red) & (blue_column == blue) & (green_column == green)
-                except IndexError:
+                    one_bbox_mask = self.__get_mask(diff_img, colors)
+                    if not one_bbox_mask.any():
+                        yield None
+                        continue
+                except StopIteration:
                     yield None
                     continue
             diff_img_copy = diff_img.copy()
             diff_img_copy[one_bbox_mask.T] = (0, 0, 0)
-            red_column, green_column, blue_column = diff_img_copy.T
-            other_bboxes_mask = (red_column != 0) | (blue_column != 0) | (green_column != 0)
+            other_bboxes_mask = self.__get_mask(diff_img_copy, (0, 0, 0), equal=False)
             img_copy = img.copy()
             # delete current bbox from the difference image
             remained_bboxes[one_bbox_mask.T] = (0, 0, 0)
@@ -105,6 +104,18 @@ class DocxImagesCreator:
             # make current bbox red
             img_copy[one_bbox_mask.T] = ImageColor.getcolor('#ff0000', "RGB")
             yield Image.fromarray(img_copy)
+
+    @staticmethod
+    def __get_mask(img: np.ndarray,
+                   colors: Tuple[int, int, int],
+                   equal: bool = True) -> np.ndarray:
+        red_column, green_column, blue_column = img.T
+        red, green, blue = colors
+        if equal:
+            mask = (red_column == red) & (blue_column == blue) & (green_column == green)
+        else:
+            mask = (red_column != red) | (blue_column != blue) | (green_column != green)
+        return mask
 
     def __draw_bboxes(self,
                       uids: List[str],
@@ -132,13 +143,11 @@ class DocxImagesCreator:
         return used_colors
 
     @staticmethod
-    def __change_page(changed_pages: List[Image.Image],
-                      base_pages: List[Image.Image],
-                      page_num: int) -> Tuple[np.ndarray, np.ndarray]:
-        base_page, changed_page = base_pages[page_num], changed_pages[page_num]
-        diff_img = np.array(changed_page) - np.array(base_page)
-        img = np.array(base_page)
-        return diff_img, img
+    def __change_page(changed_pages: Iterator[np.ndarray],
+                      base_pages: Iterator[np.ndarray]) -> Tuple[np.ndarray, np.ndarray]:
+        base_page, changed_page = next(base_pages), next(changed_pages)
+        diff_img = changed_page - base_page
+        return diff_img, base_page
 
     @staticmethod
     def __color_from_decimal(decimal_color: int) -> str:
@@ -161,6 +170,8 @@ class DocxImagesCreator:
 
         # create pdf file with bbox
         pdf_name = DocxImagesCreator.__docx2pdf(tmp_dir, docx_path)
+        # TODO delete this
+        DocxImagesCreator.__docx2pdf("examples/docx2images", docx_path)
         os.remove(docx_path)
         return pdf_name
 
@@ -191,35 +202,38 @@ class DocxImagesCreator:
     @staticmethod
     def __insert_border(bs_tree: BeautifulSoup,
                         color: str) -> None:
-        border_bs = BeautifulSoup('<w:pBdr><w:top w:val="single" '
-                                  'w:color="{color}" w:sz="8" w:space="0" '
-                                  'w:shadow="0" w:frame="0"/><w:left w:val="single" '
-                                  'w:color="{color}" w:sz="8" w:space="0" '
-                                  'w:shadow="0" w:frame="0"/><w:bottom w:val="single" '
-                                  'w:color="{color}" w:sz="8" w:space="0" w:shadow="0" '
-                                  'w:frame="0"/><w:right w:val="single" w:color="{color}" '
-                                  'w:sz="8" w:space="0" w:shadow="0" w:frame="0"/></w:pBdr>'.format(color=color),
-                                  'lxml').body.contents[0]
+        border_str = '<w:pBdr><w:top w:val="single" ' \
+                     'w:color="{color}" w:sz="8" w:space="0" ' \
+                     'w:shadow="0" w:frame="0"/><w:left w:val="single" ' \
+                     'w:color="{color}" w:sz="8" w:space="0" ' \
+                     'w:shadow="0" w:frame="0"/><w:bottom w:val="single" ' \
+                     'w:color="{color}" w:sz="8" w:space="0" w:shadow="0" ' \
+                     'w:frame="0"/><w:right w:val="single" w:color="{color}" ' \
+                     'w:sz="8" w:space="0" w:shadow="0" w:frame="0"/></w:pBdr>'.format(color=color)
+        border_bs = BeautifulSoup(border_str, 'lxml').body.contents[0]
         if bs_tree.pPr:
             bs_tree.pPr.insert(1, border_bs)
         else:
-            border_bs = BeautifulSoup('<w:pPr><w:pBdr><w:top w:val="single" '
-                                      'w:color="{color}" w:sz="8" w:space="0" '
-                                      'w:shadow="0" w:frame="0"/><w:left w:val="single" '
-                                      'w:color="{color}" w:sz="8" w:space="0" '
-                                      'w:shadow="0" w:frame="0"/><w:bottom w:val="single" '
-                                      'w:color="{color}" w:sz="8" w:space="0" w:shadow="0" '
-                                      'w:frame="0"/><w:right w:val="single" w:color="{color}" '
-                                      'w:sz="8" w:space="0" w:shadow="0" w:frame="0"/>'
-                                      '</w:pBdr></w:pPr>'.format(color=color), 'lxml').body.contents[0]
+            border_bs = BeautifulSoup('<w:pPr>' + border_str + '</w:pPr>', 'lxml').body.contents[0]
             bs_tree.insert(0, border_bs)
+
+    @staticmethod
+    def _split_pdf2image(path: str) -> Iterator[np.ndarray]:
+        step = 1
+        left = 1
+        images = None
+        while images is None or len(images) > 0:
+            images = convert_from_path(path, first_page=left, last_page=left + step - 1)
+            left += step
+            for image in images:
+                yield np.array(image)
 
 
 if __name__ == "__main__":
     img_creator = DocxImagesCreator("examples/docx2images")
     os.makedirs('examples/docx2images/jpg', exist_ok=True)
     # 55 images should be
-    for i, img in enumerate(img_creator.create_images("doc.docx")):
+    for i, img in enumerate(img_creator.create_images("doc2.docx")):
         if img:
             img.save(f'examples/docx2images/jpg/{i}.jpg', 'JPEG')
         else:
