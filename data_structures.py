@@ -36,7 +36,7 @@ class BaseProperties:
 class Run(BaseProperties):
 
     def __init__(self,
-                 properties: BaseProperties,
+                 properties: Optional[BaseProperties],
                  styles_extractor: "StylesExtractor"):
         """
         contains information about run properties

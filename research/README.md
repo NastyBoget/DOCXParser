@@ -508,3 +508,11 @@ ODA-документ состоит из 6 частей:
 * [Cues and constraints for the relational discourse analysis of complex text types–the role of logical and generic document structure (2006)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.84.7524&rep=rep1&type=pdf#page=28)
 
 * [The role of logical and generic document structure in relational discourse analysis (2010)](https://www.researchgate.net/profile/Henning_Lobin/publication/215524607_The_role_of_logical_and_generic_document_structure_in_relational_discourse_analysis/links/00b7d519e28c0f09e0000000/The-role-of-logical-and-generic-document-structure-in-relational-discourse-analysis.pdf)
+
+Последние статейки: 
+
+* http://essay.utwente.nl/72979/1/Yi%20He%20-%20master%20thesis%20-%20final%20version.pdf
+
+* http://essay.utwente.nl/76427/1/BITEW_MA_EEMCS.pdf
+
+* https://www.aclweb.org/anthology/2020.fnp-1.2.pdf
