@@ -1,6 +1,6 @@
 # Parser for documents in .docx format
 
-[стандарт Office Open XML File Formats с. 28-62; 167-1301](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-376,%20Fifth%20Edition,%20Part%201%20-%20Fundamentals%20And%20Markup%20Language%20Reference.zip)
+[стандарт Office Open XML File Formats с. 28-62; 167-1301](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/)
 
 ## Структура docx
 
