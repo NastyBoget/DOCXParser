@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
+
+from data_structures.base_props import BaseProperties
 from styles_extractor import StylesExtractor
 from properties_extractor import change_paragraph_properties, change_run_properties
-from data_structures import BaseProperties
 from typing import List, Dict, Union
 import re
 from windows_font_mapping import mapping
@@ -101,9 +102,12 @@ class AbstractNum:
             ilvl = lvl['w:ilvl']
             if ilvl not in self.levels:
                 self.levels[ilvl] = {}
+
             if lvl.lvlText and lvl.lvlText['w:val']:
                 # some characters in bullets are displayed incorrectly
-                # replace them with the unicode version
+                # replace them with the unicode equivalent
+                # use mapping between hexadecimal code of windows characters and unicode characters
+                # if hexadecimal code was found in mapping dictionary use it's unicode equivalent
                 if hex(ord(lvl.lvlText['w:val'][0])) in mapping:
                     self.levels[ilvl]['lvlText'] = mapping[hex(ord(lvl.lvlText['w:val'][0]))]
                 else:
@@ -213,7 +217,7 @@ class NumberingExtractor:
             if not self.numbering:
                 raise Exception("there are no numbering")
         else:
-            raise Exception("xml must not be empty")
+            return
 
         if styles_extractor:
             self.styles_extractor = styles_extractor
@@ -384,4 +388,3 @@ class NumberingExtractor:
             change_run_properties(paragraph_properties, lvl_info['rPr'])
         run_properties.text = text
         paragraph_properties.list_level = self.levels_count
-

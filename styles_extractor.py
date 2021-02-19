@@ -1,8 +1,11 @@
-from bs4 import BeautifulSoup
-from properties_extractor import change_paragraph_properties, change_run_properties
-from data_structures import BaseProperties, Run
 from typing import Optional, List
 import re
+
+from bs4 import BeautifulSoup
+
+from data_structures.base_props import BaseProperties
+from data_structures.run import Run
+from properties_extractor import change_paragraph_properties, change_run_properties
 
 
 class StylesExtractor:
@@ -82,7 +85,7 @@ class StylesExtractor:
         if hasattr(old_properties, "style_name"):
             name = style.find("w:name")
             if name:
-                old_properties.style_name = name["w:val"]
+                old_properties.style_name = name["w:val"].lower()
             else:
                 old_properties.style_name = style_id.lower()
             old_properties.style_level = self._get_style_level(old_properties.style_name)

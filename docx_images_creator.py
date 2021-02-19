@@ -25,18 +25,19 @@ class DocxImagesCreator:
         self.base_color_step = 1
         self.many_colors_file_name = 'many_colors_doc'
         self.two_colors_file_name = 'two_colors_doc'
+        self.docx_reader = DOCXParser()
 
     def create_images(self,
                       path: str) -> Iterator[Optional[Image.Image]]:
 
-        docx_reader = DOCXParser(os.path.join(self.path2docs, path))
+        self.docx_reader.parse(os.path.join(self.path2docs, path))
         with zipfile.ZipFile(os.path.join(self.path2docs, path)) as d:
             with tempfile.TemporaryDirectory() as tmp_dir:
                 d.extractall(tmp_dir)
                 namelist = d.namelist()
 
-                document_bs = docx_reader.get_document_bs
-                paragraph_list = docx_reader.get_paragraph_xml_list
+                document_bs = self.docx_reader.get_document_bs
+                paragraph_list = self.docx_reader.get_paragraph_xml_list
                 uids = list(range(len(paragraph_list)))
 
                 # create docx file with bboxes of different colors
@@ -71,7 +72,6 @@ class DocxImagesCreator:
                     used_two_colors: List[int]):
         diff_img, img = DocxImagesCreator.__change_page(many_colors_pages, two_colors_pages)
         remained_bboxes = diff_img.copy()
-        total_img_num = len(used_many_colors)
         for i, (base_color, changed_color) in enumerate(zip(used_two_colors, used_many_colors)):
             colors = ImageColor.getcolor('#' + DocxImagesCreator.__color_from_decimal(
                 changed_color - base_color), "RGB")

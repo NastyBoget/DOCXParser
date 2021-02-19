@@ -6,21 +6,38 @@ import time
 from typing import List
 from styles_extractor import StylesExtractor
 from numbering_extractor import NumberingExtractor
-from data_structures import Paragraph, ParagraphInfo
+from data_structures.paragraph import Paragraph
+from data_structures.paragraph_info import ParagraphInfo
 
 
 class DOCXParser:
 
-    def __init__(self,
-                 file: str):
+    def __init__(self):
+        self.document_bs = None
+        self.styles_extractor = None
+        self.numbering_extractor = None
+        # the list of paragraph with their properties
+        self.paragraph_list = []
+        self.paragraph_xml_list = []
+
+    def can_parse(self,
+                  filename: str) -> bool:
         """
-        parses the .docx document
-        holds the text and metadata for each paragraph and run in the document
-        :param file: name of the .docx file
+        checks if DOCXParser can parse file with filename path
+        :param filename: path to the file for checking
         """
-        if not file.endswith('.docx'):
+        return filename.endswith(".docx")
+
+    def parse(self,
+              filename: str) -> None:
+        """
+        parses document into paragraphs and runs, extracts text for each run and paragraph and it's metadata
+        :param filename: name of the .docx file
+        """
+        if not self.can_parse(filename):
             raise ValueError('it is not .docx file')
-        document = zipfile.ZipFile(file)
+
+        document = zipfile.ZipFile(filename)
         try:
             self.document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
         except KeyError:
@@ -39,14 +56,9 @@ class DOCXParser:
         # the list of paragraph with their properties
         self.paragraph_list = []
         self.paragraph_xml_list = []
-        self.parse()
 
-    def parse(self):
-        """
-        parses document into paragraphs and runs, extracts text for each run and paragraph and it's metadata
-        """
         if not self.document_bs:
-            return None
+            return
 
         body = self.document_bs.body
         if not body:
@@ -81,10 +93,9 @@ class DOCXParser:
         """
         :return: list of dictionaries for each paragraph
         [{"text": "",
+        "uid": "line unique identifier",
         "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) or None (hierarchy_level),
-        "indent": {"firstLine", "hanging", "start", "left"}, "alignment": "" ("left", "right", "center", "both"),
-        "annotations": [[start, end, size], [start, end, "bold"], [start, end, "italic"],
-        [start, end, "underlined"], ...] } ]
+        "annotations": [("size", start, end, size), ("bold", start, end, True), ...] } ]
         start, end - character's positions begin with 0, end isn't included
         """
         lines_with_meta = []
@@ -101,26 +112,29 @@ class DOCXParser:
 
     @property
     def get_document_bs(self) -> BeautifulSoup:
-        return  self.document_bs
+        return self.document_bs
 
 
 if __name__ == "__main__":
     choice = input()
     if choice == "test":
-        filenames = os.listdir('examples/docx/docx')[:100]
+        filenames = os.listdir('examples/test')
     else:
         filenames = [choice]
     global_start = time.time()
     start = time.time()
+    parser = DOCXParser()
     i = 0
-    with open("results.txt", "w") as write_file:
+    with open("examples/test/results.txt", "w") as write_file:
         for filename in filenames:
             try:
                 i += 1
                 if choice == "test":
-                    parser = DOCXParser('examples/docx/docx/' + filename)
+                    if parser.can_parse('examples/test' + filename):
+                        parser.parse('examples/test' + filename)
                 else:
-                    parser = DOCXParser('examples/' + choice)
+                    if parser.can_parse('examples/' + choice):
+                        parser.parse('examples/' + choice)
                 lines_info = parser.get_lines_with_meta()
                 if choice != "test":
                     file = sys.stdout
@@ -130,6 +144,7 @@ if __name__ == "__main__":
                     print("==================", file=write_file)
                     file = write_file
                 for line in lines_info:
+                    print(line)
                     print(line['text'], file=file)
                     print(line['annotations'], file=file)
                     print(line['level'], file=file)
@@ -150,4 +165,3 @@ if __name__ == "__main__":
                 pass
 
 # TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
-# footers_headers/footer_header_example_1.docx
