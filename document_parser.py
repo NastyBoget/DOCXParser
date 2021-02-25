@@ -1,13 +1,15 @@
-import zipfile
-from bs4 import BeautifulSoup
 import os
 import sys
 import time
+import zipfile
 from typing import List
-from styles_extractor import StylesExtractor
-from numbering_extractor import NumberingExtractor
+
+from bs4 import BeautifulSoup
+
 from data_structures.paragraph import Paragraph
 from data_structures.paragraph_info import ParagraphInfo
+from numbering_extractor import NumberingExtractor
+from styles_extractor import StylesExtractor
 
 
 class DOCXParser:
@@ -116,9 +118,11 @@ class DOCXParser:
 
 
 if __name__ == "__main__":
+    test_dir = 'examples/test/docx'
+    examples_dir = 'examples'
     choice = input()
     if choice == "test":
-        filenames = os.listdir('examples/test')
+        filenames = os.listdir(test_dir)
     else:
         filenames = [choice]
     global_start = time.time()
@@ -130,30 +134,30 @@ if __name__ == "__main__":
             try:
                 i += 1
                 if choice == "test":
-                    if parser.can_parse('examples/test' + filename):
-                        parser.parse('examples/test' + filename)
+                    if parser.can_parse(os.path.join(test_dir, filename)):
+                        parser.parse(os.path.join(test_dir, filename))
+                    else:
+                        continue
                 else:
-                    if parser.can_parse('examples/' + choice):
-                        parser.parse('examples/' + choice)
+                    if parser.can_parse(os.path.join(examples_dir, choice)):
+                        parser.parse(os.path.join(examples_dir, choice))
+                    else:
+                        continue
                 lines_info = parser.get_lines_with_meta()
                 if choice != "test":
                     file = sys.stdout
                 else:
-                    print("==================", file=write_file)
-                    print(filename, file=write_file)
-                    print("==================", file=write_file)
                     file = write_file
+                    print(f"\n\n\n\n\n{filename}\n\n\n", file=file)
                 for line in lines_info:
-                    print(line)
                     print(line['text'], file=file)
-                    print(line['annotations'], file=file)
-                    print(line['level'], file=file)
+                    print(f"Annotations: {line['annotations']}", file=file)
 
                 if choice == 'test':
                     print(f"\r{i} objects are processed...", end='', flush=True)
                 if i % 100 == 0:
                     end = time.time()
-                    print(end - start)
+                    print(f"current time for docs processing = {end - start}")
                     start = end
             except ValueError as err:
                 print("ValueError: ", err)
@@ -164,4 +168,4 @@ if __name__ == "__main__":
             except zipfile.BadZipFile:
                 pass
 
-# TODO docx/docx/doc_000651.docx, docx/docx/doc_000578.docx буквы вместо цифр
+# TODO docx/doc_000651.docx, docx/doc_000578.docx буквы вместо цифр
