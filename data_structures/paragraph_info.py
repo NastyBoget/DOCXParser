@@ -49,17 +49,12 @@ class ParagraphInfo:
         defines the type of paragraph and it's level according to it's type
         :return: hierarchy level if the paragraph isn't raw text else returns None
         """
-        # 0 - Глава, Параграф
-        # 1 - Статья, Пункт, heading
-        # 2 - list item
+        # (some level, 0) - heading
+        # (2, some level) - list item
         if self.list_level is not None:
             return 2, self.list_level + 1
         if self.style_level is not None:
             return self.style_level, 0
-        if re.match(r"^(Глава|Параграф)\s*(\d\\.)*(\d\\.?)?", self.text):
-            return 0, 0
-        if re.match(r"^(Статья|Пункт)\s*(\d\\.)*(\d\\.?)?", self.text):
-            return 1, 0
         return None
 
     def get_info(self) -> Dict[str, Union[str, Optional[Tuple[int, int]], List[Tuple[str, int, int, str]]]]:
