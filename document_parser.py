@@ -21,6 +21,8 @@ class DOCXParser:
         # the list of paragraph with their properties
         self.paragraph_list = []
         self.paragraph_xml_list = []
+        self.lines_with_meta = None
+        self.lines = None
 
     def can_parse(self,
                   filename: str) -> bool:
@@ -83,12 +85,15 @@ class DOCXParser:
         """
         :return: list of document's lines
         """
+        if self.lines is not None:
+            return self.lines
         lines = []
         for paragraph in self.paragraph_list:
             line_text = ""
             for run in paragraph.runs:
                 line_text += run.text
             lines.append(line_text)
+        self.lines = lines
         return lines
 
     def get_lines_with_meta(self) -> List[dict]:
@@ -100,12 +105,15 @@ class DOCXParser:
         "annotations": [("size", start, end, size), ("bold", start, end, True), ...] } ]
         start, end - character's positions begin with 0, end isn't included
         """
+        if self.lines_with_meta is not None:
+            return self.lines_with_meta
         lines_with_meta = []
         for paragraph in self.paragraph_list:
             paragraph_properties = ParagraphInfo(paragraph)
             line_with_meta = paragraph_properties.get_info()
             if line_with_meta['text']:
                 lines_with_meta.append(line_with_meta)
+        self.lines_with_meta = lines_with_meta
         return lines_with_meta
 
     @property
