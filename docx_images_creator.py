@@ -19,10 +19,10 @@ class DocxImagesCreator:
     def __init__(self,
                  path2docs: str):
         self.path2docs = path2docs
-        self.color_step = 16
-        self.first_color = 15
+        self.color_step = 100000
+        self.first_color = 511
         self.base_color = 0
-        self.base_color_step = 1
+        self.base_color_step = 500
         self.many_colors_file_name = 'many_colors_doc'
         self.two_colors_file_name = 'two_colors_doc'
         self.docx_reader = DOCXParser()
@@ -233,7 +233,7 @@ if __name__ == "__main__":
     img_creator = DocxImagesCreator("examples/docx2images")
     os.makedirs('examples/docx2images/jpg', exist_ok=True)
     # 55 images should be
-    for i, img in enumerate(img_creator.create_images("doc2.docx")):
+    for i, img in enumerate(img_creator.create_images("doc.docx")):
         if img:
             img.save(f'examples/docx2images/jpg/{i}.jpg', 'JPEG')
         else:
