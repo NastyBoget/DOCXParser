@@ -3,13 +3,13 @@ import re
 import tempfile
 import time
 import zipfile
-from collections import namedtuple, defaultdict
-from copy import deepcopy
+from abc import abstractmethod, ABC
+from collections import namedtuple
 from typing import Iterator, Optional, Dict, Iterable
 from typing import List
 
 import numpy as np
-from PIL import Image, ImageColor
+from PIL import Image
 from bs4 import BeautifulSoup
 from pdf2image import convert_from_path
 
@@ -18,7 +18,7 @@ from document_parser import DOCXParser
 PairedPdf = namedtuple("PairedPdf", ["many_color_pdf", "two_color_pdf", "many_colors", "two_colors"])
 
 
-class DocxImagesCreator:
+class AbstractDocxImagesCreator(ABC):
 
     def __init__(self,
                  path2docs: str):
@@ -52,9 +52,10 @@ class DocxImagesCreator:
             with tempfile.TemporaryDirectory() as tmp_dir:
                 pdfs = self.__create_pair_pdfs(docx_archive=d, tmp_dir=tmp_dir)
                 # create image with bbox
-                yield from self.__create_images_from_pdf(pdfs=pdfs, tmp_dir=tmp_dir)
+                yield from self._create_images_from_pdf(pdfs=pdfs, tmp_dir=tmp_dir)
 
-    def __create_images_from_pdf(self, pdfs: PairedPdf, tmp_dir: str) -> Iterable[Image.Image]:
+    @abstractmethod
+    def _create_images_from_pdf(self, pdfs: PairedPdf, tmp_dir: str) -> Iterable[Image.Image]:
         """
         we take two paired pdfs with bboxes and create images from them. Then we return images according to
         page order
@@ -62,53 +63,7 @@ class DocxImagesCreator:
         @param tmp_dir: path where we save intermediate images
         @return:
         """
-        many_color_images = self._split_pdf2image(pdfs.many_color_pdf)
-        two_color_images = self._split_pdf2image(pdfs.two_color_pdf)
-        uid2path = defaultdict(list)
-        n = 0
-        for two_color, many_color in zip(two_color_images, many_color_images):
-
-            diff = many_color - two_color
-            all_masks = np.abs(diff) > 0
-            many_color[all_masks] = 255
-            height, width, chanels = diff.shape
-
-            original_image = deepcopy(many_color)
-            original_image[all_masks.max(axis=2)] = (255, 255, 255)
-            colors = np.unique(diff.reshape(height * width, chanels), axis=0)
-
-            colors_dict = {}
-            colors_dict_invert = {}
-            lines = self.docx_reader.get_lines_with_meta()
-            page2color = {line["uid"]: line.get("color", "#ff0000") for line in lines}
-            for uid in pdfs.two_colors:
-                color = ImageColor.getcolor(
-                    "#{}".format(self.__color_from_decimal(pdfs.many_colors[uid] - pdfs.two_colors[uid])), "RGB")
-                colors_dict[uid] = color
-                colors_dict_invert[color] = uid
-            assert len(colors_dict) == len(colors_dict_invert)
-
-            for color in colors:
-                color = tuple(color)
-                if color in colors_dict_invert:
-                    uid = colors_dict_invert.get(color)
-                    mask = (diff == color).min(axis=2)
-                    bbox_color = page2color.get(uid)
-                    if bbox_color is not None:
-                        image_copy = deepcopy(original_image)
-                        image_copy[mask] = ImageColor.getcolor(bbox_color, "RGB")
-                        path = "{}/{:06d}.png".format(tmp_dir, n)
-                        n += 1
-                        uid2path[uid].append(path)
-                        Image.fromarray(image_copy).save(path)
-        lines = self.docx_reader.get_lines_with_meta()
-        for line in lines:
-            uid = line["uid"]
-            if uid in uid2path:
-                images = [Image.open(image_path) for image_path in uid2path[uid]]
-                yield self.get_concat_v(images)
-            else:
-                yield None
+        pass
 
     def __create_pair_pdfs(self, docx_archive: zipfile.ZipFile, tmp_dir: str) -> PairedPdf:
         """
@@ -159,7 +114,7 @@ class DocxImagesCreator:
         # only two interleaving colors for correct drawing bboxes in docx
         lines = self.docx_reader.get_lines_with_meta()
         for paragraph, line in zip(paragraph_list, lines):
-            color = self.__color_from_decimal(decimal_color)
+            color = self._color_from_decimal(decimal_color)
             used_colors[line["uid"]] = decimal_color
             self.__insert_border(paragraph, color)
             if many_colors:
@@ -172,7 +127,7 @@ class DocxImagesCreator:
         return used_colors
 
     @staticmethod
-    def __color_from_decimal(decimal_color: int) -> str:
+    def _color_from_decimal(decimal_color: int) -> str:
         color = hex(decimal_color)[2:]
         if len(color) < 6:
             color = '0' * (6 - len(color)) + color
@@ -190,7 +145,7 @@ class DocxImagesCreator:
             for filename in namelist:
                 new_d.write('{}/{}'.format(tmp_dir, filename), arcname=filename)
         # create pdf file with bbox
-        pdf_name = DocxImagesCreator.__docx2pdf(tmp_dir, docx_path)
+        pdf_name = AbstractDocxImagesCreator.__docx2pdf(tmp_dir, docx_path)
         os.remove(docx_path)
         return pdf_name
 
@@ -212,7 +167,7 @@ class DocxImagesCreator:
         os.system("/Applications/LibreOffice.app/Contents/MacOS/soffice --headless"
                   " --convert-to pdf {} --outdir {}".format(path, out_dir))
         out_file = '{}/{}pdf'.format(out_dir, os.path.split(path)[-1][:-4])
-        DocxImagesCreator.__await_for_conversion(out_file)
+        AbstractDocxImagesCreator.__await_for_conversion(out_file)
         return out_file
 
     @staticmethod
@@ -258,13 +213,3 @@ class DocxImagesCreator:
             height += image.height
         return dst
 
-
-if __name__ == "__main__":
-    img_creator = DocxImagesCreator("examples/docx2images")
-    os.makedirs('examples/docx2images/jpg', exist_ok=True)
-    # 55 images should be
-    for i, img in enumerate(img_creator.create_images("doc.docx")):
-        if img:
-            img.save(f'examples/docx2images/jpg/0_{i}.jpg', 'JPEG')
-        else:
-            print(i)
