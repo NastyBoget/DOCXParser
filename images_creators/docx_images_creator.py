@@ -71,8 +71,9 @@ class DocxImagesCreator(AbstractDocxImagesCreator):
 if __name__ == "__main__":
     img_creator = DocxImagesCreator("examples/docx2images")
     os.makedirs('examples/docx2images/jpg', exist_ok=True)
-    for i, img in enumerate(img_creator.create_images("doc.docx")):
+    name = "doc.docx"
+    for i, img in enumerate(img_creator.create_images(name)):
         if img:
-            img.save(f'examples/docx2images/jpg/{i}.jpg', 'JPEG')
+            img.save(f'examples/docx2images/jpg/{name}_{i}.jpg', 'JPEG')
         else:
             print(i)
