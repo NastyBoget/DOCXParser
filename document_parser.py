@@ -1,3 +1,4 @@
+import hashlib
 import os
 import sys
 import time
@@ -23,6 +24,7 @@ class DOCXParser:
         self.paragraph_xml_list = []
         self.lines_with_meta = None
         self.lines = None
+        self.hash = None
 
     def can_parse(self,
                   filename: str) -> bool:
@@ -40,6 +42,13 @@ class DOCXParser:
         """
         if not self.can_parse(filename):
             raise ValueError('it is not .docx file')
+        with open(filename, "rb") as file_doc:
+            file_hash = hashlib.md5()
+            chunk = file_doc.read(8192)
+            while chunk:
+                file_hash.update(chunk)
+                chunk = file_doc.read(8192)
+        self.hash = file_hash.hexdigest()
 
         document = zipfile.ZipFile(filename)
         try:
@@ -112,6 +121,7 @@ class DOCXParser:
             paragraph_properties = ParagraphInfo(paragraph)
             line_with_meta = paragraph_properties.get_info()
             if line_with_meta['text']:
+                line_with_meta['uid'] = f"{self.hash}_{line_with_meta['uid']}"
                 lines_with_meta.append(line_with_meta)
         self.lines_with_meta = lines_with_meta
         return lines_with_meta
