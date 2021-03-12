@@ -125,6 +125,7 @@ class TzClassifierTrainer:
         data = self.__get_data()
         scores = self._cross_val(data)
         logging.info(json.dumps(scores, indent=4))
+        print(scores)
         if not cross_val_only:
             labels_train = self.__get_labels(data)
             features_train = self.feature_extractor.fit_transform(data)

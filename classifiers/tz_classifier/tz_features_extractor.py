@@ -24,7 +24,14 @@ class TzTextFeatures(AbstractFeatureExtractor):
             self.named_item_regexp
         ]
         self.end_regexp = [
-            re.compile(r"\d+$")
+            re.compile(r":$"),
+            re.compile(r"\.;$"),
+            re.compile(r"[а-яА-яё]$")
+        ]
+        self.styles_regexp = [
+            re.compile(r"heading \d+"),
+            re.compile(r"(title)|(subtitle)"),
+            re.compile(r"list item")
         ]
 
     def parameters(self) -> dict:
@@ -95,12 +102,20 @@ class TzTextFeatures(AbstractFeatureExtractor):
 
         yield self._get_size(line)
         yield self._get_bold(line)
+        yield self._get_italic(line)
+        yield self._get_underlined(line)
         yield self._get_indentation(line)
+        yield self._get_type(line)
+        style = self._get_style(line).lower()
+        yield self._styles_regexp(style)
+        yield self._get_hierarchy_level(line)
+
         yield len(text)
         yield len(text.split())
         yield int(text.strip() == "содержание")
         yield 1 if "техническое" in text and "задание" in text else 0
         yield line_id
+        yield line_id / len(document)
 
     def _end_regexp(self, line: str):
         matches = 0
@@ -112,6 +127,15 @@ class TzTextFeatures(AbstractFeatureExtractor):
             else:
                 yield 0
         yield matches
+
+    def _styles_regexp(self, style: str):
+        pattern_num = 0
+        for pattern in self.styles_regexp:
+            match = pattern.match(style)
+            if match:
+                return pattern_num
+            pattern_num += 1
+        return pattern_num
 
     def _before_special_line(self, documents: List[List[dict]], find_special_line: method) -> List[float]:
         """

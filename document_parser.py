@@ -110,7 +110,7 @@ class DOCXParser:
         :return: list of dictionaries for each paragraph
         [{"text": "",
         "uid": "line unique identifier",
-        "type": ""("paragraph" ,"list_item", "raw_text"), "level": (1,1) or None (hierarchy_level),
+        "type": ""("paragraph" ,"list_item", "raw_text", "style_header"), "level": (1,1) or None (hierarchy_level),
         "annotations": [("size", start, end, size), ("bold", start, end, True), ...] } ]
         start, end - character's positions begin with 0, end isn't included
         """

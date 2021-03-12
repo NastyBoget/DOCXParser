@@ -1,0 +1,1 @@
+{"text": "1. Приложение № 1: Обоснование начальной (максимальной) цены контракта.", "level": null, "uid": "28e466087d8f9f2c796a7f3674bf97d5_eba115ca64503e64ee2c5e3c0a2a6392", "type": "raw_text", "annotations": [["indentation", 0, 71, "0"], ["alignment", 0, 71, "both"], ["size", 0, 71, "12.0"], ["style", 0, 71, "normal"]], "group": "1611135339_629.docx", "label": "item"}

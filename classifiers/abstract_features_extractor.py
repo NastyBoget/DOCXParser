@@ -7,8 +7,8 @@ import numpy as np
 
 class AbstractFeatureExtractor(ABC):
     number_regexp = re.compile(r'^\s*\d+\.?(\d+\.)*\d*')  # 1.1.1 1
-    item_regexp = re.compile(r'^\s*[а-я][\)|\}]')
-    item_extended_regexp = re.compile(r'^\s*[A-ZА-Яa-zа-яё][\)|\}|\.]')
+    item_regexp = re.compile(r'^\s*[а-я][)]')
+    item_extended_regexp = re.compile(r'^\s*[A-ZА-Яa-zа-яё\d][).]')
     year_regexp = re.compile(r"(19\d\d|20\d\d)")
 
     @abstractmethod
@@ -66,9 +66,35 @@ class AbstractFeatureExtractor(ABC):
         bold = [annotation for annotation in line["annotations"] if annotation[0] == "bold"]
         return 1. if len(bold) > 0 else 0
 
+    def _get_italic(self, line: dict) -> float:
+        italic = [annotation for annotation in line["annotations"] if annotation[0] == "italic"]
+        return 1. if len(italic) > 0 else 0
+
+    def _get_underlined(self, line: dict) -> float:
+        underlined = [annotation for annotation in line["annotations"] if annotation[0] == "underlined"]
+        return 1. if len(underlined) > 0 else 0
+
     def _get_indentation(self, line: dict) -> float:
         indentation = [annotation[3] for annotation in line["annotations"] if annotation[0] == "indentation"]
         return float(indentation[0]) if len(indentation) > 0 else 0
+
+    def _get_style(self, line: dict) -> str:
+        styles = [annotation[3] for annotation in line["annotations"] if annotation[0] == "style"]
+        if len(styles) > 0:
+            return styles[0]
+        else:
+            return ""
+
+    def _get_type(self, line: dict) -> float:
+        types = {"style_header": 0., "paragraph": 1., "list_item": 2., "raw_text": 3.}
+        return types[line["type"]]
+
+    def _get_hierarchy_level(self, line: dict) -> int:
+        level = line["level"]
+        if level is not None:
+            return level[1]
+        else:
+            return 0
 
     @staticmethod
     def _can_be_prev_element(this_item: Optional[str], prev_item: Optional[str]) -> bool:
