@@ -80,6 +80,7 @@ class DOCXParser:
             if paragraph.name == 'tbl':
                 continue
             if paragraph.name != 'p':
+                # w:docPartGallery w:val="Table of Contents"
                 child_paragraph_list = paragraph.find_all('w:p')
                 for child_paragraph in child_paragraph_list:
                     self.paragraph_list.append(Paragraph(child_paragraph,

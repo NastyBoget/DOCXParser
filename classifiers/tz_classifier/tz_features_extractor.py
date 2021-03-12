@@ -33,6 +33,7 @@ class TzTextFeatures(AbstractFeatureExtractor):
             re.compile(r"(title)|(subtitle)"),
             re.compile(r"list item")
         ]
+        self.toc_regexp = re.compile(r"contents")
 
     def parameters(self) -> dict:
         return {}
@@ -108,6 +109,10 @@ class TzTextFeatures(AbstractFeatureExtractor):
         yield self._get_type(line)
         style = self._get_style(line).lower()
         yield self._styles_regexp(style)
+        if self.toc_regexp.match(style):
+            yield 1
+        else:
+            yield 0
         yield self._get_hierarchy_level(line)
 
         yield len(text)
