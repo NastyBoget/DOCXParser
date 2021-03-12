@@ -19,8 +19,8 @@ class TzTextFeatures(AbstractFeatureExtractor):
             self.item_extended_regexp,
             re.compile(r"^\s*[IVX]+"),  # roman numerals
             re.compile(r"\s*\d+\)"),
-            # https://stackoverflow.com/questions/267399/
-            # how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
+            re.compile(r"\d+\.\s"),
+            self.item_regexp,
             self.dotted_list_regexp,
             self.named_item_regexp
         ]
@@ -65,7 +65,7 @@ class TzTextFeatures(AbstractFeatureExtractor):
 
     def _list_features(self, lines: List[dict]) -> List[float]:
         previous_ids = [-1]
-        texts = [line["text"].strip().strip() for line in lines]
+        texts = [line["text"].strip() for line in lines]
         matches = map(self.number_regexp.match, texts)
         numbers = [(line_id, match.group()) for line_id, match in enumerate(matches) if match]
         if len(numbers) == 0:
