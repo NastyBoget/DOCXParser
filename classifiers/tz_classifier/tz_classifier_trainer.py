@@ -47,6 +47,7 @@ class TzClassifierTrainer:
         else:
             path_out += ".pkl.gz"
         self.path_out = path_out
+        self.y_val, self.y_pred = None, None
 
     def __get_data(self) -> List[List[dict]]:
         """
@@ -78,7 +79,9 @@ class TzClassifierTrainer:
         os.system("rm -rf {}/*".format(errors_path))
         accuracy_scores = []
         f1_scores = []
+        postprocess_accuracy_scores = []
         postprocess_f1_scores = []
+        min_post_accuracy = 1.
 
         for iteration in tqdm(range(10)):
             data_train, data_val = train_test_split(data, train_size=self.train_size, random_state=iteration)
@@ -98,6 +101,12 @@ class TzClassifierTrainer:
                 post_labels_val.extend(self.__get_labels([data_item]))
                 post_labels_predict.extend(self.__get_labels([postprocessing_classifier.predict(data_item)]))
             postprocess_f1_scores.append(f1_score(post_labels_val, post_labels_predict, average="macro"))
+            post_acc_score = accuracy_score(post_labels_val, post_labels_predict)
+            postprocess_accuracy_scores.append(post_acc_score)
+            if min_post_accuracy > post_acc_score:
+                min_post_accuracy = post_acc_score
+                self.y_val = post_labels_val
+                self.y_pred = post_labels_predict
 
             for y_pred, y_true, line in zip(labels_predict, labels_val, flatten(data_val)):
                 if y_true != y_pred:
@@ -109,10 +118,11 @@ class TzClassifierTrainer:
 
         accuracy_scores_dict = self.__create_scores_dict(accuracy_scores)
         f1_scores_dict = self.__create_scores_dict(f1_scores)
-        post_scores_dict = self.__create_scores_dict(postprocess_f1_scores)
+        post_accuracy_scores_dict = self.__create_scores_dict(postprocess_accuracy_scores)
+        post_f1_scores_dict = self.__create_scores_dict(postprocess_f1_scores)
 
         self.__save_errors(error_cnt, errors_path)
-        return accuracy_scores_dict, f1_scores_dict, post_scores_dict
+        return accuracy_scores_dict, f1_scores_dict, post_accuracy_scores_dict, post_f1_scores_dict
 
     def __create_scores_dict(self, scores: list) -> dict:
         scores_dict = OrderedDict()
@@ -144,11 +154,12 @@ class TzClassifierTrainer:
 
     def fit(self, cross_val_only: bool = False):
         data = self.__get_data()
-        accuracy_scores, f1_scores, post_scores = self._cross_val(data)
+        accuracy_scores, f1_scores, post_accuracy_scores, post_f1_scores = self._cross_val(data)
         logging.info(json.dumps(accuracy_scores, indent=4))
         print(f"Accuracy: {accuracy_scores}")
         print(f"F1-measure: {f1_scores}")
-        print(f"After postprocessing: {post_scores}")
+        print(f"Accuracy after postprocessing: {post_accuracy_scores}")
+        print(f"F1-measure after postprocessing: {post_f1_scores}")
         if not cross_val_only:
             labels_train = self.__get_labels(data)
             features_train = self.feature_extractor.fit_transform(data)
@@ -166,8 +177,15 @@ class TzClassifierTrainer:
                 with open(scores_path, "w") as file:
                     print("Accuracy: ", file=file)
                     json.dump(obj=accuracy_scores, fp=file, indent=4)
+                    print(file=file)
                     print("F1-measure: ", file=file)
                     json.dump(obj=f1_scores, fp=file, indent=4)
+                    print(file=file)
+                    print("Accuracy after postprocessing: ", file=file)
+                    json.dump(obj=post_accuracy_scores, fp=file, indent=4)
+                    print(file=file)
+                    print("F1-measure after postprocessing: ", file=file)
+                    json.dump(obj=post_f1_scores, fp=file, indent=4)
 
     def __get_labels(self, data: List[List[dict]]):
         result = [line["label"] for line in flatten(data)]

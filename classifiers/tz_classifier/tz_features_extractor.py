@@ -27,7 +27,8 @@ class TzTextFeatures(AbstractFeatureExtractor):
         self.end_regexp = [
             re.compile(r":$"),
             re.compile(r"[.;]$"),
-            re.compile(r"[а-яА-яё]$")
+            re.compile(r"[а-яА-Яё]$"),
+            re.compile(r"\d+$")
         ]
         self.styles_regexp = [
             re.compile(r"heading \d+"),
