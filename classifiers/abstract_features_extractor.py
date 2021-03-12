@@ -7,8 +7,8 @@ import numpy as np
 
 class AbstractFeatureExtractor(ABC):
     number_regexp = re.compile(r'^\s*\d+\.?(\d+\.)*\d*')  # 1.1.1 1
-    item_regexp = re.compile(r'^\s*[а-я][).]')
-    item_extended_regexp = re.compile(r'^\s*[A-ZА-Яa-zа-яё\d][).]')
+    item_regexp = re.compile(r'^\s*[а-я]\)')
+    item_extended_regexp = re.compile(r'^\s*[A-ZА-Яa-zа-яё][).]')
     year_regexp = re.compile(r"(19\d\d|20\d\d)")
 
     @abstractmethod

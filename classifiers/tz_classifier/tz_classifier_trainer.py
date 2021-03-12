@@ -7,12 +7,13 @@ from collections import Counter, defaultdict, OrderedDict
 from statistics import mean
 from typing import Optional, List, Callable
 
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 from xgboost import XGBClassifier
 
 from classifiers.abstract_features_extractor import AbstractFeatureExtractor
+from classifiers.tz_classifier.tz_classifier import TzLineTypeClassifier
 from classifiers.utils import flatten, identity
 
 
@@ -75,7 +76,9 @@ class TzClassifierTrainer:
         errors_path = os.path.join(self.path_log, "errors")
         os.makedirs(errors_path, exist_ok=True)
         os.system("rm -rf {}/*".format(errors_path))
-        scores = []
+        accuracy_scores = []
+        f1_scores = []
+        postprocess_f1_scores = []
 
         for iteration in tqdm(range(10)):
             data_train, data_val = train_test_split(data, train_size=self.train_size, random_state=iteration)
@@ -87,16 +90,34 @@ class TzClassifierTrainer:
             cls = XGBClassifier(random_state=iteration, **self.classifier_parameters)
             cls.fit(features_train, labels_train)
             labels_predict = cls.predict(features_val)
+
+            postprocessing_classifier = TzLineTypeClassifier(classifier=cls, feature_extractor=self.feature_extractor)
+            post_labels_val = []
+            post_labels_predict = []
+            for data_item in data_val:
+                post_labels_val.extend(self.__get_labels([data_item]))
+                post_labels_predict.extend(self.__get_labels([postprocessing_classifier.predict(data_item)]))
+            postprocess_f1_scores.append(f1_score(post_labels_val, post_labels_predict, average="macro"))
+
             for y_pred, y_true, line in zip(labels_predict, labels_val, flatten(data_val)):
                 if y_true != y_pred:
                     error_cnt[(y_true, y_pred)] += 1
                     with open(os.path.join(errors_path, "{}_{}.txt".format(y_true, y_pred)), "a") as file:
                         file.write(json.dumps(line, ensure_ascii=False) + "\n")
-            scores.append(accuracy_score(labels_val, labels_predict))
+            accuracy_scores.append(accuracy_score(labels_val, labels_predict))
+            f1_scores.append(f1_score(labels_val, labels_predict, average="macro"))
+
+        accuracy_scores_dict = self.__create_scores_dict(accuracy_scores)
+        f1_scores_dict = self.__create_scores_dict(f1_scores)
+        post_scores_dict = self.__create_scores_dict(postprocess_f1_scores)
+
+        self.__save_errors(error_cnt, errors_path)
+        return accuracy_scores_dict, f1_scores_dict, post_scores_dict
+
+    def __create_scores_dict(self, scores: list) -> dict:
         scores_dict = OrderedDict()
         scores_dict["mean"] = mean(scores)
         scores_dict["scores"] = scores
-        self.__save_errors(error_cnt, errors_path)
         return scores_dict
 
     def __save_errors(self, error_cnt, errors_path):
@@ -123,9 +144,11 @@ class TzClassifierTrainer:
 
     def fit(self, cross_val_only: bool = False):
         data = self.__get_data()
-        scores = self._cross_val(data)
-        logging.info(json.dumps(scores, indent=4))
-        print(scores)
+        accuracy_scores, f1_scores, post_scores = self._cross_val(data)
+        logging.info(json.dumps(accuracy_scores, indent=4))
+        print(f"Accuracy: {accuracy_scores}")
+        print(f"F1-measure: {f1_scores}")
+        print(f"After postprocessing: {post_scores}")
         if not cross_val_only:
             labels_train = self.__get_labels(data)
             features_train = self.feature_extractor.fit_transform(data)
@@ -141,7 +164,10 @@ class TzClassifierTrainer:
                 scores_path = os.path.join(self.path_log, "scores.txt")
                 print("Save scores in {}".format(scores_path))
                 with open(scores_path, "w") as file:
-                    json.dump(obj=scores, fp=file, indent=4)
+                    print("Accuracy: ", file=file)
+                    json.dump(obj=accuracy_scores, fp=file, indent=4)
+                    print("F1-measure: ", file=file)
+                    json.dump(obj=f1_scores, fp=file, indent=4)
 
     def __get_labels(self, data: List[List[dict]]):
         result = [line["label"] for line in flatten(data)]

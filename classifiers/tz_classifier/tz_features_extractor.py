@@ -18,6 +18,7 @@ class TzTextFeatures(AbstractFeatureExtractor):
         self.list_item_regexp = [
             self.item_extended_regexp,
             re.compile(r"^\s*[IVX]+"),  # roman numerals
+            re.compile(r"\s*\d+\)"),
             # https://stackoverflow.com/questions/267399/
             # how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
             self.dotted_list_regexp,
@@ -25,7 +26,7 @@ class TzTextFeatures(AbstractFeatureExtractor):
         ]
         self.end_regexp = [
             re.compile(r":$"),
-            re.compile(r"\.;$"),
+            re.compile(r"[.;]$"),
             re.compile(r"[а-яА-яё]$")
         ]
         self.styles_regexp = [
