@@ -89,6 +89,13 @@ class AbstractFeatureExtractor(ABC):
         types = {"style_header": 0., "paragraph": 1., "list_item": 2., "raw_text": 3.}
         return types[line["type"]]
 
+    def _get_alignment(self, line: dict) -> int:
+        types = {"center": 0, "both": 1, "left": 2, "right": 3}
+        alignment = [annotation[3] for annotation in line["annotations"] if annotation[0] == "alignment"]
+        if len(alignment) > 0:
+            return types[alignment[0]]
+        return 2
+
     def _get_hierarchy_level(self, line: dict) -> int:
         level = line["level"]
         if level is not None:

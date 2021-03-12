@@ -106,6 +106,7 @@ class TzTextFeatures(AbstractFeatureExtractor):
         yield self._get_italic(line)
         yield self._get_underlined(line)
         yield self._get_indentation(line)
+        yield self._get_alignment(line)
         yield self._get_type(line)
         style = self._get_style(line).lower()
         yield self._styles_regexp(style)
