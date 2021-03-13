@@ -53,7 +53,6 @@ class TzLineTypeClassifier(AbstractLineTypeClassifier):
         labels_probability = self.classifier.predict_proba(features)
 
         title_id = list(self.classifier.classes_).index("title")
-        toc_id = list(self.classifier.classes_).index("toc")
         raw_text_id = list(self.classifier.classes_).index("raw_text")
 
         empty_line = [line["text"].strip() == "" for line in lines]
@@ -66,11 +65,8 @@ class TzLineTypeClassifier(AbstractLineTypeClassifier):
         labels_probability[:first_non_title, :] = 0
         labels_probability[:first_non_title, title_id] = 1
 
-        # zeros probability for title and table of contents after body of document has begun
+        # zeros probability for title after body of document has begun
         labels_probability[first_non_title:, title_id] = 0
-        # zeros probability for toc after body begun
-        first_item = min((i for i, label in enumerate(labels) if label in ("item", "part")), default=0)
-        labels_probability[first_item:, toc_id] = 0
 
         labels = [self.classifier.classes_[i] for i in labels_probability.argmax(1)]
         assert len(labels) == len(lines)

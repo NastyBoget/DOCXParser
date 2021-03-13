@@ -1,0 +1,1 @@
+{"text": " I.Общая часть", "level": null, "uid": "28e466087d8f9f2c796a7f3674bf97d5_e1cd34858d18dd03e8e7fe2ea7a91901", "type": "raw_text", "annotations": [["indentation", 0, 14, "0"], ["alignment", 0, 14, "left"], ["bold", 1, 14, "True"], ["underlined", 0, 14, "True"], ["size", 0, 14, "12.0"], ["style", 0, 14, "normal"]], "group": "1611135339_629.docx", "label": "toc"}

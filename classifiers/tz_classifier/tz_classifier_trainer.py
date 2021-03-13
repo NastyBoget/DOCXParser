@@ -74,6 +74,7 @@ class TzClassifierTrainer:
 
     def _cross_val(self, data: List[List[dict]]):
         error_cnt = Counter()
+        post_error_cnt = Counter()
         errors_path = os.path.join(self.path_log, "errors")
         os.makedirs(errors_path, exist_ok=True)
         os.system("rm -rf {}/*".format(errors_path))
@@ -107,6 +108,9 @@ class TzClassifierTrainer:
                 min_post_accuracy = post_acc_score
                 self.y_val = post_labels_val
                 self.y_pred = post_labels_predict
+            for post_y_pred, post_y_true in zip(post_labels_predict, post_labels_val):
+                if post_y_true != post_y_pred:
+                    post_error_cnt[(post_y_true, post_y_pred)] += 1
 
             for y_pred, y_true, line in zip(labels_predict, labels_val, flatten(data_val)):
                 if y_true != y_pred:
@@ -122,6 +126,8 @@ class TzClassifierTrainer:
         post_f1_scores_dict = self.__create_scores_dict(postprocess_f1_scores)
 
         self.__save_errors(error_cnt, errors_path)
+        print("After postprocessing:")
+        self.__save_errors(post_error_cnt)
         return accuracy_scores_dict, f1_scores_dict, post_accuracy_scores_dict, post_f1_scores_dict
 
     def __create_scores_dict(self, scores: list) -> dict:
@@ -130,13 +136,16 @@ class TzClassifierTrainer:
         scores_dict["scores"] = scores
         return scores_dict
 
-    def __save_errors(self, error_cnt, errors_path):
-        print("save errors in {}".format(errors_path))
+    def __save_errors(self, error_cnt, errors_path=None):
+        if errors_path:
+            print("save errors in {}".format(errors_path))
         errors_total_num = sum(error_cnt.values())
         print("{:16s} -> {:16s}\t cnt\t percent".format("true", "predicted"))
         for error, cnt in error_cnt.most_common():
             y_true, y_pred = error
             print("{:16s} -> {:16s} {:06,} ({:02.2f}%)".format(y_true, y_pred, cnt, 100 * cnt / errors_total_num))
+        if errors_path is None:
+            return
         for file_name in os.listdir(errors_path):
             path_file = os.path.join(errors_path, file_name)
             with open(path_file) as file:
