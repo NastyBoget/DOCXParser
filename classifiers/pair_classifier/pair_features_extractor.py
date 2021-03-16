@@ -97,6 +97,7 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         yield self.__compare_regexprs_difference(pair, self.list_regexps)
         yield self.__compare_regexprs_difference(pair, self.end_regexps)
         yield self.__detect_list_beginning(pair)
+        yield len(pair[0]["text"].split()[0]) - len(pair[1]["text"].split()[0])
 
     def __get_feature_difference_for_pair(self,
                                           pair: List[dict],
