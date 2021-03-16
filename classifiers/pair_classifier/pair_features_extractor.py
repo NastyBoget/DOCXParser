@@ -13,11 +13,15 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         super().__init__()
 
         self.list_beginning = re.compile(r":$")
+        self.dash_list = re.compile(r"^\s*[-—−–⎯]")
+        self.dot_list = re.compile(r"^\s*•")
+        self.bracket_list = re.compile(r'^\s*\d+\)')
+        self.bracket_letter_list = re.compile(r'^\s*[А-Яa-zа-яё]\)')
         self.list_regexps = [
             re.compile(r"^\s*[IVX]+"),
             self.number_regexp,
-            re.compile(r'^\s*\d+\)'),
-            re.compile(r'^\s*[А-Яa-zа-яё]\)'),
+            self.bracket_list,
+            self.bracket_letter_list,
             re.compile(r'^\s*–'),
             re.compile(r'^\s*—'),
             re.compile(r'^\s*•'),
@@ -58,16 +62,13 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         returns sequence of features for pair of paragraphs
         """
         # TODO решить что делать со списками неочевидно вложенными в строки
-        # двоеточие и список
-        # отдельные случаи - двоеточие до и после
-        # отдельный случай со списками с тире
         # список с точками
-        # список со скобочками
         # признак содержания
         # признак равенства длины нумерации (бинарный)
         # процент жирности в тексте
         # табы вначале
         # бинарный признак одинаковости типа списка
+        # use metadata from DOCXParser
         yield self.__get_feature_difference_for_pair(pair, self._get_size)
         yield self.__get_feature_difference_for_pair(pair, self._get_indentation)
         yield self.__get_feature_difference_for_pair(pair, self._get_bold)
@@ -82,6 +83,12 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self._get_alignment(x) == 0))
         # detect strings which end with :
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(x["text"].endswith(":")))
+        # detect specific types of lists
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.dash_list.match(x["text"]) is None))
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.dot_list.match(x["text"]) is None))
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.bracket_list.match(x["text"]) is None))
+        yield self.__get_feature_difference_for_pair(pair,
+                                                     lambda x: int(self.bracket_letter_list.match(x["text"]) is None))
 
         yield self.__compare_list_paragraphs(pair)
         yield self.__compare_regexprs_difference(pair, self.list_regexps)
