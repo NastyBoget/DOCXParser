@@ -35,7 +35,7 @@ class TzTextFeatures(AbstractFeatureExtractor):
             re.compile(r"(title)|(subtitle)"),
             re.compile(r"list item")
         ]
-        self.toc_regexp = re.compile(r"contents")
+        self.toc_regexp = re.compile(r"contents|toc")
 
     def parameters(self) -> dict:
         return {}

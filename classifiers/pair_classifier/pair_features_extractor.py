@@ -57,6 +57,7 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         """
         returns sequence of features for pair of paragraphs
         """
+        # TODO сделать важнее строки по центру
         yield self.__get_feature_difference_for_pair(pair, self._get_size)
         yield self.__get_feature_difference_for_pair(pair, self._get_indentation)
         yield self.__get_feature_difference_for_pair(pair, self._get_bold)
