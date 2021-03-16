@@ -85,7 +85,7 @@ class AbstractFeatureExtractor(ABC):
         props = [annotation for annotation in line["annotations"] if annotation[0] == prop]
         if len(props) == 0:
             return 0
-        if props[2] == len(line["text"]):
+        if props[0][2] == len(line["text"]):
             return 1.
         else:
             return 0.5
