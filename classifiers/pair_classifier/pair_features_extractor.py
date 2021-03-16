@@ -17,6 +17,7 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         self.dot_list = re.compile(r"^\s*•")
         self.bracket_list = re.compile(r'^\s*\d+\)')
         self.bracket_letter_list = re.compile(r'^\s*[А-Яa-zа-яё]\)')
+        self.compound_list = re.compile(r'^\s*(\d+\.?(\d+\.)*\d*)')
         self.list_regexps = [
             re.compile(r"^\s*[IVX]+"),
             self.number_regexp,
@@ -62,14 +63,14 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         returns sequence of features for pair of paragraphs
         """
         # TODO решить что делать со списками неочевидно вложенными в строки
-        # процент жирности в тексте
+        # текст после списка с точкой
         # use metadata from DOCXParser
         yield self.__get_feature_difference_for_pair(pair, self._get_size)
         yield self.__get_feature_difference_for_pair(pair, self._get_indentation)
         yield self.__get_feature_difference_for_pair(pair, self._get_bold)
         yield self.__get_feature_difference_for_pair(pair, self._get_italic)
         yield self.__get_feature_difference_for_pair(pair, self._get_underlined)
-        yield self.__get_feature_difference_for_pair(pair, self._get_alignment)  # TODO change this
+        yield self.__get_feature_difference_for_pair(pair, self._get_alignment)
         yield self.__get_feature_difference_for_pair(pair, self._get_hierarchy_level)
         yield self.__get_feature_difference_for_pair(pair, self._get_type)
         for prop in ["bold", "italic", "underlined"]:
@@ -112,9 +113,9 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         """
         values = [0, 0]
         for i, item in enumerate(pair):
-            match = self.number_regexp.match(item["text"])
+            match = self.compound_list.match(item["text"])
             if match:
-                text = match.string
+                text = match.groups(1)[0]
                 if text.endswith('.'):
                     text = text[:-1]
                 # count number of numbering points e.g. in 1.1.1 there are 3 numbering points
