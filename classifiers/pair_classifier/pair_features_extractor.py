@@ -24,7 +24,7 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
             self.bracket_letter_list,
             re.compile(r'^\s*–'),
             re.compile(r'^\s*—'),
-            re.compile(r'^\s*•'),
+            self.dot_list,
             re.compile(r'^\s*−'),
             re.compile(r'^\s*\*'),
             re.compile(r'^\s*⎯')
@@ -84,13 +84,14 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         # detect strings which end with :
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(x["text"].endswith(":")))
         # detect specific types of lists
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.number_regexp.match(x["text"]) is None))
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.dash_list.match(x["text"]) is None))
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.dot_list.match(x["text"]) is None))
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.bracket_list.match(x["text"]) is None))
         yield self.__get_feature_difference_for_pair(pair,
                                                      lambda x: int(self.bracket_letter_list.match(x["text"]) is None))
 
-        yield self.__compare_list_paragraphs(pair)
+        yield from self.__compare_list_paragraphs(pair)
         yield self.__compare_regexprs_difference(pair, self.list_regexps)
         yield self.__compare_regexprs_difference(pair, self.end_regexps)
         yield self.__detect_list_beginning(pair)
@@ -103,7 +104,7 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         """
         return get_feature(pair[0]) - get_feature(pair[1])
 
-    def __compare_list_paragraphs(self, pair: List[dict]) -> int:
+    def __compare_list_paragraphs(self, pair: List[dict]) -> Iterator[int]:
         """
         compares two lists with numbering like 1.1.1
         if such numbering wasn't found value of numberings set 0 by default
@@ -118,7 +119,12 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
                 # count number of numbering points e.g. in 1.1.1 there are 3 numbering points
                 values[i] = len(text.split('.'))
 
-        return values[0] - values[1]
+        if values[0] == 0 and values[1] == 0:
+            yield 0
+        else:
+            yield 1
+
+        yield values[0] - values[1]
 
     def __compare_regexprs_difference(self, pair: List[dict], patterns: List[Pattern]) -> int:
         """
