@@ -11,6 +11,13 @@ class AbstractFeatureExtractor(ABC):
     item_extended_regexp = re.compile(r'^\s*[A-ZА-Яa-zа-яё][).]')
     year_regexp = re.compile(r"(19\d\d|20\d\d)")
 
+    styles_regexp = [
+        re.compile(r"heading \d+"),
+        re.compile(r"(title)|(subtitle)"),
+        re.compile(r"list item")
+    ]
+    toc_regexp = re.compile(r"contents|toc")
+
     @abstractmethod
     def parameters(self) -> dict:
         pass
@@ -74,6 +81,15 @@ class AbstractFeatureExtractor(ABC):
         underlined = [annotation for annotation in line["annotations"] if annotation[0] == "underlined"]
         return 1. if len(underlined) > 0 else 0
 
+    def _get_property_with_percent(self, line: dict, prop: str) -> float:
+        props = [annotation for annotation in line["annotations"] if annotation[0] == prop]
+        if len(props) == 0:
+            return 0
+        if props[2] == len(line["text"]):
+            return 1.
+        else:
+            return 0.5
+
     def _get_indentation(self, line: dict) -> float:
         indentation = [annotation[3] for annotation in line["annotations"] if annotation[0] == "indentation"]
         return float(indentation[0]) if len(indentation) > 0 else 0
@@ -95,6 +111,15 @@ class AbstractFeatureExtractor(ABC):
         if len(alignment) > 0:
             return types[alignment[0]]
         return 2
+
+    def _styles_regexp(self, style: str):
+        pattern_num = 0
+        for pattern in self.styles_regexp:
+            match = pattern.match(style)
+            if match:
+                return pattern_num
+            pattern_num += 1
+        return pattern_num
 
     def _get_hierarchy_level(self, line: dict) -> int:
         level = line["level"]

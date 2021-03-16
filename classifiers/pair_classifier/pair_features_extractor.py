@@ -62,12 +62,8 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         returns sequence of features for pair of paragraphs
         """
         # TODO решить что делать со списками неочевидно вложенными в строки
-        # список с точками
         # признак содержания
-        # признак равенства длины нумерации (бинарный)
         # процент жирности в тексте
-        # табы вначале
-        # бинарный признак одинаковости типа списка
         # use metadata from DOCXParser
         yield self.__get_feature_difference_for_pair(pair, self._get_size)
         yield self.__get_feature_difference_for_pair(pair, self._get_indentation)
@@ -77,12 +73,16 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         yield self.__get_feature_difference_for_pair(pair, self._get_alignment)  # TODO change this
         yield self.__get_feature_difference_for_pair(pair, self._get_hierarchy_level)
         yield self.__get_feature_difference_for_pair(pair, self._get_type)
+        # detect styles
+        yield self.__get_feature_difference_for_pair(pair, lambda x: self._styles_regexp(self._get_style(x).lower()))
+        yield int(self.toc_regexp.match(self._get_style(pair[0]).lower()) is None)
         # detect uppercase
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(x["text"].isupper()))
         # detect centering alignment
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self._get_alignment(x) == 0))
         # detect strings which end with :
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(x["text"].endswith(":")))
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(x["text"].startswith("\t")))
         # detect specific types of lists
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.number_regexp.match(x["text"]) is None))
         yield self.__get_feature_difference_for_pair(pair, lambda x: int(self.dash_list.match(x["text"]) is None))
