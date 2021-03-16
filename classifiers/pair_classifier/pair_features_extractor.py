@@ -58,6 +58,18 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         returns sequence of features for pair of paragraphs
         """
         # TODO сделать важнее строки по центру
+        # решить что делать со списками неочевидно вложенными в строки
+        # двоеточие и список
+        # отдельные случаи - двоеточие до и после
+        # отдельный случай со списками с тире
+        # список с точками
+        # список со скобочками
+        # признак содержания
+        # признак равенства длины нумерации (бинарный)
+        # процент жирности в тексте
+        # caps letters
+        # табы вначале
+        # бинарный признак одинаковости типа списка
         yield self.__get_feature_difference_for_pair(pair, self._get_size)
         yield self.__get_feature_difference_for_pair(pair, self._get_indentation)
         yield self.__get_feature_difference_for_pair(pair, self._get_bold)
@@ -66,6 +78,10 @@ class PairFeaturesExtractor(AbstractFeatureExtractor):
         yield self.__get_feature_difference_for_pair(pair, self._get_alignment)  # TODO change this
         yield self.__get_feature_difference_for_pair(pair, self._get_hierarchy_level)
         yield self.__get_feature_difference_for_pair(pair, self._get_type)
+        # detect uppercase
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(x["text"].isupper()))
+        # detect centering alignment
+        yield self.__get_feature_difference_for_pair(pair, lambda x: int(self._get_alignment(x) == 0))
         yield self.__compare_list_paragraphs(pair)
         yield self.__compare_regexprs_difference(pair, self.list_regexps)
         yield self.__compare_regexprs_difference(pair, self.end_regexps)

@@ -81,7 +81,8 @@ class PairClassifierTrainer:
                 if y_true != y_pred:
                     error_cnt[(y_true, y_pred)] += 1
                     with open(os.path.join(errors_path, "{}_{}.txt".format(y_true, y_pred)), "a") as file:
-                        file.write(json.dumps(line, ensure_ascii=False) + "\n")
+                        line_with_label = {"label": y_true, "uid": f"{line[0]['uid']}_{line[1]['uid']}", "data": line}
+                        file.write(json.dumps(line_with_label, ensure_ascii=False) + "\n")
             accuracy_scores.append(accuracy_score(labels_val, labels_predict))
             f1_scores.append(f1_score(labels_val, labels_predict, average="macro"))
 
