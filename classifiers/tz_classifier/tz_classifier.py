@@ -20,7 +20,7 @@ class TzLineTypeClassifier(AbstractLineTypeClassifier):
     @staticmethod
     def load_pickled(path: str = None, *, config: dict) -> "TzLineTypeClassifier":
         if path is None:
-            path = os.path.join(os.path.dirname(__file__), "tz_classifier.pkl.gz")
+            path = os.path.join(os.path.dirname(__file__), "resources", "tz_classifier.pkl.gz")
             path = os.path.abspath(path)
         with gzip.open(path) as file:
             classifier, feature_extractor_parameters = pickle.load(file)

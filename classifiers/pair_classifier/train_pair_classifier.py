@@ -17,4 +17,4 @@ trainer = PairClassifierTrainer(
     random_seed=42,
 )
 
-trainer.fit(cross_val_only=True)
+trainer.fit(cross_val_only=False)
