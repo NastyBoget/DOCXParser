@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 from typing import Optional
 
-from data_structures.base_props import BaseProperties
-from data_structures.run import Run
-from properties_extractor import change_paragraph_properties, change_run_properties
+from docx_parser.data_structures.base_props import BaseProperties
+from docx_parser.data_structures.run import Run
+from docx_parser.extractors.properties_extractor import change_paragraph_properties, change_run_properties
 
 
 class Paragraph(BaseProperties):

@@ -3,7 +3,7 @@ from typing import List
 
 from bs4 import BeautifulSoup
 
-from data_structures.run import Run
+from docx_parser.data_structures.run import Run
 
 
 class DocxTable:

@@ -13,7 +13,7 @@ from PIL import Image
 from bs4 import BeautifulSoup
 from pdf2image import convert_from_path
 
-from document_parser import DOCXParser
+from docx_parser.document_parser import DOCXParser
 
 PairedPdf = namedtuple("PairedPdf", ["many_color_pdf", "two_color_pdf", "many_colors", "two_colors"])
 

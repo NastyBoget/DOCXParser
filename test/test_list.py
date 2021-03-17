@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from document_parser import DOCXParser
+from docx_parser.document_parser import DOCXParser
 
 TEST_DIR = '../examples'
 

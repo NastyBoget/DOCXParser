@@ -7,24 +7,16 @@ from typing import List
 
 from bs4 import BeautifulSoup
 
-from data_structures.paragraph import Paragraph
-from data_structures.paragraph_info import ParagraphInfo
-from numbering_extractor import NumberingExtractor
-from styles_extractor import StylesExtractor
+from docx_parser.data_structures.paragraph import Paragraph
+from docx_parser.data_structures.paragraph_info import ParagraphInfo
+from docx_parser.extractors.numbering_extractor import NumberingExtractor
+from docx_parser.extractors.styles_extractor import StylesExtractor
 
 
 class DOCXParser:
 
     def __init__(self):
-        self.document_bs = None
-        self.styles_extractor = None
-        self.numbering_extractor = None
-        # the list of paragraph with their properties
-        self.paragraph_list = []
-        self.paragraph_xml_list = []
-        self.lines_with_meta = None
-        self.lines = None
-        self.hash = None
+        self.__init_structures()
 
     def can_parse(self,
                   filename: str) -> bool:
@@ -40,6 +32,7 @@ class DOCXParser:
         parses document into paragraphs and runs, extracts text for each run and paragraph and it's metadata
         :param filename: name of the .docx file
         """
+        self.__init_structures()
         if not self.can_parse(filename):
             raise ValueError('it is not .docx file')
         with open(filename, "rb") as file_doc:
@@ -135,10 +128,21 @@ class DOCXParser:
     def get_document_bs(self) -> BeautifulSoup:
         return self.document_bs
 
+    def __init_structures(self):
+        self.document_bs = None
+        self.styles_extractor = None
+        self.numbering_extractor = None
+        # the list of paragraph with their properties
+        self.paragraph_list = []
+        self.paragraph_xml_list = []
+        self.lines_with_meta = None
+        self.lines = None
+        self.hash = None
+
 
 if __name__ == "__main__":
-    test_dir = 'examples/test/docx'
-    examples_dir = 'examples'
+    test_dir = '../examples/test/docx'
+    examples_dir = '../examples'
     choice = input()
     if choice == "test":
         filenames = os.listdir(test_dir)
@@ -148,7 +152,7 @@ if __name__ == "__main__":
     start = time.time()
     parser = DOCXParser()
     i = 0
-    with open("examples/test/results.txt", "w") as write_file:
+    with open("../examples/test/results.txt", "w") as write_file:
         for filename in filenames:
             try:
                 i += 1

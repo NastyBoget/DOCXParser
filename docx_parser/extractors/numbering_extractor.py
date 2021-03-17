@@ -1,11 +1,11 @@
 from bs4 import BeautifulSoup
 
-from data_structures.base_props import BaseProperties
-from styles_extractor import StylesExtractor
-from properties_extractor import change_paragraph_properties, change_run_properties
+from docx_parser.data_structures.base_props import BaseProperties
+from docx_parser.extractors.styles_extractor import StylesExtractor
+from docx_parser.extractors.properties_extractor import change_paragraph_properties, change_run_properties
 from typing import List, Dict, Union
 import re
-from windows_font_mapping import mapping
+from docx_parser.windows_font_mapping import mapping
 
 numFmtList = {"decimal": "1",  # 1, 2, 3, ..., 10, 11, 12, ...
               "lowerLetter": "a",  # a, b, c, ..., y, z, aa, bb, cc, ..., yy, zz, aaa, bbb, ccc, ...

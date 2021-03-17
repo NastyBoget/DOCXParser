@@ -2,8 +2,8 @@ from typing import Optional
 
 from bs4 import BeautifulSoup
 
-from data_structures.base_props import BaseProperties
-from properties_extractor import change_caps
+from docx_parser.data_structures.base_props import BaseProperties
+from docx_parser.extractors.properties_extractor import change_caps
 
 
 class Run(BaseProperties):

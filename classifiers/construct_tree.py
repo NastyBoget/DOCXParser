@@ -1,6 +1,6 @@
 from classifiers.pair_classifier.pair_classifier import PairClassifier
 from classifiers.tz_classifier.tz_classifier import TzLineTypeClassifier
-from document_parser import DOCXParser
+from docx_parser.document_parser import DOCXParser
 from tree_constructor import DocumentTreeConstructor
 
 
