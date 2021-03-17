@@ -3,9 +3,9 @@ from typing import Optional
 from treelib import Tree
 
 from classifiers.pair_classifier.pair_classifier import PairClassifier
+from classifiers.tree_constructor import DocumentTreeConstructor
 from classifiers.tz_classifier.tz_classifier import TzLineTypeClassifier
 from docx_parser.document_parser import DOCXParser
-from tree_constructor import DocumentTreeConstructor
 
 
 def create_tree(doc_tree: dict, parent: Optional[str] = None, tree: Optional[Tree] = None) -> Optional[Tree]:
