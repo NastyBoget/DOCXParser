@@ -25,7 +25,8 @@ docx_parser.get_lines_with_meta()
 ```python
 {'text': 'some text',  # text of each paragraph
  'level': None,  # may be tuple, e.g. (1, 1) (see code for more details)
- 'uid': 'e9c87f98bffab8a6b576c9f232f6910c_a9c66dbe50d3a99771a25955712274f4',  # unique identifier of each paragraph  'type': 'raw_text',  # may be "paragraph" ,"list_item", "raw_text" or "style_header"
+ 'uid': 'e9c87f98bffab8a6b576c9f232f6910c_a9c66dbe50d3a99771a25955712274f4',  # unique identifier of each paragraph  
+ 'type': 'raw_text',  # may be "paragraph" ,"list_item", "raw_text" or "style_header"
  # list of annotations for current paragraph
  # each annotation is like ("name", start, end, "value") where
  # name - name of annotation, may be "indentation", "alignment", "bold", "italic", "underlined", "size", "style"
