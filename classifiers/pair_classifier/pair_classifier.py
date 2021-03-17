@@ -38,3 +38,7 @@ class PairClassifier(AbstractLineTypeClassifier):
         result = [{"data": pair}]
         result[0]["label"] = self.classifier.predict(features)[0]
         return result
+
+    def compare(self, pair: List[dict]) -> str:
+        features = self.feature_extractor.transform([pair])
+        return self.classifier.predict(features)[0]
