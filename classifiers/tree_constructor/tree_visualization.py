@@ -4,6 +4,7 @@ from treelib import Tree
 
 from classifiers.pair_classifier.pair_classifier import PairClassifier
 from classifiers.tree_constructor.tree_constructor import DocumentTreeConstructor
+from classifiers.tree_constructor.tz_tree_constructor import TzDocumentTreeConstructor
 from classifiers.tz_classifier.tz_classifier import TzLineTypeClassifier
 from docx_parser.document_parser import DOCXParser
 
@@ -37,10 +38,14 @@ if __name__ == "__main__":
     docx_parser.parse(doc_name)
     lines = docx_parser.get_lines_with_meta()
     lines_with_label = tz_classifier.predict(lines)
-    lines = [line for line in lines_with_label if line["label"] != "toc"]
+    cropped_lines = [line for line in lines_with_label if line["label"] != "toc"]
 
     tree_constructor = DocumentTreeConstructor(comparator=pair_classifier, line_type_classifier=tz_classifier)
-    doc_tree = tree_constructor.construct_tree(lines, with_type=True)
-
+    doc_tree = tree_constructor.construct_tree(cropped_lines, with_type=True)
     tree = visualize_tree(doc_tree, with_type=True)
     tree.show()
+
+    tz_tree_constructor = TzDocumentTreeConstructor(comparator=pair_classifier, line_type_classifier=tz_classifier)
+    tz_doc_tree = tz_tree_constructor.construct_tree(lines)
+    tz_tree = visualize_tree(tz_doc_tree, with_type=True)
+    tz_tree.show()
