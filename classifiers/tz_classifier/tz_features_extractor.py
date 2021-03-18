@@ -112,6 +112,15 @@ class TzTextFeatures(AbstractFeatureExtractor):
             yield 0
         yield self._get_hierarchy_level(line)
 
+        # additional feature for list_item
+        matched = False
+        for regexp in self.list_item_regexp:
+            match = regexp.match(line["text"])
+            if match:
+                matched = True
+                break
+        yield int(matched or line["type"] == "list_item")
+
         yield len(text)
         yield len(text.split())
         yield int(text.strip() == "содержание")
