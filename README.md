@@ -82,7 +82,7 @@ For example given above `predict()` method can return the following data:
 
 ```python
 from classifiers.pair_classifier.pair_classifier import PairClassifier
-from classifiers.tree_constructor import DocumentTreeConstructor
+from classifiers.tree_constructor.tree_constructor import DocumentTreeConstructor
 from docx_parser.document_parser import DOCXParser
 
 
@@ -114,7 +114,7 @@ Code is almost the same:
 
 ```python
 from classifiers.pair_classifier.pair_classifier import PairClassifier
-from classifiers.tree_constructor import DocumentTreeConstructor
+from classifiers.tree_constructor.tree_constructor import DocumentTreeConstructor
 from classifiers.tz_classifier.tz_classifier import TzLineTypeClassifier
 from docx_parser.document_parser import DOCXParser
 
@@ -135,12 +135,11 @@ doc_tree = tree_constructor.construct_tree(lines, with_type=True)
 You can get visual representation of tree structure:
 
 ```python
-from classifiers.construct_tree import create_tree
-
+from classifiers.tree_constructor.tree_visualization import visualize_tree
 
 doc_tree = tree_constructor.construct_tree(lines, with_type=True)
 
-tree = create_tree(doc_tree)
+tree = visualize_tree(doc_tree, with_type=False)
 tree.show()
 ```
 
