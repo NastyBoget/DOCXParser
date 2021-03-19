@@ -1,3 +1,4 @@
+import os
 from typing import Optional
 
 from treelib import Tree
@@ -18,7 +19,7 @@ def visualize_tree(doc_tree: dict,
         tree.create_node("Root", "0")
         parent = "0"
     for i, subtree in enumerate(doc_tree["children"]):
-        node_name = parent + str(i)
+        node_name = parent + str(i) + str(hash(subtree['data']['text']))
         if with_type and 'label' in subtree['data']:
             tree.create_node(f"{subtree['data']['label']}: {subtree['data']['text']}", node_name, parent=parent)
             visualize_tree(subtree, True, node_name, tree, )
@@ -30,6 +31,7 @@ def visualize_tree(doc_tree: dict,
 
 if __name__ == "__main__":
     doc_name = "../data/1611572467_467.docx"
+    doc_name = os.path.abspath(doc_name)
 
     pair_classifier = PairClassifier.load_pickled(config={})
     tz_classifier = TzLineTypeClassifier.load_pickled(config={})
