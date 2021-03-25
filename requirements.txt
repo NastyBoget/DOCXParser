@@ -11,3 +11,5 @@ matplotlib~=3.3.2
 tqdm~=4.54.1
 pillow~=8.0.0
 pdf2image~=1.14.0
+ete3~=3.1.2
+pandas~=1.1.3

@@ -5,6 +5,11 @@ from typing import List, Iterable, TypeVar, Optional
 import matplotlib.pyplot as plt
 import numpy as np
 
+from classifiers.pair_classifier.pair_classifier import PairClassifier
+from classifiers.tree_constructor.test_comparator import TestComparator
+from classifiers.tree_constructor.tree_constructor import DocumentTreeConstructor
+from docx_parser.document_parser import DOCXParser
+
 T = TypeVar("T")
 
 
@@ -56,3 +61,20 @@ def plot_confusion_matrix(cm, classes,
 
     os.makedirs("resources", exist_ok=True)
     plt.savefig('resources/confusion_matrix.png',  bbox_inches='tight')
+
+
+def doc2tree(doc_name: str, comparator_type: str = "pair", data_path: str = None) -> dict:
+    doc_name = os.path.abspath(doc_name)
+    if comparator_type == "test":
+        assert(data_path is not None)
+        comparator = TestComparator(data_path)
+    else:
+        comparator = PairClassifier.load_pickled(config={})
+
+    docx_parser = DOCXParser()
+    docx_parser.parse(doc_name)
+    lines = docx_parser.get_lines_with_meta()
+
+    tree_constructor = DocumentTreeConstructor(comparator=comparator)
+    doc_tree = tree_constructor.construct_tree(lines)
+    return doc_tree
