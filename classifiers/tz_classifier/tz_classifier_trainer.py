@@ -63,6 +63,13 @@ class TzClassifierTrainer(AbstractClassifierTrainer):
             cls = XGBClassifier(random_state=iteration, **self.classifier_parameters)
             cls.fit(features_train, labels_train)
             labels_predict = cls.predict(features_val)
+            for y_pred, y_true, line in zip(labels_predict, labels_val, flatten(data_val)):
+                if y_true != y_pred:
+                    error_cnt[(y_true, y_pred)] += 1
+                    with open(os.path.join(errors_path, "{}_{}.txt".format(y_true, y_pred)), "a") as file:
+                        file.write(json.dumps(line, ensure_ascii=False) + "\n")
+            accuracy_scores.append(accuracy_score(labels_val, labels_predict))
+            f1_scores.append(f1_score(labels_val, labels_predict, average="macro"))
 
             postprocessing_classifier = TzLineTypeClassifier(classifier=cls, feature_extractor=self.feature_extractor)
             post_labels_val = []
@@ -80,14 +87,6 @@ class TzClassifierTrainer(AbstractClassifierTrainer):
             for post_y_pred, post_y_true in zip(post_labels_predict, post_labels_val):
                 if post_y_true != post_y_pred:
                     post_error_cnt[(post_y_true, post_y_pred)] += 1
-
-            for y_pred, y_true, line in zip(labels_predict, labels_val, flatten(data_val)):
-                if y_true != y_pred:
-                    error_cnt[(y_true, y_pred)] += 1
-                    with open(os.path.join(errors_path, "{}_{}.txt".format(y_true, y_pred)), "a") as file:
-                        file.write(json.dumps(line, ensure_ascii=False) + "\n")
-            accuracy_scores.append(accuracy_score(labels_val, labels_predict))
-            f1_scores.append(f1_score(labels_val, labels_predict, average="macro"))
 
         accuracy_scores_dict = self._create_scores_dict(accuracy_scores)
         f1_scores_dict = self._create_scores_dict(f1_scores)
@@ -119,21 +118,21 @@ class TzClassifierTrainer(AbstractClassifierTrainer):
             with gzip.open(self.path_out, "wb") as output_file:
                 pickle.dump((cls, self.feature_extractor.parameters()), output_file)
 
-            if self.path_log is not None:
-                scores_path = os.path.join(self.path_log, "scores.txt")
-                print("Save scores in {}".format(scores_path))
-                with open(scores_path, "w") as file:
-                    print("Accuracy: ", file=file)
-                    json.dump(obj=accuracy_scores, fp=file, indent=4)
-                    print(file=file)
-                    print("F1-measure: ", file=file)
-                    json.dump(obj=f1_scores, fp=file, indent=4)
-                    print(file=file)
-                    print("Accuracy after postprocessing: ", file=file)
-                    json.dump(obj=post_accuracy_scores, fp=file, indent=4)
-                    print(file=file)
-                    print("F1-measure after postprocessing: ", file=file)
-                    json.dump(obj=post_f1_scores, fp=file, indent=4)
+        if self.path_log is not None:
+            scores_path = os.path.join(self.path_log, "scores.txt")
+            print("Save scores in {}".format(scores_path))
+            with open(scores_path, "w") as file:
+                print("Accuracy: ", file=file)
+                json.dump(obj=accuracy_scores, fp=file, indent=4)
+                print(file=file)
+                print("F1-measure: ", file=file)
+                json.dump(obj=f1_scores, fp=file, indent=4)
+                print(file=file)
+                print("Accuracy after postprocessing: ", file=file)
+                json.dump(obj=post_accuracy_scores, fp=file, indent=4)
+                print(file=file)
+                print("F1-measure after postprocessing: ", file=file)
+                json.dump(obj=post_f1_scores, fp=file, indent=4)
 
     def _get_labels(self, data: List[List[dict]]):
         result = [line["label"] for line in flatten(data)]
