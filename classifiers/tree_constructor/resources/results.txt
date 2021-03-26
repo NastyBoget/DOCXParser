@@ -1,1 +1,2 @@
 {'test_1.docx': 0.0, 'test_3.docx': 0.05263157894736842, 'test_2.docx': 0.09090909090909091, 'test_5.docx': 0.07894736842105263, 'test_4.docx': 0.14285714285714285, 'mean_rf': 0.07306903622693096}
+{'test_1.docx': {'rf': 0.0, 'rf_max': 28.0}, 'test_3.docx': {'rf': 2.0, 'rf_max': 38.0}, 'test_2.docx': {'rf': 2.0, 'rf_max': 22.0}, 'test_5.docx': {'rf': 6.0, 'rf_max': 76.0}, 'test_4.docx': {'rf': 2.0, 'rf_max': 14.0}}

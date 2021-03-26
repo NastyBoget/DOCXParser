@@ -142,8 +142,9 @@ class DOCXParser:
 
 if __name__ == "__main__":
     test_dir = '../examples/test/docx'
-    examples_dir = '../examples'
-    choice = input()
+    # examples_dir = '../examples'
+    examples_dir = '/Users/anastasiabogatenkova/Downloads/'
+    choice = input('')
     if choice == "test":
         filenames = os.listdir(test_dir)
     else:
@@ -191,4 +192,4 @@ if __name__ == "__main__":
             except zipfile.BadZipFile:
                 pass
 
-# TODO docx/doc_000651.docx, docx/doc_000578.docx буквы вместо цифр
+# /Users/anastasiabogatenkova/Downloads/1.docx
