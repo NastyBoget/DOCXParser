@@ -103,20 +103,19 @@ class TestAnnotations(unittest.TestCase):
                          'техническим характеристикам поставляемых средств защиты информации.', result[6]['text'])
         self.assertIn(('bold', 0, 145, 'True'), result[6]['annotations'])
 
-        # TODO handle such lists more correctly
-        self.assertEqual('7.\tУслуги по обновлению системы защиты информации должны быть оказаны в соответствии с '
+        self.assertEqual('7.1.\tУслуги по обновлению системы защиты информации должны быть оказаны в соответствии с '
                          'требованиями и рекомендациями следующих нормативных документов:', result[7]['text'])
-        self.assertIn(('style', 0, 150, 'list paragraph'), result[7]['annotations'])
+        self.assertIn(('style', 0, 152, 'list paragraph'), result[7]['annotations'])
 
         self.assertEqual('⎯\tФедеральный закон от 27 июля 2006 г. № 149-ФЗ "Об информации, '
                          'информационных технологиях и о защите информации".', result[8]['text'])
         self.assertIn(('style', 0, 114, 'list paragraph'), result[8]['annotations'])
 
-        self.assertEqual('7.1.\tДоработка проектов организационно-распорядительной документации.', result[9]['text'])
+        self.assertEqual('7.1.1.\tДоработка проектов организационно-распорядительной документации.', result[9]['text'])
         self.assertEqual('-\tАнализ процесса обработки персональных данных.', result[11]['text'])
         self.assertEqual('• управление заявками пользователей (заявки на обслуживание и техподдержку);',
                          result[13]['text'])
-        self.assertEqual('7.2.\tТребования к качественным и техническим характеристикам программного обеспечения, '
+        self.assertEqual('7.1.2.\tТребования к качественным и техническим характеристикам программного обеспечения, '
                          'реализующего функции средства анализа защищенности:', result[14]['text'])
         self.assertEqual('⎯\tАнализ и классификацию уязвимостей на 32 узлах защищаемой сети.', result[16]['text'])
 
