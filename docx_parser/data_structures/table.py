@@ -1,4 +1,5 @@
 import hashlib
+import os
 import zipfile
 from typing import List
 
@@ -123,17 +124,26 @@ class DocxTable:
 
 
 if __name__ == "__main__":
-    filename = "/Users/anastasiabogatenkova/DOCXParser/examples/merged_cells_example.docx"
-    document = zipfile.ZipFile(filename)
-    document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
-    tbls = document_bs.find_all("w:tbl")
-    styles_extractor = StylesExtractor(BeautifulSoup(document.read('word/styles.xml'), 'xml'))
-    tables = []
-    for tbl in tbls:
-        table = DocxTable(tbl, styles_extractor)
-        tables.append(table.get_cells())
-
-    for table in tables:
-        print("new table")
-        for row in table:
-            print(row)
+    test_dir = "/Users/anastasiabogatenkova/DOCXParser/examples/test/docx"
+    # filename = "/Users/anastasiabogatenkova/DOCXParser/examples/merged_cells_example.docx"
+    with open("results.txt", "w") as f:
+        i = 0
+        for filename in os.listdir(test_dir):
+            if not filename.endswith(".docx"):
+                continue
+            filename = os.path.join(test_dir, filename)
+            document = zipfile.ZipFile(filename)
+            document_bs = BeautifulSoup(document.read('word/document.xml'), 'xml')
+            tbls = document_bs.find_all("w:tbl")
+            styles_extractor = StylesExtractor(BeautifulSoup(document.read('word/styles.xml'), 'xml'))
+            tables = []
+            for tbl in tbls:
+                table = DocxTable(tbl, styles_extractor)
+                tables.append(table.get_cells())
+            print(f"\n\n\n{filename}", file=f)
+            for table in tables:
+                print("new table", file=f)
+                for row in table:
+                    print(row, file=f)
+            i += 1
+            print(f"\r{i} objects are processed...", end='', flush=True)
