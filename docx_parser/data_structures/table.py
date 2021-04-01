@@ -32,6 +32,13 @@ class DocxTable:
         # tc tag defines table cell
         result_cells = []
 
+        # delete tables inside tables
+        for tbl in self.xml.find_all("w:tbl"):
+            tbl.extract()
+
+        if self.xml.tbl:
+            return result_cells
+
         rows = self.xml.find_all("w:tr")
         prev_row = []
         for row in rows:
@@ -50,15 +57,10 @@ class DocxTable:
                 # vmerge tag for vertically merged set of cells (or horizontally split cells)
                 # attribute val may be "restart" or "continue" ("continue" if omitted)
                 if cell.vMerge:
-                    try:
-                        value = cell.vMerge["w:val"]
-                    except KeyError:
-                        value = "continue"
+                    value = cell.vMerge.get("w:val", "continue")
+
                     if value == "continue":
-                        try:
-                            cell_text += prev_row[cell_ind]
-                        except IndexError:
-                            pass
+                        cell_text += prev_row[cell_ind]
                 # split merged cells
                 for span in range(grid_span):
                     cell_ind += 1
@@ -142,7 +144,7 @@ if __name__ == "__main__":
                 tables.append(table.get_cells())
             print(f"\n\n\n{filename}", file=f)
             for table in tables:
-                print("new table", file=f)
+                print("\nnew table", file=f)
                 for row in table:
                     print(row, file=f)
             i += 1
